@@ -7,8 +7,6 @@ function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider attribute='class' value={{ dark: "dark-theme" }}>
       <>
-        <Component {...pageProps} />
-        <Menu />
         <Background />
         <Menu />
         <Component {...pageProps} />

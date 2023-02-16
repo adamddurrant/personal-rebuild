@@ -11,24 +11,28 @@ export default function Menu() {
       <div className={styles.container}>
         <div className={styles.upper}>
           <Link href='/'>
-            <img
-              className={
-                util.hiddenOnMobile + " " + util.pointer + " logoInvert"
-              }
-              src='/logo.png'
-              alt='site logo'
-            ></img>
-            {/* <h2
-            className={
-              util.hiddenOnMobile +
-              " " +
-              util.pointer +
-              " " +
-              styles.homeLogoText
-            }
-          >
-            A Durrant.
-          </h2> */}
+            <>
+              <div className={styles.mainLogo}>
+                <img
+                  className={
+                    util.hiddenOnMobile + " " + util.pointer + " logoInvert"
+                  }
+                  src='/bolt.svg'
+                  alt='site logo'
+                ></img>
+                <h2
+                  className={
+                    util.hiddenOnMobile +
+                    " " +
+                    util.pointer +
+                    " " +
+                    styles.homeLogoText
+                  }
+                >
+                  A Durrant.
+                </h2>
+              </div>
+            </>
           </Link>
 
           <nav className={styles.nav}>

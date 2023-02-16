@@ -130,7 +130,12 @@ export default function Home({ data }) {
           Adam Durrant | SEO Specialist & Meta Certified Web Developer
         </title>
         <meta name='description' content={description} />
-        <link rel='icon' href='/favicon.gif' type='image/gif' />
+        <link
+          href='/favicon-small.png'
+          rel='shortcut icon'
+          type='image/x-icon'
+        />
+        <link href='/favicon-large.png' rel='apple-touch-icon' />
         <meta property='og:image' content='https://www.sj.land/og/index.png' />
       </Head>
       <main className={util.page} id='recentsPage'>
