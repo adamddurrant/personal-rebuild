@@ -1,13 +1,13 @@
 import Head from "next/head";
-import Link from "next/link";
 import { getAllPublished } from "../lib/notion";
-import styles from "../styles/Home.module.css";
 import util from "../styles/util.module.css";
+import PostTile from "../components/postTile";
 
 //page header and in-page description
 const description = "Blog posts written by me";
 
 export default function Home({ posts }) {
+  console.log(posts);
   if (!posts) return <h1>No posts</h1>;
   return (
     <>
@@ -21,17 +21,14 @@ export default function Home({ posts }) {
           <h1 className={util.header}>Blog</h1>
           <p className={util.description}>{description}</p>
           {posts.map((post, index) => (
-            <section key={index} className={styles.card}>
-              <div>
-                <h2>
-                  <Link href={`/posts/${post.slug}`}>
-                    <a className={styles.action}>{post.title}</a>
-                  </Link>
-                </h2>
-                <div>{post.date}</div>
-              </div>
-              <p>{post.description}</p>
-            </section>
+            <PostTile
+              key={index}
+              title={post.title}
+              content={post.description}
+              tags={post.tags}
+              date={post.date}
+              url={post.slug}
+            />
           ))}
         </div>
       </main>

@@ -4,6 +4,8 @@ import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { getAllPublished, getSingleBlogPostBySlug } from "../../lib/notion";
 import util from "../../styles/util.module.css";
 import style from "./markdownStyles.module.css";
+import gfm from "remark-gfm";
+import Link from "next/link";
 
 const CodeBlock = ({ language, codestring }) => {
   return (
@@ -25,6 +27,7 @@ const Post = ({ post }) => {
             </p>
           </div>
           <ReactMarkdown
+            remarkPlugins={[gfm]}
             className={style.reactMarkDown}
             components={{
               code({ node, inline, className, children, ...props }) {
@@ -45,6 +48,9 @@ const Post = ({ post }) => {
             {post.markdown}
           </ReactMarkdown>
         </div>
+        <Link scroll={false} href='/blog'>
+          <a className={util.backButton}> ← &nbsp; Back to blog</a>
+        </Link>
       </article>
     </>
   );

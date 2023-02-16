@@ -22,12 +22,26 @@
   max-width: 300px;
 }
 
+.upper {
+  text-transform: uppercase;
+  font-size: var(--font-s);
+}
+
 .postMeta {
   margin-bottom: 20px;
+  margin-right: 10px;
+  font-size: var(--font-l);
+  line-height: 1.75;
+  color: var(--gray12);
 }
 
 .postDate {
   margin-right: 10px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
 }
 
 .video {
@@ -477,7 +491,7 @@
 }
 .backButton {
   padding: 12px 20px 12px 18px;
-  margin-top: 3.5rem;
+  margin-top: 1.5rem;
   border-radius: 24px;
   background-color: var(--gray2);
   color: var(--gray11);
