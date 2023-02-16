@@ -22,6 +22,14 @@
   max-width: 300px;
 }
 
+.postMeta {
+  margin-bottom: 20px;
+}
+
+.postDate {
+  margin-right: 10px;
+}
+
 .video {
   width: 100%;
   aspect-ratio: 16 / 9;

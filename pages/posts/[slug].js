@@ -3,6 +3,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { getAllPublished, getSingleBlogPostBySlug } from "../../lib/notion";
 import util from "../../styles/util.module.css";
+import style from "./markdownStyles.module.css";
 
 const CodeBlock = ({ language, codestring }) => {
   return (
@@ -17,13 +18,14 @@ const Post = ({ post }) => {
       <article className={util.page} id='aboutPage'>
         <div className={util.pageColumn}>
           <h1 className={util.header}>{post.metadata.title}</h1>
-          <span>{post.metadata.date}</span>
-          <div className={util.tags + " " + util.flexRow}>
+          <div className={util.tags + " " + util.flexRow + " " + util.postMeta}>
+            <span className={util.postDate}>{post.metadata.date}</span>
             <p className={post.metadata.tags[0].color + "Tag tag"}>
               {post.metadata.tags[0].name}
             </p>
           </div>
           <ReactMarkdown
+            className={style.reactMarkDown}
             components={{
               code({ node, inline, className, children, ...props }) {
                 const match = /language-(\w+)/.exec(className || "");
