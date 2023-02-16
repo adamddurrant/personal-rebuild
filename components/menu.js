@@ -47,8 +47,8 @@ export default function Menu() {
             />
             <NavLink
               svg='investments'
-              href='/kind-words'
-              label='Testimonials'
+              href='/testimonials'
+              label='Kind words'
               shortcut='4'
             />
             <p className={styles.divider}>Resources</p>

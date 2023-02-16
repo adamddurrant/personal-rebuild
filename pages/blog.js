@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { getAllPublished } from "../lib/notion";
 import util from "../styles/util.module.css";
-import PostTile from "../components/postTile";
+import PostTile from "../components/tiles/postTile";
 
 //page header and in-page description
 const description = "Blog posts written by me";
