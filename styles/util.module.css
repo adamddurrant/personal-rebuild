@@ -397,7 +397,6 @@
   flex-direction: row;
   align-items: center;
   flex-wrap: nowrap;
-  overflow: scroll;
 }
 .settingButton {
   margin-right: 0px;
@@ -711,6 +710,9 @@
 @media (max-width: 700px) {
   .hiddenOnMobile {
     display: none;
+  }
+  .tabRow {
+    overflow: scroll;
   }
   .page {
     display: flex;

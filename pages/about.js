@@ -24,14 +24,12 @@ export default function About({ data }) {
   }, []);
 
   const description =
-    "I’m a designer and developer by training and trade. I spend most of my spare time reading about business, finance and crypto. If this combination interests you, welcome to my corner of the internet. This is where I share my reading list, investment updates, and software adventures.";
+    "I’m an SEO specialist and front-end developer by trade. I currently spend most of my spare time learning React. Welcome to my corner of the internet. Here I share my writings, favourite resources, personal updates and career adventures.";
   return (
     <>
       <Head>
         <title>Adam Durrant · About</title>
         <meta name='description' content={description} />
-        <link rel='icon' href='/favicon.gif' />{" "}
-        <meta property='og:image' content='https://www.sj.land/og/index.png' />
       </Head>
       <main className={util.page} id='aboutPage'>
         <div className={util.pageColumn}>
@@ -40,7 +38,7 @@ export default function About({ data }) {
             <p className={util.description}>{description}</p>
             <div className={util.read}>
               <h2 style={{ padding: "1rem 0rem 0rem 0rem" }} id='about-update'>
-                Updates
+                Personal updates
               </h2>
             </div>
             <ul className={util.list} style={{ margin: "0rem 0rem 0rem 0rem" }}>
@@ -57,97 +55,78 @@ export default function About({ data }) {
             </ul>
             <div className={util.divider}></div>
             <div className={util.read}>
-              <h2>Me</h2>
+              <h2>About me</h2>
               <p>
                 {
-                  "Trained and still based in New York. I’m deeply fascinated by all design practices from UI history to iconic chairs. My "
+                  "I have almost a decade of experience as a professional SEO specialist. I've worked freelance, in-house and agency-side for startups, SMEs and larger corporations alike."
                 }
+
+                {"My work have been featured in; "}
                 <a
-                  href='https://form2shape.com/'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className={util.externalLink}
-                >
-                  {"master's thesis"}
-                </a>
-                {
-                  " included an archive of influential 20th century industrial design. During undergrad, I wrote papers on Jony Ive and Issey Miyake. In those fashion years, I learned about supply chains and sewed dozens of garments myself. Growing up with an architect father, I’ve paid attention to shapes, forms and spaces at every street corner since I was a kid. "
-                }
-              </p>
-              <p>
-                {
-                  "Another big part of my life is my pursuit to better understand how the world works. Complicated systems and economic patterns fascinate me. You can find what I’ve been reading in my "
-                }
-                <Link href='/reading-list'>
-                  <a className={util.internalLink}>Reading List</a>
-                </Link>
-                {". "}
-              </p>
-              <p>
-                {
-                  "As I learn I get interested in validating my understanding through investing. I participated in different venture related progroms at "
-                }
-                <a
-                  href='https://fellows.kleinerperkins.com/'
+                  href='https://www.searchenginewatch.com/'
                   target='_blank'
                   rel='noopener noreferrer'
                   className={util.normalLink}
                 >
-                  Kleiner Perkins
+                  Search Engine Watch
+                </a>
+                {", "}
+                <a
+                  href='https://trafficthinktank.com/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className={util.normalLink}
+                >
+                  Traffic Think Tank
+                </a>
+                {", "}
+                <a
+                  href='https://www.seofomo.co/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className={util.normalLink}
+                >
+                  SEO FOMO
                 </a>
                 {" and "}
                 <a
-                  href='https://republic.com/venture-programs'
+                  href='https://www.oncrawl.com/'
                   target='_blank'
                   rel='noopener noreferrer'
                   className={util.normalLink}
                 >
-                  Republic
+                  Oncrawl
                 </a>
+
                 {
-                  " and now often make deal introductions. You can get a look at my current "
+                  ". For as long as I can remember I have been passionate about the web and fascinated by code."
                 }
-                <Link href='/investments'>
-                  <a className={util.internalLink}>investing portfolio here</a>
-                </Link>
-                {". "}
               </p>
               <p>
-                {"To keep myself active, I play table tennis at "}
-                <a
-                  href='https://pingpod.com/'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className={util.externalLink}
-                >
-                  PingPod
-                </a>
-                {" and boulder at a few different gyms in Brooklyn. I used to "}
-                <a
-                  href='https://instagram.com/woandworld'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className={util.externalLink}
-                >
-                  travel
-                </a>
-                {" a lot between 2014-2018."}
+                {
+                  "My personal mission is to help grow ambitious brands online, working with and meeting the most creative and ambitious people along the way helping them own their own piece of the web."
+                }
               </p>
 
               <h2>Career</h2>
               <p className={util.read}>
-                {"I’m currently working at Series B fintech company "}
+                {"I’m currently working at Series B biotech company "}
                 <a
-                  href='https://withcompound.com'
+                  href='https://joinzoe.com/'
                   target='_blank'
                   rel='noopener noreferrer'
                   className={util.externalLink}
                 >
-                  Compound
+                  ZOE
                 </a>
                 {". "}
                 {
-                  "In the 10+ years that I've been studying and working in design. I spent the first two in arts, and the next four years trying my hands in different design practices. In the last few years, I focused on designing and developing software products. I’ve worked in large design teams as well as performed as the sole designer for startups. If you are interested to know more, you can find me on "
+                  "In the 7+ years that I've been working in the SEO industry I have made it my mission to learn by doing. I started my career at the bottom as an SEO assistant and quickly learned the craft from the ground up and quickly realised why SEO was so lucrative (it can be powerful in the right hands). Since then, i've been hooked on all things web."
+                }
+              </p>
+              <p>
+                {
+                  "I have added a brief summary below. If you are interested to learn more, "
                 }
                 <a
                   href='https://www.linkedin.com/in/s-j-zhang/'
@@ -155,74 +134,68 @@ export default function About({ data }) {
                   rel='noopener noreferrer'
                   className={util.externalLink}
                 >
-                  Linkedin
+                  visit my Linkedin
                 </a>
-                {". I’ve also added a summary below."}
               </p>
             </div>
             <div>
               <ExpTile
-                date='2020–Now'
-                title='Design at Compound'
-                url={"https://withcompound.com"}
+                date='2022–Now'
+                title='SEO Manager at ZOE'
+                url={"https://joinzoe.com/"}
                 content={
-                  "Started as the only designer from Seed to Series B. Then recruited and built a talented team of designers across product and brand."
+                  "Inspired by the brand and their mission I joined ZOE as their first SEO manager to support ambitious growth goals."
+                }
+              />
+              <ExpTile
+                date='2021'
+                title='SEO Consultant at Brainlabs Digital'
+                url={"https://www.brainlabsdigital.com/"}
+                content={
+                  "Led SEO strategy, planning and execution for household name brands as their main POC. Working in a team of 10."
                 }
               />
               <ExpTile
                 date='2020'
-                title='Design Fellow at Kleiner Perkins (Zumper)'
-                url={"https://zumper.com"}
+                title='Digital Marketing Manager at Tots to Travel'
                 content={
-                  "Led Zumper’s landlord portal redesign to improve listing completeness and product adoption. Zumper is the largest US private startup in the rental space."
-                }
-              />
-              <ExpTile
-                date='2019–20'
-                title='Design at Friendly Studio'
-                url={"https://friendly.studio"}
-                content={
-                  "First designer at the design collective. Mainly worked for YC19 recruiting startup Flo Recruit. Design experiences across web, tablet and mobile use-cases for lawyers. Design and built landing pages and CMS-driven blogs."
+                  "Owned SEO & paid social in house with external agency management of other paid channels"
                 }
               />
               <ExpTile
                 date='2019'
-                title='UX Design at Sonos'
-                url={"https://sonos.com"}
+                title='SEO & Content Specialist at CIPS'
+                url={"https://www.cips.org/"}
                 content={
-                  "Led service connections redesign. Ran exploration on music scheduling experiences. Sonos app is used by 10M households. "
+                  "Main SEO POC globally including APAC teams. Oversaw technical and content strategy."
                 }
               />
               <ExpTile
-                date='2017–18'
-                title='Web/Digital Design at Fashion Company'
-                url={"https://illesteva.com"}
+                date='2018'
+                title='SEO & Data Lead at Zazzle Media'
+                url={"https://www.zazzlemedia.co.uk/"}
                 content={
-                  "Led the website redesign and relaunched the e-commerce platform on Shopify. Supported social graphics and ran all email marketing efforts."
+                  "Main SEO POC for varied clients in finance and eCommerce. Executed strategy as dictated by strategy lead."
                 }
               />
               <ExpTile
-                date='2015–17'
-                title='Co-Founder at Fashion Company'
+                date='2016'
+                title='SEO & Content Executive at Interflora'
                 content={
-                  "Targeted the affordable luxury accessory market. Got some press, sales, and traction but ultimately closed it down. The site I built was featured as a Squarespace template example, which accidentally pushed me toward web and digital design."
+                  "Primarily worked on Interflora's portfolio brands building on an existing SEO strategy but touching all aspects of optimisation."
                 }
-              />
-              <ExpTile
-                date='2012–20'
-                title={
-                  "Freelance Designer & Intern at multiple Fashion Companies"
-                }
-                content={
-                  "Did graphic design freelance gigs, while doing the most ridiculous intern chores at different New York fashion companies."
-                }
+                url={"https://www.interflora.co.uk/"}
               />
             </div>
             <div className={util.read}>
-              <h2>This Site</h2>
+              <h2>This site</h2>
               <p>
-                This site was initially built in Apr 2022 over 2 weekends. I
-                built it for 2 reasons:
+                This site was forked, rebuilt and modified from a build by
+                designer/developer that inspires me
+                <a href='https://www.linkedin.com/in/s-j-zhang'>S J Zhang</a>. I
+                am in the process of learning React and Next.js and fell in love
+                with SJ&apos;s design so I set about putting it together piece
+                by piece to:
               </p>
               <ol
                 type='1'
@@ -230,17 +203,27 @@ export default function About({ data }) {
                 style={{ padding: "0rem 0rem 0rem 1.25rem" }}
               >
                 <li style={{ marginBottom: "0.5rem" }}>
-                  Keep myself accountable with my investments and learnings.
-                  Sharing these in public gives me another level of rigor.
+                  Motivate myself to read, interpret and understand code written
+                  by another developer.
                 </li>
                 <li style={{ marginBottom: "0.5rem" }}>
-                  Keep myself engaged with the latest stacks. Iterating on my
-                  personal site gives me an opportunity to try new libraries and
-                  frameworks.
+                  Keep myself accountable with my goal of mastering front end
+                  development. So far I&apos;m loving React and Next.js.
+                </li>
+                <li style={{ marginBottom: "0.5rem" }}>
+                  Keep myself engaged with the modern frameworks and libraries.
+                  Having a beautiful site motivates me to continuously iterate,
+                  improve and experiment with new tech.
                 </li>
               </ol>
               <p>
-                This site is built with{" "}
+                SJ has kindly licensed this build for anyone to use as a
+                template{" "}
+                <a href='https://github.com/sjzhan9/sj-land'>over on Github</a>{" "}
+                so you can try it too!
+              </p>
+              <p>
+                The site is built with{" "}
                 <a
                   href='https://nextjs.org/'
                   target='_blank'

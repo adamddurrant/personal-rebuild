@@ -3,6 +3,7 @@ import Menu from "../components/menu";
 import { ThemeProvider } from "next-themes";
 import Background from "../components/background";
 import Head from "next/head";
+import toast, { Toaster } from "react-hot-toast";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -20,6 +21,16 @@ function MyApp({ Component, pageProps }) {
             content='https://www.sj.land/og/index.png'
           />
         </Head>
+        <Toaster
+          toastOptions={{
+            duration: 1500,
+            style: {
+              padding: "3px",
+              borderRadius: "6px",
+              fontSize: "14px",
+            },
+          }}
+        />
         <Background />
         <Menu />
         <Component {...pageProps} />

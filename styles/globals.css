@@ -128,9 +128,9 @@ html {
 }
 
 .logoInvert {
-  width: 15px;
+  width: 11px;
   margin-right: 0.5rem;
-  margin-left: 10px;
+  margin-left: 16px;
   transition: color 0.2s ease;
   opacity: 0.9;
   -webkit-user-drag: none;
