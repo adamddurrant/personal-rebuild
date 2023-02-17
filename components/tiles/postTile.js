@@ -1,5 +1,5 @@
 import styles from ".//postTile.module.css";
-import util from "../styles/util.module.css";
+import util from "../../styles/util.module.css";
 
 export default function PostTile({ title, content, url, tags }) {
   return (

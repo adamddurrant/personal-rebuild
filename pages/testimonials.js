@@ -8,7 +8,7 @@ import TestimonialTile from "../components/tiles/testimonialTile";
 export default function testimonials({ reviews }) {
   console.log(reviews);
   const description =
-    "I have been fortunate enough to work with some rockstars. Here's what they had to say.";
+    "I have been fortunate enough to work with some genuine rockstars. Here's what they had to say:";
   return (
     <>
       <Head>
@@ -21,7 +21,6 @@ export default function testimonials({ reviews }) {
           <h1 className={util.header}>Kind words</h1>
           <div className={util.inset}>
             <p className={util.description}>{description}</p>
-            <div className={util.read}></div>
             <div className={util.flexGrid}>
               {reviews.map((item) => (
                 <TestimonialTile
