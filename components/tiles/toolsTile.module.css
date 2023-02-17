@@ -23,16 +23,6 @@
   transition: opacity 0.2s ease, color 0.2s ease;
 }
 
-.separate {
-  border-width: 0px;
-  margin-block-start: 0.2em;
-  margin-block-end: 0.2em;
-}
-
-.top {
-  margin-top: 10px;
-}
-
 .container:hover .externalIcon {
   opacity: 1;
 }
@@ -49,7 +39,8 @@
   align-items: flex-start;
   justify-content: center;
   padding: 0px;
-  padding: 1.5rem 0rem 1.5rem 0.5rem;
+  margin-left: 2rem;
+  padding: 1.5rem 0rem 1.5rem 0rem;
   /* height: 6rem; */
   width: 100%;
   border-bottom: 1px solid var(--linkContainerBorder);
@@ -61,7 +52,13 @@
   width: 64px;
   height: 64px;
   flex-shrink: 0;
+  background-color: rgb(255 255 255);
 }
+
+.image > span > img {
+  padding: 5% !important;
+}
+
 @media (max-width: 700px) {
   .container {
     margin: 0rem -0.5rem;

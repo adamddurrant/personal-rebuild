@@ -1,7 +1,7 @@
 import styles from ".//postTile.module.css";
 import util from "../../styles/util.module.css";
 
-export default function PostTile({ title, content, url, tags }) {
+export default function PostTile({ title, content, url, tags, date }) {
   return (
     <a
       href={"posts/" + url}
@@ -11,7 +11,7 @@ export default function PostTile({ title, content, url, tags }) {
       <div className={styles.stack}>
         <div>
           <span className={tags[0].color + "Tag tag"}>{tags[0].name}</span>
-
+          <hr className={styles.separate}></hr>
           <h3
             className={util.tileTitle + " " + styles.inline + " " + styles.top}
           >

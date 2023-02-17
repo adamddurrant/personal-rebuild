@@ -48,7 +48,7 @@ export default function Menu() {
             <NavLink
               svg='investments'
               href='/testimonials'
-              label='Kind words'
+              label='Kind Words'
               shortcut='4'
             />
             <p className={styles.divider}>Resources</p>
@@ -61,8 +61,8 @@ export default function Menu() {
             />
             <NavLink
               svg='newsletters'
-              href='/newsletters'
-              label='Newsletters'
+              href='/tools'
+              label='Tools'
               shortcut='7'
             />
             <NavLink
