@@ -71,7 +71,7 @@ export default function Menu() {
               label='Podcasts'
               shortcut='8'
             />
-            <p className={styles.divider}>Stay in touch</p>
+            <p className={styles.divider}>Reach out</p>
             <Contact svg='chat' label='Contact' shortcut='9' />
             <NavLink
               svg='twitter'

@@ -22,197 +22,73 @@ export default function Projects() {
 
   //page header and in-page description
   const description =
-    "Since mid 2020, I’ve focused my energy on Compound. Before that, I worked on a few personal coding projects, freelance and in-house design jobs. Between 2018 and 2020 I worked on a variety of hardware, installations, AR and creative coding sketches.";
+    "Since 2016, I’ve focused my energy on my SEO career. I am slowly transitioning to focus more on coding. More interesting projects will be added to this page soon.";
   return (
     <>
       <Head>
-        <title>{"SJ's Projects"}</title>
+        <title>{"Adam Durrant - Projects"}</title>
         <meta name='description' content={description} />
-        <link rel='icon' href='/favicon.gif' />{" "}
-        <meta property='og:image' content='https://www.sj.land/og/index.png' />
       </Head>
 
       <main id='projectsPage' className={util.page}>
         <div className={util.pageColumn}>
           <h1 className={util.header}>Projects</h1>
-          <p className={util.description}>
-            {"Since mid 2020, I’ve focused my energy on "}
-            <a
-              href='https://withcompound.com'
-              target='_blank'
-              rel='noopener noreferrer'
-              className={util.externalLink}
-            >
-              Compound
-            </a>
-            {
-              ". Before that, I worked on a few personal coding projects, freelance and in-house design jobs. Between 2018 and 2020 I worked on a variety of hardware, installations, AR and creative coding sketches."
-            }
-          </p>
+          <p className={util.description}>{description}</p>
           <ul className={util.list}>
             <ProjectTile
-              image='Clock'
-              title='Compound'
-              content='This is where I work and spent the last few years'
-              type='Design · Full-time'
-              date='2020-06-01'
-              url='https://withcompound.com'
+              image='zoe'
+              title='ZOE Library Reimagined'
+              content='A redesign and build of the ZOE blog subfolder. Built to help me learn an epic combo: Nextjs + DatoCMS.'
+              type='Nextjs · DatoCMS . Tailwind . Side Project'
+              date='2023-01-01'
+              url='https://github.com/adamddurrant/zoe-clone'
             />
             <ProjectTile
-              image='Clock'
-              title='Form2Shape'
+              image='seotweets'
+              title='seotweets.io'
               content={
-                "A graphic editor & library inspired by historically significant designs"
+                "An automated twitter curation web app & newsletter that reached 2k signups. Built, launched and sold."
               }
-              type='React · Side Project'
-              date='2020-05-20'
-              url='https://form2shape.com/'
+              type='Webflow · Zapier . Twitter API . Side Project'
+              date='2021-05-20'
+              url='https://www.producthunt.com/products/seotweets'
             />
             <ProjectTile
-              image='Clock'
-              title='Startup Idea Generator'
+              image='pete-mason'
+              title='Peter Mason - Pro Lifestyle Photographer'
               content={
-                "A site that uses keywords to generate startup ideas. All the ideas are pre-generated though a machine learning model. It is trained on more than 1800 historical Y-Combinator startup descriptions on the foundation of GPT-2."
+                "A site that had a host of legacy issues completely rebuilt and restructured using modern WordPress frameworks. "
               }
-              type='GPT2 · Side Project'
-              date='2020-04-25'
-              url='https://startup-generator-app.web.app'
+              type='WordPress · Vanilla CSS . WPBakery . Freelance'
+              date='2019-02-25'
+              url='https://peter-mason.com/'
             />
             <ProjectTile
-              image='Clock'
-              title='Flo Recruit'
+              image='city-academy'
+              title='City Academy of Ballet'
               content={
-                "I spent 8 months freelancing for the legal recruiting platform. I worked on the dashboard for employer and school platform. I also designed and built the marketing website and a CMS driven blog."
+                "The academy was struggling to find new members and had no online presence. The site was built with Webflow and now drives consistent leads to the ballet school via organic search."
               }
-              type='Startup · Freelance'
-              date='2020-04-20'
-              url={"flo"}
-              internal='true'
+              type='Webflow . Freelance'
+              date='2022-04-20'
+              url={"https://www.cityacademyofballet.co.uk/"}
             />
             <ProjectTile
-              image='Clock'
-              title='Gesture Map'
-              content={"A interactive installation"}
-              type='OpenFrameworks + Kinect · Side Project'
-              date='2020-02-20'
-              url={"https://vimeo.com/376008207"}
-            />
-            <ProjectTile
-              image='Clock'
-              title='SF Everywhere'
+              image='shopping-list'
+              title='Shopping List CRUD'
               content={
-                "A Chrome extension that turns texts on a webpage into the system default font (San Francisco for Mac OS, Segoe UI for Window). It serves as an alternative to Reading Mode. You can use SF Everywhere to improve text readabilities but not completely remove the site design."
+                "It might be cliché but I couldn't find a simple and unbloated shopping list app to use with my partner. Please reach out for the password if you want to play (it's our actual shopping list). "
               }
-              type='Chrome Extention · Side Project'
-              date='2020-02-20'
-              url={
-                "https://chrome.google.com/webstore/detail/system-font-everywhere/dcncgmembfephfbibnnigchndgncmdnj?authuser=1&hl=en"
-              }
-            />
-            <ProjectTile
-              image='Clock'
-              title='Crumb Film'
-              content={"Web Design & Dev for indie film studio"}
-              type='Freelance'
-              date='2019-12-20'
-              url={"crumb"}
-              internal='true'
-            />
-            <ProjectTile
-              image='Clock'
-              title='Sonos'
-              content={
-                "I led design on music and podcast service intergrations."
-              }
-              type='NASDAQ: SONO · Full-time'
-              date='2019-08-20'
-              url={"https://sonos.com"}
-            />
-            <ProjectTile
-              image='Clock'
-              title='Mixily'
-              content={
-                "I freelanced a few month for the lightweight event planning platform. As a Facebook Event alternative that focuses on privacy and being inclusive to non-facebook users, Mixily allows you to create and manage events, RSVPs, message attendees."
-              }
-              type='Startup · Freelance'
-              date='2019-07-20'
-              url={"mixily"}
-              internal='true'
-            />
-
-            <ProjectTile
-              image='Clock'
-              title='Say it'
-              content={
-                "An iOS app that adds interactive text overlays to your photos and videos. The text overlay reacts to your facial expressions. This was done in early 2019, before instagram and TikTok popularized the live transcription feature for video recording."
-              }
-              type='iOS · Side Project'
-              date='2019-05-20'
-              url={
-                "https://apps.apple.com/us/app/say-it-ar-expressions/id1480969165"
-              }
-            />
-            <ProjectTile
-              image='Clock'
-              title='OneCare'
-              content={
-                "A 2-day design exercise to improve the quality of life for children with type-1 diabetes. The app helps patient monitor their glucose level, manage insulin injection alerts and track symptoms."
-              }
-              type='Design Exercise'
-              date='2019-04-20'
-              url={"onecare"}
-              internal='true'
-            />
-            <ProjectTile
-              image='Clock'
-              title='BillShare'
-              content={
-                "A design exercise to enable people splitting bills effectively. The experience utilizes familiar chat interfaces for the organization of groups. The App also enable various splitting methods. It was a 4 day project that I carried out from research to hi-fidelity UI design."
-              }
-              type='Design Exercise'
-              date='2019-03-20'
-              url={"billshare"}
-              internal='true'
-            />
-            <ProjectTile
-              image='Clock'
-              title='Oriant'
-              content={
-                "A design exercise to encourage students exploring orientation events and manage their orientation schedules. It was a 5 day project that I covered from research to prototyping. "
-              }
-              type='Design Exercise'
-              date='2019-02-20'
-              url={"oriant"}
-              internal='true'
-            />
-            <ProjectTile
-              image='Clock'
-              title='ParkAmigo'
-              content={
-                "I spent 2 weeks working on a complete redesign of the ParkAmigo iOS app."
-              }
-              type='iOS - Freelance'
-              date='2018-12-20'
-              url={"parkamigo"}
-              internal='true'
-            />
-            <ProjectTile
-              image='Clock'
-              title='Illesteva'
-              content={
-                "I worked as a graphic designer at the eyewear brand. I redesigned and maintained the e-commerce site and was in charge of all online and offline graphical assets."
-              }
-              type='Web · Full-time'
-              date='2017-8-24'
-              url={"illesteva"}
-              internal='true'
+              type='HTML . CSS · Vanilla JS . Firebase . Side Project'
+              date='2021-02-20'
+              url={"https://adamdurrant.co.uk/projects/shopping-list"}
             />
           </ul>
           <p
             className={util.tileContent}
             style={{ marginTop: "6rem", textAlign: "center" }}
           >
-            {"Work before 2017 wasn't very well-documented :)"}
+            {"More soon :)"}
           </p>
         </div>
       </main>
