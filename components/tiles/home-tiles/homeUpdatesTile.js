@@ -1,5 +1,5 @@
 import styles from ".//homeUpdateTile.module.css";
-import util from "../../styles/util.module.css";
+import util from "../../../styles/util.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import * as Tooltip from "@radix-ui/react-tooltip";

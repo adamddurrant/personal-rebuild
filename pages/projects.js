@@ -81,7 +81,7 @@ export default function Projects() {
               }
               type='HTML . CSS · Vanilla JS . Firebase . Side Project'
               date='2021-02-20'
-              url={"https://adamdurrant.co.uk/projects/shopping-list"}
+              url={"https://shopping-list-regsnmcwt-adamddurrant.vercel.app/"}
             />
           </ul>
           <p

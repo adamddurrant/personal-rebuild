@@ -6,9 +6,10 @@ import React, { useEffect } from "react";
 import util from "../styles/util.module.css";
 import { motion, AnimatePresence } from "framer-motion";
 import OnboardingCard from "../components/onboardingCard";
-import HomeUpdatesTile from "../components/tiles/homeUpdatesTile";
+import HomeUpdatesTile from "../components/tiles/home-tiles/homeUpdatesTile";
+import ReadingListTile from "../components/tiles/home-tiles/readingListTile";
 
-export default function Home({ data }) {
+export default function Home({ data, readingList }) {
   const tips = [
     {
       id: "useShortCut",
@@ -192,7 +193,6 @@ export default function Home({ data }) {
               </motion.div>
             )}
           </AnimatePresence>
-
           <div className={styles.homeSectionContainer}>
             <h2 className={styles.homeSectionTitle}>Personal updates</h2>
             <Link href='/about#about-update'>
@@ -208,6 +208,24 @@ export default function Home({ data }) {
                 content={item.properties.Description.rich_text}
                 url={item.properties.URL.url}
                 date={item.properties.Date.date.start}
+              />
+            ))}
+          </ul>
+          <div className={styles.homeSectionContainer}>
+            <h2 className={styles.homeSectionTitle}>Reading List</h2>
+            <Link href='/reading-list'>
+              <a className={styles.homeLinkButton}>View All</a>
+            </Link>
+          </div>{" "}
+          <ul className={styles.homeReadingGrid}>
+            {readingList.map((link) => (
+              <ReadingListTile
+                key={link.id}
+                title={link.properties.Name.title[0].plain_text}
+                url={link.properties.URL.url}
+                date={link.created_time}
+                fav={link.properties.Fav.checkbox}
+                tags={link.properties.Tags.multi_select}
               />
             ))}
           </ul>
@@ -243,9 +261,31 @@ export const getStaticProps = async () => {
     page_size: 4,
   });
 
+  const readingListResponse = await notion.databases.query({
+    database_id: process.env.READING_LIST_DATABASE_ID,
+    filter: {
+      and: [
+        {
+          property: "Display",
+          checkbox: {
+            equals: true,
+          },
+        },
+      ],
+    },
+    sorts: [
+      {
+        property: "Created",
+        direction: "descending",
+      },
+    ],
+    page_size: 8,
+  });
+
   return {
     props: {
       data: response.results,
+      readingList: readingListResponse.results,
     },
     revalidate: 5,
   };

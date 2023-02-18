@@ -69,6 +69,12 @@ export async function getStaticProps() {
         },
       ],
     },
+    sorts: [
+      {
+        property: "Order",
+        direction: "ascending",
+      },
+    ],
   });
 
   return {
