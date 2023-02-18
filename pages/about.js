@@ -1,12 +1,14 @@
+/* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
 import Link from "next/link";
 import React, { useEffect } from "react";
 import util from "../styles/util.module.css";
 import ContactContent from "../components/contactContent";
 import ExpTile from "../components/tiles/expTile";
-import Script from "next/script";
+import Image from "next/image";
 const { Client } = require("@notionhq/client");
 import Tile from "../components/tiles/tile";
+import SkillsIcon from "../components/skillsIcon";
 import { getAllUpdates } from "../lib/notion";
 
 export default function About({ data }) {
@@ -36,6 +38,7 @@ export default function About({ data }) {
           <h1 className={util.header}>About</h1>
           <div className={util.inset}>
             <p className={util.description}>{description}</p>
+
             <div className={util.read}>
               <h2 style={{ padding: "1rem 0rem 0rem 0rem" }} id='about-update'>
                 Personal updates
@@ -108,9 +111,58 @@ export default function About({ data }) {
                 }
               </p>
 
+              <div className={util.read}>
+                <h2 style={{ padding: "1rem 0rem 0rem 0rem" }} id='about-tools'>
+                  Software & Technologies
+                </h2>
+                <p className={util.read}>
+                  My journey to front end proficiency is still in its infancy
+                  and I am dabbling with numerous languages and frameworks to
+                  discover what I enjoy most such as the Next.js used to build
+                  this website.
+                </p>
+                <p>
+                  However, I am experimenting and working most with the
+                  following technology stack:
+                </p>
+
+                <div className={util.flexRow}>
+                  <div className={util.flexRow + "" + util.alignCenter}>
+                    <p class={util.date}>Development:</p>
+                  </div>
+                  <div className={util.flexRow}>
+                    <SkillsIcon icon={"html"} technology={"HTML 5"} />
+                    <SkillsIcon icon={"css"} technology={"CSS 3"} />
+                    <SkillsIcon
+                      icon={"javascript"}
+                      technology={"JavaScript ES6"}
+                    />
+                    <SkillsIcon icon={"react"} technology={"React"} />
+                    <SkillsIcon icon={"tailwind"} technology={"Tailwind CSS"} />
+                    <SkillsIcon icon={"webflow"} technology={"Webflow"} />
+                    <SkillsIcon icon={"wordpress"} technology={"WordPress 6"} />
+                  </div>
+                </div>
+                <div style={{ paddingTop: "20px" }} className={util.flexRow}>
+                  <div className={util.flexRow + "" + util.alignCenter}>
+                    <p class={util.date}>Design:</p>
+                  </div>
+                  <div className={util.flexRow}>
+                    <SkillsIcon icon={"figma"} technology={"Figma"} />
+                    <SkillsIcon icon={"framer"} technology={"Framer"} />
+                    <SkillsIcon
+                      icon={"photoshop"}
+                      technology={"Adobe Photoshop"}
+                    />
+
+                    <SkillsIcon icon={"xd"} technology={"Adobe Xd"} />
+                  </div>
+                </div>
+              </div>
+
               <h2>Career</h2>
               <p className={util.read}>
-                {"I’m currently working at Series B biotech company "}
+                {"I’m currently working at series B biotech company "}
                 <a
                   href='https://joinzoe.com/'
                   target='_blank'
@@ -121,7 +173,7 @@ export default function About({ data }) {
                 </a>
                 {". "}
                 {
-                  "In the 7+ years that I've been working in the SEO industry I have made it my mission to learn by doing. I started my career at the bottom as an SEO assistant and quickly learned the craft from the ground up and quickly realised why SEO was so lucrative (it can be powerful in the right hands). Since then, i've been hooked on all things web."
+                  "In the 7+ years that I've been working in the SEO industry I have made it my mission to learn by doing. I started my career at the bottom as an SEO assistant and quickly realised how much impact I could make as a solo marketeer. Since then, i've been hooked on all things web."
                 }
               </p>
               <p>

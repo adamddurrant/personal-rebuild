@@ -23,7 +23,7 @@ export default function ContactContent() {
       <div className={styles.row}>
         <div className={styles.stack}>
           <p className={styles.mainText}>Email</p>
-          <p className={styles.subText}>hello at adamdurrant.co.uk</p>
+          <p className={styles.subText}>I&apos;m always happy to help </p>
         </div>
 
         <div className={styles.buttonPair}>

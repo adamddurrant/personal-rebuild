@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50" height="50">
+	<title>New Project</title>
+	<defs>
+		<image width="512" height="512" id="img1" href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IS0tIFVwbG9hZGVkIHRvOiBTVkcgUmVwbywgd3d3LnN2Z3JlcG8uY29tLCBHZW5lcmF0b3I6IFNWRyBSZXBvIE1peGVyIFRvb2xzIC0tPgo8c3ZnIGhlaWdodD0iODAwcHgiIHdpZHRoPSI4MDBweCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgphcmlhLWxhYmVsPSJDU1MzIiByb2xlPSJpbWciCnZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjMjY0ZGU0IgpkPSJNNzIgNDYwTDMwIDBoNDUxbC00MSA0NjAtMTg0IDUyIi8+PHBhdGggZmlsbD0iIzI5NjVmMSIKZD0iTTI1NiAzN1Y0NzJsMTQ5LTQxIDM1LTM5NCIvPjxwYXRoIGZpbGw9IiNlYmViZWIiCmQ9Im0xMTQgOTRoMTQydjU2SDExOW01IDU4aDEzMnY1N0gxMjltMyAyOGg1Nmw0IDQ1IDY0IDE3djU5TDEzOSAzODIiLz48cGF0aCBmaWxsPSIjZmZmZmZmIgpkPSJtMjU2IDIwOHY1N2g2OWwtNyA3My02MiAxN3Y1OWwxMTUtMzIgMjYtMjg4SDI1NnY1Nmg4MGwtNS41IDU4WiIvPjwvc3ZnPg=="/>
+	</defs>
+	<style>
+	</style>
+	<use id="css3-svgrepo-com" href="#img1" transform="matrix(.098,0,0,.098,0,0)"/>
+</svg>

@@ -22,6 +22,28 @@
   max-width: 300px;
 }
 
+.skillsInvert {
+  transition: color 0.2s ease;
+  opacity: 0.9;
+  -webkit-user-drag: none;
+}
+
+.dark-theme .skillsInvert {
+  filter: invert(1);
+}
+
+.date {
+  width: 80px;
+  font-size: var(--font-m);
+  color: #7e7e7e !important;
+  margin: 0px 30px 0px 0px !important;
+  margin-right: 1rem;
+}
+
+.alignCenter {
+  align-items: center;
+}
+
 .upper {
   text-transform: uppercase;
   font-size: var(--font-s);
@@ -112,6 +134,7 @@
   font-weight: 450;
   color: var(--gray9);
 }
+
 .center {
   text-align: center;
   display: flex;
@@ -376,6 +399,13 @@
   align-items: center;
   flex-wrap: wrap;
 }
+
+.flexCol {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+
 .inlineCTA {
   display: flex;
   flex-direction: row;

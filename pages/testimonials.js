@@ -6,7 +6,6 @@ import { Client } from "@notionhq/client";
 import TestimonialTile from "../components/tiles/testimonialTile";
 
 export default function testimonials({ reviews }) {
-  console.log(reviews);
   const description =
     "I have been fortunate enough to work with some genuine rockstars. Here's what they had to say:";
   return (

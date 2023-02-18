@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50" height="50">
+	<title>New Project</title>
+	<defs>
+		<image width="213" height="148" id="img1" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMTIuOCIgaGVpZ2h0PSIxNDcuNyIgdmlld0JveD0iMCAwIDIxMi44IDE0Ny43Ij4NCiAgPHBhdGggaWQ9IndlYmZsb3dfdyIgZD0iTTI2MSwxNzQuM3MtMTcuMyw1NC4yLTE4LjYsNTguOGMtLjUtNC42LTEzLjEtMTAyLTEzLjEtMTAyLTI5LjUsMC00NS4yLDIwLjktNTMuNSw0My4yLDAsMC0yMSw1NC40LTIyLjcsNTktLjEtNC4zLTMuMi01OC40LTMuMi01OC40LTEuOC0yNy4yLTI2LjYtNDMuNy00Ni43LTQzLjdsMjQuMiwxNDcuNmMzMC45LS4xLDQ3LjUtMjEsNTYuMi00My4yLDAsMCwxOC41LTQ4LDE5LjMtNTAuMi4yLDIuMSwxMy4zLDkzLjQsMTMuMyw5My40LDMwLjksMCw0Ny42LTE5LjYsNTYuNi00MUwzMTYsMTMxLjFDMjg1LjQsMTMxLjEsMjY5LjMsMTUyLDI2MSwxNzQuM1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMDMuMiAtMTMxLjEpIiBmaWxsPSIjNDM1M2ZmIi8+DQo8L3N2Zz4NCg=="/>
+	</defs>
+	<style>
+	</style>
+	<use id="5f32a6e2259196e3f6e6e0c5_webflow logo" href="#img1" transform="matrix(.235,0,0,.236,0,8)"/>
+</svg>

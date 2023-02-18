@@ -34,7 +34,7 @@ export default function ReadingList({ list }) {
     return () => thisPage.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const filters = ["General", "Business", "Tech", "Health"];
+  const filters = ["Business", "Design", "SEO", "Development", "Health"];
 
   //handlers to handle filter and fav setting changes
   function removeFilter() {
