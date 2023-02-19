@@ -127,11 +127,16 @@ export default function Home({ data, readingList, posts }) {
   const description =
     "Adam Durrant - Growing ambitious brands online. Working with and learning from inspiring people along the way.";
 
+  const pageTitle = "dam Durrant | SEO Specialist & Front-end Web Developer";
+
   return (
     <>
       <Head>
-        <title>Adam Durrant | SEO Specialist & Front-end Web Developer</title>
+        <title>{pageTitle}</title>
         <meta name='description' content={description} />
+        <meta property='og:url' content='https://adamdurrant.co.uk/' />
+        <meta property='og:title' content={pageTitle} />
+        <meta property='og:description' content={description} />
       </Head>
       <main className={util.page} id='recentsPage'>
         <div className={styles.homeColumn}>

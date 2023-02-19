@@ -9,6 +9,8 @@ export default function Custom404() {
       <Head>
         <title>404 Not Found</title>
         <meta name='description' content='Page missing' />
+        <meta property='og:title' content='404 Not Found' />
+        <meta property='og:description' content='Page missing' />
       </Head>
       <main className={util.page} id='recentsPage'>
         <div className={util.center}>

@@ -25,11 +25,16 @@ export default function Podcasts({ list }) {
   const description =
     "A collection of podcasts I listen to on a regular basis for learning, health and entertainment.";
 
+  const pageTitle = "Adam Durrant | Favourite Podcasts";
+
   return (
     <>
       <Head>
-        <title>{"Adam Durrant | Favourite Podcasts"}</title>
+        <title>{pageTitle}</title>
         <meta name='description' content={description} />
+        <meta property='og:url' content='https://adamdurrant.co.uk/podcasts' />
+        <meta property='og:title' content={pageTitle} />
+        <meta property='og:description' content={description} />
       </Head>
       <main className={util.page} id='podcastPage'>
         <div className={util.pageColumn}>

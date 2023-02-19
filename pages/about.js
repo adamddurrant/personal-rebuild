@@ -27,11 +27,15 @@ export default function About({ data }) {
 
   const description =
     "I’m an SEO specialist and front-end developer by trade. I currently spend most of my spare time learning React. Welcome to my corner of the internet. Here I share my writings, favourite resources, personal updates and career adventures.";
+  const pageTitle = "Adam Durrant | About Me";
   return (
     <>
       <Head>
-        <title>Adam Durrant | About Me</title>
+        <title>{pageTitle}</title>
         <meta name='description' content={description} />
+        <meta property='og:url' content='https://adamdurrant.co.uk/about' />
+        <meta property='og:title' content={pageTitle} />
+        <meta property='og:description' content={description} />
       </Head>
       <main className={util.page} id='aboutPage'>
         <div className={util.pageColumn}>

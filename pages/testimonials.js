@@ -8,11 +8,18 @@ import TestimonialTile from "../components/tiles/testimonialTile";
 export default function testimonials({ reviews }) {
   const description =
     "I have been fortunate enough to work with some genuine rockstars. Here's what they had to say:";
+  const pageTitle = "Adam Durrant | Testimonials";
   return (
     <>
       <Head>
-        <title>Adam Durrant | Testimonials</title>
+        <title>{pageTitle}</title>
         <meta name='description' content={description} />
+        <meta
+          property='og:url'
+          content='https://adamdurrant.co.uk/testimonials'
+        />
+        <meta property='og:title' content={pageTitle} />
+        <meta property='og:description' content={description} />
       </Head>
       <main className={util.page} id='testimonialsPage'>
         <div className={util.pageColumn}>

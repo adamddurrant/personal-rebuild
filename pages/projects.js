@@ -23,11 +23,15 @@ export default function Projects() {
   //page header and in-page description
   const description =
     "Since 2016, I’ve focused my energy on my SEO career. I am slowly transitioning to focus more on coding. More interesting projects will be added to this page soon.";
+  const pageTitle = "Adam Durrant | Coding Projects";
   return (
     <>
       <Head>
-        <title>{"Adam Durrant | Coding Projects"}</title>
+        <title>{pageTitle}</title>
         <meta name='description' content={description} />
+        <meta property='og:url' content='https://adamdurrant.co.uk/projects' />
+        <meta property='og:title' content={pageTitle} />
+        <meta property='og:description' content={description} />
       </Head>
 
       <main id='projectsPage' className={util.page}>

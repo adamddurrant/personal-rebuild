@@ -11,6 +11,8 @@ export default function ReadingList({ list }) {
   const description =
     "A curated list of the best SEO, design and development Resources on Earth to accelerate your learning, productivity and efficiency.";
 
+  const pageTitle = "Adam Durrant | Tools & Resources List";
+
   //filtering logic depends on query params
   //if no query we assume the section is "recently added" and fav setting is "false"
   //if you toggle section or fav setting, the changed setting will be reflected in param
@@ -153,8 +155,11 @@ export default function ReadingList({ list }) {
   return (
     <>
       <Head>
-        <title>{"Adam Durrant | Tools & Resources List"}</title>
+        <title>{pageTitle}</title>
         <meta name='description' content={description} />
+        <meta property='og:url' content='https://adamdurrant.co.uk/tools' />
+        <meta property='og:title' content={pageTitle} />
+        <meta property='og:description' content={description} />
       </Head>
       <main className={util.page} id='readingPage'>
         <div className={util.pageColumn}>

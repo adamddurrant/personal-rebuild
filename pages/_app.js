@@ -18,7 +18,12 @@ function MyApp({ Component, pageProps }) {
           <link href='/favicon-large.png' rel='apple-touch-icon' />
           <meta
             property='og:image'
-            content='https://adamdurrant.co.uk/og/og.png'
+            content='https://adamdurrant.co.uk/og/og.jpg'
+          />
+          <meta property='og:type' content='website' />
+          <meta
+            name='twitter:image'
+            content='https://adamdurrant.co.uk/og/og.jpg'
           />
         </Head>
         <Toaster

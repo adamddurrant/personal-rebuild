@@ -11,7 +11,7 @@ import Settings from "../components/settings";
 export default function ReadingList({ list }) {
   const description =
     "Books, videos, twitter threads and blog posts, this page is a collection of learning materials that have made my brain bigger.";
-
+  const pageTitle = "Adam Durrant | Reading List";
   //filtering logic depends on query params
   //if no query we assume the section is "recently added" and fav setting is "false"
   //if you toggle section or fav setting, the changed setting will be reflected in param
@@ -154,8 +154,14 @@ export default function ReadingList({ list }) {
   return (
     <>
       <Head>
-        <title>{"Adam Durrant | Reading List"}</title>
+        <title>{pageTitle}</title>
         <meta name='description' content={description} />
+        <meta
+          property='og:url'
+          content='https://adamdurrant.co.uk/testimonials'
+        />
+        <meta property='og:title' content={pageTitle} />
+        <meta property='og:description' content={description} />
       </Head>
       <main className={util.page} id='readingPage'>
         <div className={util.pageColumn}>
