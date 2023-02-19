@@ -19,8 +19,12 @@ const Post = ({ post }) => {
   return (
     <>
       <Head>
-        <title>{post.metadata.title}</title>
+        <title>{post.metadata.title} | ADurrant</title>
         <meta name='description' content={post.metadata.description} />
+        <meta property='og:title' content={post.metadata.title} />
+        <meta property='og:description' content={post.metadata.description} />
+        <meta name='twitter:title' content={post.metadata.title} />
+        <meta name='twitter:description' content={post.metadata.description} />
       </Head>
       <article className={util.page} id='aboutPage'>
         <div className={util.pageColumn}>
