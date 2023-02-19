@@ -17,7 +17,7 @@ export default function testimonials({ reviews }) {
       </Head>
       <main className={util.page} id='testimonialsPage'>
         <div className={util.pageColumn}>
-          <h1 className={util.header}>Kind words</h1>
+          <h1 className={util.header}>Kind Words</h1>
           <div className={util.inset}>
             <p className={util.description}>{description}</p>
             <div className={util.flexGrid}>

@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 const { Client } = require("@notionhq/client");
+import { getHomePosts } from "../lib/notion";
 import styles from "../pages/index.module.css";
 import React, { useEffect } from "react";
 import util from "../styles/util.module.css";
@@ -8,8 +9,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import OnboardingCard from "../components/onboardingCard";
 import HomeUpdatesTile from "../components/tiles/home-tiles/homeUpdatesTile";
 import ReadingListTile from "../components/tiles/home-tiles/readingListTile";
+import BlogTile from "../components/tiles/home-tiles/blogTile";
 
-export default function Home({ data, readingList }) {
+export default function Home({ data, readingList, posts }) {
   const tips = [
     {
       id: "useShortCut",
@@ -19,31 +21,31 @@ export default function Home({ data, readingList }) {
     },
     {
       id: "firstTime",
-      text: "I love modern web development, sushi and over-engineered personal sites — ",
+      text: "Get to know me: I love modern web development, sushi and over-engineered personal sites — ",
       ctaText: "Learn more about me →",
       ctaLink: "/about",
     },
     {
       id: "seeReviews",
-      text: "I am fortunate to have worked with some inspiring people and rockstar brands",
-      ctaText: "See what they had to say →",
+      text: "I am fortunate to have worked with some inspiring people and some rockstar brands — ",
+      ctaText: "See what they have to say →",
       ctaLink: "/kind-words",
     },
     {
       id: "referenceSJ",
-      text: "This site was forked and restructured from a build by a designer & developer that inspires me — SJ Zhang",
-      ctaText: "See the code →",
-      ctaLink: "https://github.com/sjzhan9/sj-land",
+      text: "This site was forked and restructured from a build by designer & developer SJ Zhang — ",
+      ctaText: "Learn how it's made →",
+      ctaLink: "/about#site",
     },
     {
       id: "openCal",
-      text: "I enjoy meeting cool people and love to help where I can. Feel free to book some time together. ",
+      text: "I enjoy meeting people and love to help where I can. Feel free to book some time together — ",
       ctaText: "My open calendar is here ↗",
-      ctaLink: "https://cal.com/sjzhang/15min",
+      ctaLink: "https://cal.com/adam-durrant-z9wzhk/15min",
     },
     {
       id: "seeProject",
-      text: "My front-end web development journey is still just getting started but I have a small collection of code projects — ",
+      text: "My web development journey is just getting started but, I have a small collection of code projects — ",
       ctaText: "See projects →",
       ctaLink: "/projects",
     },
@@ -145,7 +147,7 @@ export default function Home({ data, readingList }) {
             {userTime ? userTime : "Hello"}
           </h1>
           <span className={styles.tinyText}>
-            My name is Adam Durrant —{" "}
+            My name is Adam —{" "}
             {isVisible ? `Below are tips to help get started ↓` : null}
             {!isVisible ? (
               <span onClick={resetOnboarding} className={styles.reset}>
@@ -206,6 +208,24 @@ export default function Home({ data, readingList }) {
                 content={item.properties.Description.rich_text}
                 url={item.properties.URL.url}
                 date={item.properties.Date.date.start}
+              />
+            ))}
+          </ul>
+          <div className={styles.homeSectionContainer}>
+            <h2 className={styles.homeSectionTitle}>Recent posts</h2>
+            <Link href='/blog'>
+              <a className={styles.homeLinkButton}>View All</a>
+            </Link>
+          </div>{" "}
+          <ul className={util.homePostsGrid}>
+            {posts.map((post, index) => (
+              <BlogTile
+                key={index}
+                imageUrl={post.hero}
+                title={post.title}
+                content={post.description}
+                url={post.slug}
+                tags={post.multi_select}
               />
             ))}
           </ul>
@@ -280,9 +300,12 @@ export const getStaticProps = async () => {
     page_size: 8,
   });
 
+  const blogPosts = await getHomePosts();
+
   return {
     props: {
       data: response.results,
+      posts: blogPosts,
       readingList: readingListResponse.results,
     },
     revalidate: 5,
