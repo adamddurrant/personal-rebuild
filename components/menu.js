@@ -21,7 +21,7 @@ export default function Menu() {
                   src='/bolt.svg'
                   alt='site logo'
                 ></img>
-                <h2
+                {/* <h2
                   className={
                     util.hiddenOnMobile +
                     " " +
@@ -31,7 +31,7 @@ export default function Menu() {
                   }
                 >
                   A Durrant.
-                </h2>
+                </h2> */}
               </div>
             </>
           </Link>
@@ -53,7 +53,7 @@ export default function Menu() {
               shortcut='4'
             />
             <p className={styles.divider}>Resources</p>
-            <NavLink svg='users' href='/blog' label='Blog' shortcut='5' />
+            <NavLink svg='link' href='/blog' label='Blog' shortcut='5' />
             <NavLink
               svg='reading'
               href='/reading-list'

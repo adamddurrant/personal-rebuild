@@ -12,7 +12,7 @@ export default function Home({ posts }) {
   return (
     <>
       <Head>
-        <title>Adam Durrant . Blog</title>
+        <title>Adam Durrant | Personal Blog</title>
         <meta name='description' content={description} />
       </Head>
       <main className={util.page} id='aboutPage'>

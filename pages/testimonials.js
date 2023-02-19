@@ -11,9 +11,8 @@ export default function testimonials({ reviews }) {
   return (
     <>
       <Head>
-        <title>Adam Durrant · Testimonials</title>
+        <title>Adam Durrant | Testimonials</title>
         <meta name='description' content={description} />
-        <meta property='og:image' content='https://www.sj.land/og/index.png' />
       </Head>
       <main className={util.page} id='testimonialsPage'>
         <div className={util.pageColumn}>

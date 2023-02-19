@@ -26,7 +26,7 @@ export default function Projects() {
   return (
     <>
       <Head>
-        <title>{"Adam Durrant - Projects"}</title>
+        <title>{"Adam Durrant | Coding Projects"}</title>
         <meta name='description' content={description} />
       </Head>
 

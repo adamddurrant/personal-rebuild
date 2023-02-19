@@ -129,17 +129,8 @@ export default function Home({ data, readingList, posts }) {
   return (
     <>
       <Head>
-        <title>
-          Adam Durrant | SEO Specialist & Meta Certified Web Developer
-        </title>
+        <title>Adam Durrant | SEO Specialist & Front-end Web Developer</title>
         <meta name='description' content={description} />
-        <link
-          href='/favicon-small.png'
-          rel='shortcut icon'
-          type='image/x-icon'
-        />
-        <link href='/favicon-large.png' rel='apple-touch-icon' />
-        <meta property='og:image' content='https://www.sj.land/og/index.png' />
       </Head>
       <main className={util.page} id='recentsPage'>
         <div className={styles.homeColumn}>
@@ -148,7 +139,7 @@ export default function Home({ data, readingList, posts }) {
           </h1>
           <span className={styles.tinyText}>
             My name is Adam —{" "}
-            {isVisible ? `Below are tips to help get started ↓` : null}
+            {isVisible ? `Below are some tips to help get started ↓` : null}
             {!isVisible ? (
               <span onClick={resetOnboarding} className={styles.reset}>
                 Need a refresher? Reset onboarding.

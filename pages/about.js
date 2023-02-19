@@ -30,7 +30,7 @@ export default function About({ data }) {
   return (
     <>
       <Head>
-        <title>Adam Durrant · About</title>
+        <title>Adam Durrant | About Me</title>
         <meta name='description' content={description} />
       </Head>
       <main className={util.page} id='aboutPage'>

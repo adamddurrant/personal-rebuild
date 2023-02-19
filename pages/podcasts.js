@@ -28,7 +28,7 @@ export default function Podcasts({ list }) {
   return (
     <>
       <Head>
-        <title>{"Adam Durrant - Favourite Podcasts"}</title>
+        <title>{"Adam Durrant | Favourite Podcasts"}</title>
         <meta name='description' content={description} />
       </Head>
       <main className={util.page} id='podcastPage'>

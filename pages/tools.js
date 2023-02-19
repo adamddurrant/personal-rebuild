@@ -153,10 +153,8 @@ export default function ReadingList({ list }) {
   return (
     <>
       <Head>
-        <title>{"Adam Durrant . Tools List"}</title>
+        <title>{"Adam Durrant | Tools & Resources List"}</title>
         <meta name='description' content={description} />
-        <link rel='icon' href='/favicon.gif' />{" "}
-        <meta property='og:image' content='https://www.sj.land/og/index.png' />
       </Head>
       <main className={util.page} id='readingPage'>
         <div className={util.pageColumn}>

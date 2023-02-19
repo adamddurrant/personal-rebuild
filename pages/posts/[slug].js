@@ -5,6 +5,7 @@ import { getAllPublished, getSingleBlogPostBySlug } from "../../lib/notion";
 import util from "../../styles/util.module.css";
 import style from "./markdownStyles.module.css";
 import gfm from "remark-gfm";
+import Head from "next/head";
 import Link from "next/link";
 
 const CodeBlock = ({ language, codestring }) => {
@@ -17,6 +18,10 @@ const CodeBlock = ({ language, codestring }) => {
 const Post = ({ post }) => {
   return (
     <>
+      <Head>
+        <title>{post.metadata.title}</title>
+        <meta name='description' content={post.metadata.description} />
+      </Head>
       <article className={util.page} id='aboutPage'>
         <div className={util.pageColumn}>
           <h1 className={util.header}>{post.metadata.title}</h1>
