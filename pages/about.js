@@ -129,7 +129,7 @@ export default function About({ data }) {
 
                 <div className={util.flexRow}>
                   <div className={util.flexRow + "" + util.alignCenter}>
-                    <p class={util.date}>Development:</p>
+                    <p class={util.smlHeading}>Development:</p>
                   </div>
                   <div className={util.flexRow}>
                     <SkillsIcon icon={"html"} technology={"HTML 5"} />
@@ -146,7 +146,7 @@ export default function About({ data }) {
                 </div>
                 <div style={{ paddingTop: "20px" }} className={util.flexRow}>
                   <div className={util.flexRow + "" + util.alignCenter}>
-                    <p class={util.date}>Design:</p>
+                    <p class={util.smlHeading}>Design:</p>
                   </div>
                   <div className={util.flexRow}>
                     <SkillsIcon icon={"figma"} technology={"Figma"} />
@@ -162,7 +162,7 @@ export default function About({ data }) {
 
                 <div style={{ paddingTop: "20px" }} className={util.flexRow}>
                   <div className={util.flexRow + "" + util.alignCenter}>
-                    <p class={util.date}>Productivity:</p>
+                    <p class={util.smlHeading}>Productivity:</p>
                   </div>
                   <div className={util.flexRow}>
                     <SkillsIcon icon={"jira"} technology={"Jira"} />
@@ -256,15 +256,15 @@ export default function About({ data }) {
             <div className={util.read}>
               <h2>This site</h2>
               <p>
-                This site was forked, rebuilt and modified from a build by a
-                designer/developer that inspires me:
-                <a href='https://www.linkedin.com/in/s-j-zhang'>S J Zhang</a>.
+                This site was forked, rebuilt and modified from a build by
+                <a href='https://www.linkedin.com/in/s-j-zhang'>S J Zhang</a> A
+                designer I take a lot of inspiration from.
               </p>
               <p>
-                I am in the process of learning React & Next.js and totally fell
-                in love with SJ&apos;s design so, I set about destructuring his
-                work and putting it back together piece by piece while making it
-                my own. I did this so that I could:
+                I&apos;m in the process of learning React & Next.js and totally
+                fell in love with SJ&apos;s design so, I set about destructuring
+                his work and putting it back together piece by piece while
+                making it my own. I did this for a few reasons:
               </p>
               <ol
                 type='1'
@@ -272,22 +272,25 @@ export default function About({ data }) {
                 style={{ padding: "0rem 0rem 0rem 1.25rem" }}
               >
                 <li style={{ marginBottom: "0.5rem" }}>
-                  Motivate myself to read, interpret and understand code written
-                  by another developer.
+                  To motivate myself to read, interpret and understand code
+                  written by other developers.
                 </li>
                 <li style={{ marginBottom: "0.5rem" }}>
-                  Keep myself accountable with my goal of front end proficiency.
-                  So far I&apos;m loving React & Next.js.
+                  To keep myself accountable with my goal of becoming proficient
+                  in front end development.
                 </li>
                 <li style={{ marginBottom: "0.5rem" }}>
-                  Keep myself engaged with the modern frameworks & libraries.
-                  Having a beautiful site motivates me to continuously iterate,
-                  improve and experiment with new tech.
+                  To stay actively engaged with the modern frameworks &
+                  libraries.
+                </li>
+                <li style={{ marginBottom: "0.5rem" }}>
+                  To encourage myself to create and share more often. A
+                  beautiful site that i&apos;m proud of, keeps me driven.
                 </li>
               </ol>
               <p>
-                SJ has kindly licensed this build for anyone to use as a
-                template{" "}
+                Because he&apos;s amazing, SJ has kindly licensed this build for
+                anyone to use as a base starting place{" "}
                 <a href='https://github.com/sjzhan9/sj-land'>over on Github</a>{" "}
                 so you can try it too!
               </p>
