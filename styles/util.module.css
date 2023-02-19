@@ -68,15 +68,17 @@
 }
 
 .postMeta {
-  margin-bottom: 20px;
-  margin-right: 10px;
+  margin-bottom: 40px;
+  padding-bottom: 50px;
   font-size: var(--font-l);
   line-height: 1.75;
   color: var(--gray12);
+  border-bottom: 1px solid var(--linkContainerBorder);
+  justify-content: center;
 }
 
 .postDate {
-  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .col {
@@ -168,6 +170,15 @@
   margin-bottom: 1.5rem;
   color: var(--gray12);
   transition: color 0.25s ease;
+}
+
+.blogHeader {
+  font-size: 2.275rem;
+  font-weight: 560;
+  margin-bottom: 1.5rem;
+  color: var(--gray12);
+  transition: color 0.25s ease;
+  text-align: center;
 }
 
 .projectHeader {
@@ -431,6 +442,13 @@
 .flexRow {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
 }

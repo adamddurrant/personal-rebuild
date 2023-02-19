@@ -24,8 +24,10 @@ const Post = ({ post }) => {
       </Head>
       <article className={util.page} id='aboutPage'>
         <div className={util.pageColumn}>
-          <h1 className={util.header}>{post.metadata.title}</h1>
-          <div className={util.tags + " " + util.flexRow + " " + util.postMeta}>
+          <h1 className={util.blogHeader}>{post.metadata.title}</h1>
+          <div
+            className={util.tags + " " + util.flexColumn + " " + util.postMeta}
+          >
             <span className={util.postDate}>{post.metadata.date}</span>
             <p className={post.metadata.tags[0].color + "Tag tag"}>
               {post.metadata.tags[0].name}

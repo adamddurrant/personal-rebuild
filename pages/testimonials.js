@@ -55,6 +55,12 @@ export const getStaticProps = async () => {
         },
       ],
     },
+    sorts: [
+      {
+        property: "Order",
+        direction: "ascending",
+      },
+    ],
   });
 
   return {
