@@ -28,6 +28,10 @@
   -webkit-user-drag: none;
 }
 
+.testimonial {
+  line-height: 1.68;
+}
+
 .dark-theme .skillsInvert {
   filter: invert(1);
 }

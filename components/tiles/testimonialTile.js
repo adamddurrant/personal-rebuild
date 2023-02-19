@@ -13,7 +13,7 @@ export default function TestimonialTile({ profileUrl, title, content, url }) {
       >
         <div className={util.viewTruncated}>
           {content.map((e, i) => (
-            <span key={i} href={e.href}>
+            <span className={styles.testimonial} key={i} href={e.href}>
               {e.plain_text}
             </span>
           ))}

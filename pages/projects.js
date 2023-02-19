@@ -39,7 +39,7 @@ export default function Projects() {
               image='zoe'
               title='ZOE Library Reimagined'
               content='A redesign and build of the ZOE blog subfolder. Built to help me learn an epic combo: Nextjs + DatoCMS.'
-              type='Nextjs · DatoCMS . Tailwind . Side Project'
+              type='Nextjs · DatoCMS · Tailwind · Side Project'
               date='2023-01-01'
               url='https://github.com/adamddurrant/zoe-clone'
             />
@@ -49,7 +49,7 @@ export default function Projects() {
               content={
                 "An automated twitter curation web app & newsletter that reached 2k signups. Built, launched and sold."
               }
-              type='Webflow · Zapier . Twitter API . Side Project'
+              type='Webflow · Zapier · Twitter API · Side Project'
               date='2021-05-20'
               url='https://www.producthunt.com/products/seotweets'
             />
@@ -59,7 +59,7 @@ export default function Projects() {
               content={
                 "A site that had a host of legacy issues completely rebuilt and restructured using modern WordPress frameworks. "
               }
-              type='WordPress · Vanilla CSS . WPBakery . Freelance'
+              type='WordPress · Vanilla CSS · WPBakery · Freelance'
               date='2019-02-25'
               url='https://peter-mason.com/'
             />
@@ -69,7 +69,7 @@ export default function Projects() {
               content={
                 "The academy was struggling to find new members and had no online presence. The site was built with Webflow and now drives consistent leads to the ballet school via organic search."
               }
-              type='Webflow . Freelance'
+              type='Webflow · Freelance'
               date='2022-04-20'
               url={"https://www.cityacademyofballet.co.uk/"}
             />
@@ -79,7 +79,7 @@ export default function Projects() {
               content={
                 "It might be cliché but I couldn't find a simple and unbloated shopping list app to use with my partner. Please reach out for the password if you want to play (it's our actual shopping list). "
               }
-              type='HTML . CSS · Vanilla JS . Firebase . Side Project'
+              type='HTML · CSS · Vanilla JS · Firebase · Side Project'
               date='2021-02-20'
               url={"https://shopping-list-regsnmcwt-adamddurrant.vercel.app/"}
             />
