@@ -20,30 +20,30 @@ export default function Home({ data, readingList }) {
     {
       id: "firstTime",
       text: "I love modern web development, sushi and over-engineered personal sites — ",
-      ctaText: "More about me →",
+      ctaText: "Learn more about me →",
       ctaLink: "/about",
     },
     {
       id: "seeReviews",
-      text: "I am fortunate to have worked with some rockstar brands, see what they say about working with me — ",
-      ctaText: "See kind words →",
+      text: "I am fortunate to have worked with some inspiring people and rockstar brands",
+      ctaText: "See what they had to say →",
       ctaLink: "/kind-words",
     },
     {
       id: "referenceSJ",
-      text: "This site was forked and restructured from a build by a designer and developer that inspires me — SJ Zhang",
+      text: "This site was forked and restructured from a build by a designer & developer that inspires me — SJ Zhang",
       ctaText: "See the code →",
       ctaLink: "https://github.com/sjzhan9/sj-land",
     },
     {
       id: "openCal",
-      text: "I enjoy meeting inspiring people and love to help where I can. Feel free to book a call. ",
+      text: "I enjoy meeting cool people and love to help where I can. Feel free to book some time together. ",
       ctaText: "My open calendar is here ↗",
       ctaLink: "https://cal.com/sjzhang/15min",
     },
     {
       id: "seeProject",
-      text: "I'm early in my front-end dev journey but I have a small collection of coded projects — ",
+      text: "My front-end web development journey is still just getting started but I have a small collection of code projects — ",
       ctaText: "See projects →",
       ctaLink: "/projects",
     },
@@ -122,7 +122,7 @@ export default function Home({ data, readingList }) {
   }, []);
 
   const description =
-    "I’m a designer and developer by training and trade. I spend most of my spare time reading about business, finance and crypto. If this combination interests you, welcome to my corner of the internet. This is where I share my reading list, investment updates, and software adventures.";
+    "Adam Durrant - Growing ambitious brands online. Working with and learning from inspiring people along the way.";
 
   return (
     <>
@@ -145,10 +145,8 @@ export default function Home({ data, readingList }) {
             {userTime ? userTime : "Hello"}
           </h1>
           <span className={styles.tinyText}>
-            My name is Adam —{" "}
-            {isVisible
-              ? `Below are tips to help get you started on this website ↓`
-              : null}
+            My name is Adam Durrant —{" "}
+            {isVisible ? `Below are tips to help get started ↓` : null}
             {!isVisible ? (
               <span onClick={resetOnboarding} className={styles.reset}>
                 Need a refresher? Reset onboarding.

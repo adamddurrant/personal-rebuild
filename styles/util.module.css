@@ -506,7 +506,7 @@
 .flexGrid {
   display: grid;
   margin-top: 3.5rem;
-  gap: 1rem;
+  gap: 1.7rem;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 

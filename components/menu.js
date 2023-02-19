@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import styles from "../components/menu.module.css";
 import { ThemeChanger } from "./theme";
 import Link from "next/link";
@@ -46,7 +47,7 @@ export default function Menu() {
               shortcut='3'
             />
             <NavLink
-              svg='investments'
+              svg='star'
               href='/testimonials'
               label='Kind Words'
               shortcut='4'

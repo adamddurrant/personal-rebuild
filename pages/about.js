@@ -61,7 +61,7 @@ export default function About({ data }) {
               <h2>About me</h2>
               <p>
                 {
-                  "I have almost a decade of experience as a professional SEO specialist. I've worked freelance, in-house and agency-side for startups, SMEs and larger corporations alike."
+                  "I have almost a decade of experience as a professional SEO specialist. I've worked freelance, in-house and agency-side for startups, SMEs and enterprise business. "
                 }
 
                 {"My work have been featured in; "}
@@ -107,7 +107,7 @@ export default function About({ data }) {
               </p>
               <p>
                 {
-                  "My personal mission is to help grow ambitious brands online, working with and meeting the most creative and ambitious people along the way helping them own their own piece of the web."
+                  "My personal mission is to be part of growing ambitious brands online, working with and meeting the most creative and ambitious people along the way."
                 }
               </p>
 
@@ -116,14 +116,15 @@ export default function About({ data }) {
                   Software & Technologies
                 </h2>
                 <p className={util.read}>
-                  My journey to front end proficiency is still in its infancy
-                  and I am dabbling with numerous languages and frameworks to
-                  discover what I enjoy most such as the Next.js used to build
-                  this website.
+                  My front end dev journey is still in its infancy but, I am
+                  dabbling with numerous languages and frameworks to understand
+                  what I enjoy most. The Next.js used to build this website for
+                  example has opened my eyes to using this React framework as
+                  often as possible.
                 </p>
                 <p>
-                  However, I am experimenting and working most with the
-                  following technology stack:
+                  Despite this, I am experimenting, working and coding most with
+                  the following tech stack:
                 </p>
 
                 <div className={util.flexRow}>
@@ -149,13 +150,26 @@ export default function About({ data }) {
                   </div>
                   <div className={util.flexRow}>
                     <SkillsIcon icon={"figma"} technology={"Figma"} />
-                    <SkillsIcon icon={"framer"} technology={"Framer"} />
+                    <SkillsIcon icon={"framer"} technology={"Framer Motion"} />
                     <SkillsIcon
                       icon={"photoshop"}
                       technology={"Adobe Photoshop"}
                     />
 
                     <SkillsIcon icon={"xd"} technology={"Adobe Xd"} />
+                  </div>
+                </div>
+
+                <div style={{ paddingTop: "20px" }} className={util.flexRow}>
+                  <div className={util.flexRow + "" + util.alignCenter}>
+                    <p class={util.date}>Productivity:</p>
+                  </div>
+                  <div className={util.flexRow}>
+                    <SkillsIcon icon={"jira"} technology={"Jira"} />
+                    <SkillsIcon icon={"git"} technology={"Git"} />
+                    <SkillsIcon icon={"slack"} technology={"Slack"} />
+                    <SkillsIcon icon={"loom"} technology={"Loom"} />
+                    <SkillsIcon icon={"cron"} technology={"Cron"} />
                   </div>
                 </div>
               </div>
@@ -196,7 +210,7 @@ export default function About({ data }) {
                 title='SEO Manager at ZOE'
                 url={"https://joinzoe.com/"}
                 content={
-                  "Inspired by the brand and their mission I joined ZOE as their first SEO manager to support ambitious growth goals."
+                  "Inspired by the brand and their mission I joined ZOE as their first and only SEO manager to support ambitious growth goals."
                 }
               />
               <ExpTile
@@ -211,7 +225,7 @@ export default function About({ data }) {
                 date='2020'
                 title='Digital Marketing Manager at Tots to Travel'
                 content={
-                  "Owned SEO & paid social in house with external agency management of other paid channels"
+                  "Owned SEO & paid social in house with external agency management of other paid channels."
                 }
               />
               <ExpTile

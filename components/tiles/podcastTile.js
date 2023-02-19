@@ -11,13 +11,11 @@ export default function PodcastTile({
   tags,
   fav,
 }) {
-  console.log(imageUrl);
-
   return (
     <a
       href={url}
-      target="_blank"
-      rel="noopener noreferrer"
+      target='_blank'
+      rel='noopener noreferrer'
       className={styles.container}
     >
       <div>
@@ -29,7 +27,7 @@ export default function PodcastTile({
             src={"/podcasts/" + internalUrl + ".png"}
             width={288}
             height={288}
-            layout="responsive"
+            layout='responsive'
             alt={title}
           />
         ) : (
@@ -40,7 +38,7 @@ export default function PodcastTile({
             src={imageUrl}
             width={288}
             height={288}
-            layout="responsive"
+            layout='responsive'
             alt={title}
           />
         )}

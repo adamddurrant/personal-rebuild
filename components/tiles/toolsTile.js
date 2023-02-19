@@ -24,8 +24,8 @@ export default function ToolsTile({
             priority
             // unoptimized
             src={"/newsletters/" + internalUrl + ".png"}
-            height={64}
-            width={64}
+            height={50}
+            width={50}
             layout='fixed'
             alt={title}
           />
@@ -34,8 +34,8 @@ export default function ToolsTile({
             // unoptimized
             priority
             src={imageUrl}
-            width={64}
-            height={64}
+            width={50}
+            height={50}
             layout='fixed'
             alt={title}
           />

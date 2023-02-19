@@ -4,7 +4,6 @@ import util from "../../styles/util.module.css";
 import * as Tooltip from "@radix-ui/react-tooltip";
 
 export default function ReadingListTile({ title, url, date, fav, tags }) {
-  console.log(tags);
   let displayUrl = url
     .replace("https://www.", "")
     .replace("http://www.", "")
