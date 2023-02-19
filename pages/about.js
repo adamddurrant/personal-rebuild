@@ -256,12 +256,15 @@ export default function About({ data }) {
             <div className={util.read}>
               <h2>This site</h2>
               <p>
-                This site was forked, rebuilt and modified from a build by
-                designer/developer that inspires me
-                <a href='https://www.linkedin.com/in/s-j-zhang'>S J Zhang</a>. I
-                am in the process of learning React and Next.js and fell in love
-                with SJ&apos;s design so I set about putting it together piece
-                by piece to:
+                This site was forked, rebuilt and modified from a build by a
+                designer/developer that inspires me:
+                <a href='https://www.linkedin.com/in/s-j-zhang'>S J Zhang</a>.
+              </p>
+              <p>
+                I am in the process of learning React & Next.js and totally fell
+                in love with SJ&apos;s design so, I set about destructuring his
+                work and putting it back together piece by piece while making it
+                my own. I did this so that I could:
               </p>
               <ol
                 type='1'
@@ -273,11 +276,11 @@ export default function About({ data }) {
                   by another developer.
                 </li>
                 <li style={{ marginBottom: "0.5rem" }}>
-                  Keep myself accountable with my goal of mastering front end
-                  development. So far I&apos;m loving React and Next.js.
+                  Keep myself accountable with my goal of front end proficiency.
+                  So far I&apos;m loving React & Next.js.
                 </li>
                 <li style={{ marginBottom: "0.5rem" }}>
-                  Keep myself engaged with the modern frameworks and libraries.
+                  Keep myself engaged with the modern frameworks & libraries.
                   Having a beautiful site motivates me to continuously iterate,
                   improve and experiment with new tech.
                 </li>
@@ -325,25 +328,8 @@ export default function About({ data }) {
                 >
                   Notion API
                 </a>
-                . When new discoveries are added on the go, content is{" "}
-                <a
-                  href='https://nextjs.org/docs/basic-features/data-fetching/incremental-static-regeneration'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className={util.normalLink}
-                >
-                  regenerated
-                </a>{" "}
-                at server-side on demand, without manual redeployment.{" "}
-                <a
-                  href='https://www.radix-ui.com/'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className={util.externalLink}
-                >
-                  Radix UI
-                </a>{" "}
-                is used for front-end components like modals and tooltips.{" "}
+                . Radix UI is used for front-end components like modals and
+                tooltips.{" "}
                 <a
                   href='https://github.com/pacocoursey/next-themes'
                   target='_blank'
@@ -352,7 +338,7 @@ export default function About({ data }) {
                 >
                   Next Themes
                 </a>{" "}
-                made light/dark-mode management easy.
+                controls light/dark-mode and made implementation a lot easier.
               </p>
               {/* <div className={util.divider}></div> */}
 
