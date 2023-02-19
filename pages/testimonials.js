@@ -61,6 +61,6 @@ export const getStaticProps = async () => {
     props: {
       reviews: response.results,
     },
-    revalidate: 5,
+    revalidate: 60,
   };
 };

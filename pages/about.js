@@ -107,8 +107,17 @@ export default function About({ data }) {
               </p>
               <p>
                 {
-                  "My personal mission is to be part of growing ambitious brands online, working with and meeting the most creative and ambitious people along the way."
+                  "My personal mission is to be part of growing ambitious brands online, working with and meeting the most creative and ambitious people along the way. If you need it, here's "
                 }
+                <a
+                  href='/me/adam-durrant.jpg'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className={util.normalLink}
+                >
+                  a picture of me looking busy
+                </a>
+                .
               </p>
 
               <div className={util.read}>
@@ -386,6 +395,6 @@ export const getStaticProps = async () => {
     props: {
       data: response.results,
     },
-    revalidate: 5,
+    revalidate: 60,
   };
 };

@@ -29,6 +29,14 @@
   justify-content: center;
 }
 
+.mainLogo img {
+  transition: all 0.4s ease-in-out;
+}
+
+.mainLogo img:hover {
+  transform: scale(1.5);
+}
+
 .divider {
   padding: 1.25rem 0rem 0.5rem 0.875rem;
   /* margin-top: 0.5rem; */

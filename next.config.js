@@ -9,6 +9,16 @@ const nextConfig = {
       "amazonaws.com",
     ],
   },
+
+  async redirects() {
+    return [
+      {
+        source: "/book",
+        destination: "https://cal.com/adam-durrant-z9wzhk/15min",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;

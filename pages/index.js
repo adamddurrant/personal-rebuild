@@ -10,6 +10,7 @@ import OnboardingCard from "../components/onboardingCard";
 import HomeUpdatesTile from "../components/tiles/home-tiles/homeUpdatesTile";
 import ReadingListTile from "../components/tiles/home-tiles/readingListTile";
 import BlogTile from "../components/tiles/home-tiles/blogTile";
+import Script from "next/script";
 
 export default function Home({ data, readingList, posts }) {
   const tips = [
@@ -299,6 +300,6 @@ export const getStaticProps = async () => {
       posts: blogPosts,
       readingList: readingListResponse.results,
     },
-    revalidate: 5,
+    revalidate: 60,
   };
 };
