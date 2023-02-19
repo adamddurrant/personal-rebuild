@@ -160,6 +160,8 @@ export default function ReadingList({ list }) {
         <meta property='og:url' content='https://adamdurrant.co.uk/tools' />
         <meta property='og:title' content={pageTitle} />
         <meta property='og:description' content={description} />
+        <meta name='twitter:title' content={pageTitle} />
+        <meta name='twitter:description' content={description} />
       </Head>
       <main className={util.page} id='readingPage'>
         <div className={util.pageColumn}>
