@@ -372,7 +372,7 @@ export default function About({ data }) {
   );
 }
 //notion API
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const notion = new Client({
     auth: process.env.NOTION_TOKEN,
   });
@@ -401,5 +401,6 @@ export const getServerSideProps = async () => {
     props: {
       data: response.results,
     },
+    revalidate: 5,
   };
 };

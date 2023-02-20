@@ -61,7 +61,7 @@ export default function Podcasts({ list }) {
   );
 }
 //notion API
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const notion = new Client({ auth: process.env.NOTION_TOKEN });
 
   const response = await notion.databases.query({
@@ -88,5 +88,6 @@ export async function getServerSideProps() {
     props: {
       list: response.results,
     },
+    revalidate: 5,
   };
 }

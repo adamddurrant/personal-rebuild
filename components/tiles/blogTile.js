@@ -23,7 +23,7 @@ export default function BlogTile({ imageUrl, title, content, url, tags, fav }) {
             src={imageUrl}
             width={288}
             height={150}
-            layout='responsive'
+            layout='intrinsic'
             alt={title}
           />
         </div>

@@ -42,11 +42,12 @@ export default function Home({ posts }) {
     </>
   );
 }
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const data = await getAllPublished();
   return {
     props: {
       posts: data,
     },
+    revalidate: 5,
   };
 };
