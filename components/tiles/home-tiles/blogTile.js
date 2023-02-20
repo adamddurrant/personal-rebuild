@@ -5,7 +5,7 @@ import util from "../../../styles/util.module.css";
 export default function BlogTile({ imageUrl, title, content, url, tags, fav }) {
   //Checks if link is external to open in a new tab
   const target = url.includes("www.") ? "_blank" : null;
-  const slugConcat = "posts/" + url;
+  const slugConcat = "blog/" + url;
   const preSlug = url.includes("www.") ? url : slugConcat;
   return (
     <>
