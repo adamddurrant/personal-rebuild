@@ -252,7 +252,7 @@ export default function Home({ data, readingList, posts }) {
   );
 }
 //notion API
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const notion = new Client({
     auth: process.env.NOTION_TOKEN,
   });
@@ -307,6 +307,5 @@ export const getStaticProps = async () => {
       posts: blogPosts,
       readingList: readingListResponse.results,
     },
-    revalidate: 60,
   };
 };

@@ -47,7 +47,7 @@ export default function testimonials({ reviews }) {
 }
 
 //notion API
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const notion = new Client({
     auth: process.env.NOTION_TOKEN,
   });
@@ -76,6 +76,5 @@ export const getStaticProps = async () => {
     props: {
       reviews: response.results,
     },
-    revalidate: 60,
   };
 };
