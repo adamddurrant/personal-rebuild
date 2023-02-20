@@ -5,7 +5,7 @@ import util from "../../styles/util.module.css";
 export default function BlogTile({ imageUrl, title, content, url, tags, fav }) {
   //Checks if link is external to open in a new tab
   const target = url.includes("http") ? "_blank" : null;
-  const slugConcat = "posts/" + url;
+  const slugConcat = "blog/" + url;
   const preSlug = url.includes("http") ? url : slugConcat;
   return (
     <>
@@ -23,7 +23,7 @@ export default function BlogTile({ imageUrl, title, content, url, tags, fav }) {
             src={imageUrl}
             width={288}
             height={150}
-            layout='intrinsic'
+            layout='responsive'
             alt={title}
           />
         </div>
