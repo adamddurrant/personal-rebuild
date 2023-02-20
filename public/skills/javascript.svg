@@ -1,9 +1,0 @@
-<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50" height="50">
-	<title>New Project</title>
-	<defs>
-		<image width="124" height="143" id="img1" href="data:image/svg+xml;base64,PHN2ZyBmaWxsPSJub25lIiBoZWlnaHQ9IjI1MDAiIHdpZHRoPSIyMTgzIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjQgMTQxLjUzMTk5OTk5OTk5OTk4Ij48cGF0aCBkPSJNMTAuMzgzIDEyNi44OTRMMCAwbDEyNCAuMjU1LTEwLjk3OSAxMjYuNjM5LTUwLjU1MyAxNC42Mzh6IiBmaWxsPSIjZTljYTMyIi8+PHBhdGggZD0iTTYyLjQ2OCAxMjkuMjc3VjEyLjA4NWw1MS4wNjQuMTctOS4xMDYgMTA0Ljg1MXoiIGZpbGw9IiNmZmRlMjUiLz48ZyBmaWxsPSIjZmZmIj48cGF0aCBkPSJNNTcgMjZINDMuNXY3OEwzMyAxMDJWOTEuNWwtMTIuNS0yVjExM2wzNi41IDkuNXpNNjcuMTI3IDI2SDEwNC41TDEwMiA0MC45NUg4MS4zOTR2MjQuNTMzSDEwMkw5OS41IDExNWwtMzIuMzczIDcuNVYxMDdMODkgOTkuNSA5MC4yNjMgNzlsLTIzLjEzNiAzLjM1eiIvPjwvZz48L3N2Zz4="/>
-	</defs>
-	<style>
-	</style>
-	<use id="javascript-1" href="#img1" transform="matrix(.347,0,0,.35,4,0)"/>
-</svg>

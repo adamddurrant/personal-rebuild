@@ -30,10 +30,10 @@ export default function ProjectTile({
             <Image
               priority
               className={styles.image}
-              src={"/projects/" + image + ".png"}
+              src={"/projects/" + image + ".jpg"}
               width={400}
               height={220}
-              layout="responsive"
+              layout='responsive'
               alt={title}
             />
             <div className={styles.stack}>
@@ -46,17 +46,17 @@ export default function ProjectTile({
       ) : (
         <a
           href={url}
-          target="_blank"
-          rel="noopener noreferrer"
+          target='_blank'
+          rel='noopener noreferrer'
           className={styles.container}
         >
           <Image
             className={styles.image}
-            // priority
-            src={"/projects/" + image + ".png"}
+            priority
+            src={"/projects/" + image + ".jpg"}
             width={400}
             height={220}
-            layout="responsive"
+            layout='responsive'
             alt={title}
           />
 

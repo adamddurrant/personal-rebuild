@@ -2,11 +2,10 @@
 import React from "react";
 import * as Tooltip from "@radix-ui/react-tooltip";
 import util from "../styles/util.module.css";
-import styles from "../components/navLink.module.css";
 
 export default function SkillsIcon({ icon, technology }) {
   const imageStyles = {
-    paddingRight: "15px",
+    marginRight: "23px",
   };
   return (
     <>
@@ -15,9 +14,9 @@ export default function SkillsIcon({ icon, technology }) {
           <Tooltip.Trigger asChild>
             <img
               className={"skillsInvert" + " " + util.flexCol}
-              height={40}
-              width={40}
-              src={"/skills/" + icon + ".svg"}
+              height={25}
+              width={25}
+              src={"/skills/" + icon + ".png"}
               alt={technology}
               style={imageStyles}
             />
