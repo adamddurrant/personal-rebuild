@@ -1,15 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
-import Link from "next/link";
 import React, { useEffect } from "react";
 import util from "../styles/util.module.css";
 import ContactContent from "../components/contactContent";
 import ExpTile from "../components/tiles/expTile";
-import Image from "next/image";
 const { Client } = require("@notionhq/client");
 import Tile from "../components/tiles/tile";
 import SkillsIcon from "../components/skillsIcon";
-import { getAllUpdates } from "../lib/notion";
 
 export default function About({ data }) {
   useEffect(() => {
@@ -121,6 +118,7 @@ export default function About({ data }) {
                   rel='noopener noreferrer'
                   className={util.normalLink}
                 >
+                  {" "}
                   a picture of me looking busy
                 </a>
                 .
@@ -159,7 +157,7 @@ export default function About({ data }) {
                     <SkillsIcon icon={"wordpress"} technology={"WordPress 6"} />
                   </div>
                 </div>
-                <div style={{ paddingTop: "20px" }} className={util.flexRow}>
+                <div style={{ paddingTop: "25px" }} className={util.flexRow}>
                   <div className={util.flexRow + "" + util.alignCenter}>
                     <p class={util.smlHeading}>Design:</p>
                   </div>
@@ -175,7 +173,7 @@ export default function About({ data }) {
                   </div>
                 </div>
 
-                <div style={{ paddingTop: "20px" }} className={util.flexRow}>
+                <div style={{ paddingTop: "25px" }} className={util.flexRow}>
                   <div className={util.flexRow + "" + util.alignCenter}>
                     <p class={util.smlHeading}>Productivity:</p>
                   </div>
@@ -269,9 +267,9 @@ export default function About({ data }) {
               />
             </div>
             <div className={util.read}>
-              <h2>This site</h2>
+              <h2>This Site</h2>
               <p>
-                This site was forked, rebuilt and modified from a build by
+                This site was forked, rebuilt and modified from a build by{" "}
                 <a href='https://www.linkedin.com/in/s-j-zhang'>S J Zhang</a> A
                 designer I take a lot of inspiration from.
               </p>
@@ -328,7 +326,7 @@ export default function About({ data }) {
                 >
                   Vercel
                 </a>
-                . Content is managed in{" "}
+                . Most content is managed in{" "}
                 <a
                   href='http://notion.com/'
                   target='_blank'
@@ -345,6 +343,16 @@ export default function About({ data }) {
                   className={util.externalLink}
                 >
                   Notion API
+                </a>
+                . I ran into problems rendering images from notion as uploaded
+                images{" "}
+                <a
+                  href='https://developers.notion.com/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className={util.externalLink}
+                >
+                  regularly regenerate
                 </a>
                 . Radix UI is used for front-end components like modals and
                 tooltips.{" "}
