@@ -26,7 +26,6 @@ export default function Podcasts({ list }) {
     "A collection of podcasts I listen to on a regular basis for learning, health and entertainment.";
 
   const pageTitle = "Adam Durrant | Favourite Podcasts";
-
   return (
     <>
       <Head>
@@ -46,7 +45,7 @@ export default function Podcasts({ list }) {
             {list.map((item) => (
               <PodcastTile
                 key={item.id}
-                imageUrl={item.properties.Logo.files[0].file.url}
+                imageUrl={item.properties.image.url}
                 title={item.properties.Name.title[0].plain_text}
                 content={item.properties.Body.rich_text[0].plain_text}
                 url={item.properties.URL.url}

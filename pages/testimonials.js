@@ -32,7 +32,7 @@ export default function testimonials({ reviews }) {
               {reviews.map((item) => (
                 <TestimonialTile
                   key={item.id}
-                  profileUrl={item.properties.profile.files[0].file.url}
+                  profileUrl={item.properties.image.url}
                   title={item.properties.name.title[0].plain_text}
                   content={item.properties.content.rich_text}
                   url={item.properties.linkedin.url}

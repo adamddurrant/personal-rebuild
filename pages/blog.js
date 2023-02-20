@@ -29,7 +29,7 @@ export default function Home({ posts }) {
             {posts.map((post, index) => (
               <BlogTile
                 key={index}
-                imageUrl={post.hero}
+                imageUrl={post.image}
                 title={post.title}
                 content={post.description}
                 url={post.slug}

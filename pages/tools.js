@@ -210,7 +210,7 @@ export default function ReadingList({ list }) {
                   <ToolsTile
                     key={link.id}
                     title={link.properties.Name.title[0].plain_text}
-                    imageUrl={link.properties.Logo.files[0].file.url}
+                    imageUrl={link.properties.image.url}
                     content={link.properties.Body.rich_text[0].plain_text}
                     url={link.properties.URL.url}
                     date={link.created_time}

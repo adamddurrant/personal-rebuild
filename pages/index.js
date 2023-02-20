@@ -202,7 +202,7 @@ export default function Home({ data, readingList, posts }) {
             {data.map((item) => (
               <HomeUpdatesTile
                 key={item.id}
-                logoUrl={item.properties.image.files[0].file.url}
+                logoUrl={item.properties.icon.url}
                 title={item.properties.Name.title[0].plain_text}
                 content={item.properties.Description.rich_text}
                 url={item.properties.URL.url}
@@ -220,7 +220,7 @@ export default function Home({ data, readingList, posts }) {
             {posts.map((post, index) => (
               <BlogTile
                 key={index}
-                imageUrl={post.hero}
+                imageUrl={post.image}
                 title={post.title}
                 content={post.description}
                 url={post.slug}
