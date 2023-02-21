@@ -17,6 +17,16 @@ const nextConfig = {
         destination: "https://cal.com/adam-durrant-z9wzhk/15min",
         permanent: true,
       },
+      {
+        source: "/blog/webflow-vs-seo",
+        destination: "/blog/webflow-for-seo",
+        permanent: true,
+      },
+      {
+        source: "/blog/bookmarklets",
+        destination: "/blog/bookmarklets-for-seo",
+        permanent: true,
+      },
     ];
   },
 };

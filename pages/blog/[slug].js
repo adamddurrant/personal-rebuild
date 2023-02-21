@@ -7,6 +7,7 @@ import style from "./markdownStyles.module.css";
 import gfm from "remark-gfm";
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 
 const CodeBlock = ({ language, codestring }) => {
   return (
@@ -28,14 +29,44 @@ const Post = ({ post }) => {
       </Head>
       <article className={util.page} id='aboutPage'>
         <div className={util.pageColumn}>
-          <h1 className={util.blogHeader}>{post.metadata.title}</h1>
+          <h1 style={{ marginTop: "20px" }} className={util.blogHeader}>
+            {post.metadata.title}
+          </h1>
           <div
             className={util.tags + " " + util.flexColumn + " " + util.postMeta}
           >
-            <span className={util.postDate}>{post.metadata.date}</span>
-            <p className={post.metadata.tags[0].color + "Tag tag"}>
-              {post.metadata.tags[0].name}
-            </p>
+            <div
+              className={util.flexMeta}
+              style={{ justifyContent: "center", alignItems: "center" }}
+            >
+              <span className={util.postDate}>{post.metadata.date}</span>
+              <p className={post.metadata.tags[0].color + "Tag tag"}>
+                {post.metadata.tags[0].name}
+              </p>
+            </div>
+
+            <div className={util.flexRow} style={{ marginTop: "30px" }}>
+              <div style={{ marginRight: "10px" }}>
+                <Image
+                  priority
+                  width={40}
+                  height={40}
+                  src='/me/adam-durrant.jpg'
+                  alt='Adam Durrant'
+                  style={{ borderRadius: "100px" }}
+                />
+              </div>
+              <div className={util.read}>
+                <p style={{ margin: "0px", lineHeight: "0.9" }}>Adam Durrant</p>
+                <a
+                  className={util.tweetLink}
+                  style={{ fontSize: "12px" }}
+                  href='https://twitter.com/AdamDDurrant'
+                >
+                  @adamddurrant
+                </a>
+              </div>
+            </div>
           </div>
           <ReactMarkdown
             remarkPlugins={[gfm]}
@@ -60,7 +91,9 @@ const Post = ({ post }) => {
           </ReactMarkdown>
         </div>
         <Link scroll={false} href='/blog'>
-          <a className={util.backButton}> ← &nbsp; Back to blog</a>
+          <div className={util.buttonPadding}>
+            <a className={util.backButton}> ← &nbsp; Back to blog</a>
+          </div>
         </Link>
       </article>
     </>
