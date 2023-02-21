@@ -47,13 +47,13 @@ export default function Menu() {
               shortcut='3'
             />
             <NavLink
-              svg='star'
+              svg='heart'
               href='/testimonials'
               label='Kind Words'
               shortcut='4'
             />
             <p className={styles.divider}>Resources</p>
-            <NavLink svg='link' href='/blog' label='Blog' shortcut='5' />
+            <NavLink svg='file' href='/blog' label='Posts' shortcut='5' />
             <NavLink
               svg='reading'
               href='/reading-list'
