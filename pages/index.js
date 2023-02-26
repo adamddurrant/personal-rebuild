@@ -165,6 +165,9 @@ export default function Home({ data, readingList, posts }) {
           <h1 className={styles.homeGreetingTitle}>
             {userTime ? userTime : "Hello"}
           </h1>
+          <span className={styles.mobileTinyText}>
+            My name is Adam Durrant - Welcome to my corner of the web.
+          </span>
           <span className={styles.tinyText}>
             My name is Adam —{" "}
             {isVisible ? `Below are some tips to help get started ↓` : null}
