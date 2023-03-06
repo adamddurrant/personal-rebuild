@@ -8,6 +8,8 @@ const nextConfig = {
       "s3.us-west-2.amazonaws.com",
       "amazonaws.com",
     ],
+    unoptimized: true,
+    minimumCacheTTL: 60,
   },
 
   async redirects() {
