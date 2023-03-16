@@ -267,7 +267,7 @@ export default function About({ data }) {
               />
             </div>
             <div className={util.read}>
-              <h2>This Site</h2>
+              <h2 id='site'>This Site</h2>
               <p>
                 This site was forked, rebuilt and modified from a build by{" "}
                 <a href='https://www.linkedin.com/in/s-j-zhang'>S J Zhang</a> A

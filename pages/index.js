@@ -22,15 +22,15 @@ export default function Home({ data, readingList, posts }) {
     },
     {
       id: "firstTime",
-      text: "Get to know me: I love modern web development, sushi and over-engineered personal sites — ",
+      text: "Get to know me. I love modern web development, sushi and over-engineered personal sites — ",
       ctaText: "Learn more about me →",
       ctaLink: "/about",
     },
     {
       id: "seeReviews",
-      text: "I am fortunate to have worked with some inspiring people and some rockstar brands — ",
+      text: "I am fortunate to have worked with some inspiring people and rockstar brands — ",
       ctaText: "See what they have to say →",
-      ctaLink: "/kind-words",
+      ctaLink: "/testimonials",
     },
     {
       id: "referenceSJ",
@@ -170,7 +170,7 @@ export default function Home({ data, readingList, posts }) {
           </span>
           <span className={styles.tinyText}>
             My name is Adam —{" "}
-            {isVisible ? `Below are some tips to help get started ↓` : null}
+            {isVisible ? `Below are some tips to help you get started ↓` : null}
             {!isVisible ? (
               <span onClick={resetOnboarding} className={styles.reset}>
                 Need a refresher? Reset onboarding.
