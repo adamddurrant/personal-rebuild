@@ -551,6 +551,9 @@
   flex-shrink: 0;
   flex-wrap: nowrap !important;
 }
+.tagSpace {
+  margin-right: 5px;
+}
 .badge {
   font-size: var(--font-m);
   padding: 6px 8px 6px 8px;

@@ -4,6 +4,7 @@ import util from "../../../styles/util.module.css";
 import * as Tooltip from "@radix-ui/react-tooltip";
 
 export default function ReadingListTile({ title, url, date, fav, tags }) {
+  let firstRead = tags.slice(0, 1);
   let displayUrl = url
     .replace("https://www.", "")
     .replace("http://www.", "")
@@ -12,8 +13,8 @@ export default function ReadingListTile({ title, url, date, fav, tags }) {
   return (
     <a
       href={url}
-      target="_blank"
-      rel="noopener noreferrer"
+      target='_blank'
+      rel='noopener noreferrer'
       className={styles.container}
     >
       <div className={styles.icon}>
@@ -27,7 +28,7 @@ export default function ReadingListTile({ title, url, date, fav, tags }) {
           }
           height={20}
           width={20}
-          alt="url favicon"
+          alt='url favicon'
         ></Image>
       </div>
       <div className={styles.right}>
@@ -36,7 +37,7 @@ export default function ReadingListTile({ title, url, date, fav, tags }) {
             <h3 className={styles.tileTitle}>{title}</h3>
             <div className={util.tags + " " + util.flexRow + " " + styles.tags}>
               {tags
-                ? tags.map((tag) => (
+                ? firstRead.map((tag) => (
                     <p key={tag.name + tag.color} className={styles.tag}>
                       {tag.name}
                     </p>
