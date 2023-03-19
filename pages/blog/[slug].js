@@ -33,12 +33,10 @@ const Post = ({ post }) => {
             {post.metadata.title}
           </h1>
           <div
-            className={util.tags + " " + util.flexColumn + " " + util.postMeta}
-          >
+            className={util.tags + " " + util.flexColumn + " " + util.postMeta}>
             <div
               className={util.flexMeta}
-              style={{ justifyContent: "center", alignItems: "center" }}
-            >
+              style={{ justifyContent: "center", alignItems: "center" }}>
               <span className={util.postDate}>{post.metadata.date}</span>
               <p className={post.metadata.tags[0].color + "Tag tag"}>
                 {post.metadata.tags[0].name}
@@ -61,8 +59,7 @@ const Post = ({ post }) => {
                 <a
                   className={util.tweetLink}
                   style={{ fontSize: "12px" }}
-                  href='https://twitter.com/AdamDDurrant'
-                >
+                  href='https://twitter.com/AdamDDurrant'>
                   @adamddurrant
                 </a>
               </div>
@@ -85,8 +82,7 @@ const Post = ({ post }) => {
                   </code>
                 );
               },
-            }}
-          >
+            }}>
             {post.markdown}
           </ReactMarkdown>
         </div>
