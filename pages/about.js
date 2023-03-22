@@ -64,16 +64,15 @@ export default function About({ data }) {
               <h2>About me</h2>
               <p>
                 {
-                  "I have almost a decade of experience as a professional SEO specialist. I've worked freelance, in-house and agency-side for startups, SMEs and enterprise business. "
+                  "I have almost a decade of experience as a professional SEO specialist. I've worked in a freelance, in-house and agency-side capacity for startups, SMEs and enterprise business. "
                 }
 
-                {"My work have been featured in; "}
+                {"My work has been featured in; "}
                 <a
                   href='https://www.searchenginewatch.com/'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className={util.normalLink}
-                >
+                  className={util.normalLink}>
                   Search Engine Watch
                 </a>
                 {", "}
@@ -81,8 +80,7 @@ export default function About({ data }) {
                   href='https://trafficthinktank.com/'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className={util.normalLink}
-                >
+                  className={util.normalLink}>
                   Traffic Think Tank
                 </a>
                 {", "}
@@ -90,8 +88,7 @@ export default function About({ data }) {
                   href='https://www.seofomo.co/'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className={util.normalLink}
-                >
+                  className={util.normalLink}>
                   SEO FOMO
                 </a>
                 {" and "}
@@ -99,8 +96,7 @@ export default function About({ data }) {
                   href='https://www.oncrawl.com/'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className={util.normalLink}
-                >
+                  className={util.normalLink}>
                   Oncrawl
                 </a>
 
@@ -110,14 +106,13 @@ export default function About({ data }) {
               </p>
               <p>
                 {
-                  "My personal mission is to be part of growing ambitious brands online, working with and meeting the most creative and ambitious people along the way. If you need it, here's "
+                  "My current personal mission is to master my craft while working with ambitious and important brands online. Meeting and working with the most creative and ambitious people I can find along the way. If you need it, here's "
                 }
                 <a
                   href='/me/adam-durrant.jpg'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className={util.normalLink}
-                >
+                  className={util.normalLink}>
                   {" "}
                   a picture of me looking busy
                 </a>
@@ -132,8 +127,8 @@ export default function About({ data }) {
                   My front end dev journey is still in its infancy but, I am
                   dabbling with numerous languages and frameworks to understand
                   what I enjoy most. The Next.js used to build this website for
-                  example has opened my eyes to using this React framework as
-                  often as possible.
+                  example has opened my eyes to using this awesome React
+                  framework as often as possible.
                 </p>
                 <p>
                   Despite this, I am experimenting, working and coding most with
@@ -194,8 +189,7 @@ export default function About({ data }) {
                   href='https://joinzoe.com/'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className={util.externalLink}
-                >
+                  className={util.externalLink}>
                   ZOE
                 </a>
                 {". "}
@@ -211,8 +205,7 @@ export default function About({ data }) {
                   href='https://www.linkedin.com/in/s-j-zhang/'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className={util.externalLink}
-                >
+                  className={util.externalLink}>
                   visit my Linkedin
                 </a>
               </p>
@@ -282,23 +275,22 @@ export default function About({ data }) {
               <ol
                 type='1'
                 start='1'
-                style={{ padding: "0rem 0rem 0rem 1.25rem" }}
-              >
+                style={{ padding: "0rem 0rem 0rem 1.25rem" }}>
                 <li style={{ marginBottom: "0.5rem" }}>
                   To motivate myself to read, interpret and understand code
-                  written by other developers.
+                  written by other people.
                 </li>
                 <li style={{ marginBottom: "0.5rem" }}>
                   To keep myself accountable with my goal of becoming proficient
-                  in front end development.
+                  in modern front end development.
                 </li>
                 <li style={{ marginBottom: "0.5rem" }}>
-                  To stay actively engaged with the modern frameworks &
+                  To stay actively engaged with the the latest frameworks &
                   libraries.
                 </li>
                 <li style={{ marginBottom: "0.5rem" }}>
-                  To encourage myself to create and share more often. A
-                  beautiful site that i&apos;m proud of, keeps me driven.
+                  To encourage myself to make and share more frequently. A
+                  beautiful site that i&apos;m proud of keeps me driven.
                 </li>
               </ol>
               <p>
@@ -313,8 +305,7 @@ export default function About({ data }) {
                   href='https://nextjs.org/'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className={util.normalLink}
-                >
+                  className={util.normalLink}>
                   Next.js
                 </a>{" "}
                 and deployed on{" "}
@@ -322,46 +313,42 @@ export default function About({ data }) {
                   href='https://vercel.com'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className={util.externalLink}
-                >
+                  className={util.externalLink}>
                   Vercel
                 </a>
-                . Most content is managed in{" "}
+                . Most of the content is managed in{" "}
                 <a
                   href='http://notion.com/'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className={util.normalLink}
-                >
+                  className={util.normalLink}>
                   Notion
                 </a>{" "}
-                and statically pre-rendered through{" "}
+                and statically pre-rendered through the{" "}
                 <a
                   href='https://developers.notion.com/'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className={util.externalLink}
-                >
+                  className={util.externalLink}>
                   Notion API
                 </a>
-                . I ran into problems rendering images from notion as uploaded
-                images{" "}
+                . I ran into problems rendering images that are hosted on notion
+                because uploaded images{" "}
                 <a
                   href='https://developers.notion.com/'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className={util.externalLink}
-                >
+                  className={util.externalLink}>
                   regularly regenerate
                 </a>
-                . Radix UI is used for front-end components like modals and
-                tooltips.{" "}
+                . To solve for this I host images locally or via Medium for blog
+                content. Radix UI is also used for front-end components like
+                modals and tooltips.{" "}
                 <a
                   href='https://github.com/pacocoursey/next-themes'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className={util.externalLink}
-                >
+                  className={util.externalLink}>
                   Next Themes
                 </a>{" "}
                 controls light/dark-mode and made implementation a lot easier.
