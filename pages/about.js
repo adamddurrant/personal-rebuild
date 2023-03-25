@@ -184,14 +184,14 @@ export default function About({ data }) {
 
               <h2>Career</h2>
               <p className={util.read}>
-                {"I’m currently working at series B biotech company "}
+                {"I'm currently working at "}
                 <a
-                  href='https://joinzoe.com/'
+                  href='https://www.pugpig.com/'
                   target='_blank'
                   rel='noopener noreferrer'
                   className={util.externalLink}>
-                  ZOE
-                </a>
+                  Pugpig
+                </a> a WordPress based publishing platform that powers some of the worlds biggest names in media
                 {". "}
                 {
                   "In the 7+ years that I've been working in the SEO industry I have made it my mission to learn by doing. I started my career at the bottom as an SEO assistant and quickly realised how much impact I could make as a solo marketeer. Since then, i've been hooked on all things web."
@@ -211,6 +211,14 @@ export default function About({ data }) {
               </p>
             </div>
             <div>
+              <ExpTile
+                date='2022–Now'
+                title='Web Developer at Pugpig'
+                url={"https://www.pugpig.com/"}
+                content={
+                  "Pugpig are one of the most well known publishing platforms on the web. Their product and client services power some of the world's leading media brands."
+                }
+              />
               <ExpTile
                 date='2022–Now'
                 title='SEO Manager at ZOE'
