@@ -29,6 +29,16 @@ const nextConfig = {
         destination: "/blog/bookmarklets-for-seo",
         permanent: true,
       },
+      {
+        source: "/resources",
+        destination: "/tools",
+        permanent: true,
+      },
+      {
+        source: "/how-to-use-github",
+        destination: "/blog/using-git-and-github",
+        permanent: true,
+      },
     ];
   },
 };

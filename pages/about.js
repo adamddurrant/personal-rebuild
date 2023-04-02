@@ -23,7 +23,7 @@ export default function About({ data }) {
   }, []);
 
   const description =
-    "I’m an SEO specialist and front-end developer by trade. I currently spend most of my spare time learning React. Welcome to my corner of the internet. Here I share my writings, favourite resources, personal updates and career adventures.";
+    "I’m an SEO specialist and front-end developer by trade. I currently spend most of my spare time learning WordPress & Sass. Welcome to my corner of the internet. Here I share my writings, favourite resources, personal updates and career adventures.";
   const pageTitle = "Adam Durrant | About Me";
   return (
     <>
