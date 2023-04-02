@@ -121,7 +121,7 @@ export default function About({ data }) {
 
               <div className={util.read}>
                 <h2 style={{ padding: "1rem 0rem 0rem 0rem" }} id='about-tools'>
-                  Software & Technologies
+                  Tech stack
                 </h2>
                 <p className={util.read}>
                   My front end dev journey is still in its infancy but, I am
@@ -147,9 +147,9 @@ export default function About({ data }) {
                       technology={"JavaScript ES6"}
                     />
                     <SkillsIcon icon={"react"} technology={"React"} />
-                    <SkillsIcon icon={"tailwind"} technology={"Tailwind CSS"} />
-                    <SkillsIcon icon={"webflow"} technology={"Webflow"} />
+                    <SkillsIcon icon={"sass-word"} technology={"Sass"} />
                     <SkillsIcon icon={"wordpress"} technology={"WordPress 6"} />
+                    <SkillsIcon icon={"webflow"} technology={"Webflow"} />
                   </div>
                 </div>
                 <div style={{ paddingTop: "25px" }} className={util.flexRow}>
@@ -268,7 +268,7 @@ export default function About({ data }) {
               />
             </div>
             <div className={util.read}>
-              <h2 id='site'>This Site</h2>
+              <h2 id='site'>How this site was made</h2>
               <p>
                 This site was forked, rebuilt and modified from a build by{" "}
                 <a href='https://www.linkedin.com/in/s-j-zhang'>S J Zhang</a> A
