@@ -10,6 +10,7 @@ import OnboardingCard from "../components/onboardingCard";
 import HomeUpdatesTile from "../components/tiles/home-tiles/homeUpdatesTile";
 import ReadingListTile from "../components/tiles/home-tiles/readingListTile";
 import BlogTile from "../components/tiles/home-tiles/blogTile";
+import StructuredData from "../components/structuredData";
 
 export default function Home({ data, readingList, posts }) {
   const tips = [
@@ -128,6 +129,25 @@ export default function Home({ data, readingList, posts }) {
 
   const pageTitle = "Adam Durrant | SEO Specialist & Front-end Web Developer";
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Adam Durrant",
+    "description": "Adam Durrant (born 26 July 1992 in Birmingham, England), is an SEO consultant & front end web developer.",
+    "height": "180 cm",
+    "nationality": "British",
+    "birthDate": "26 July 1992",
+    "Gender": "Male",
+    "url": "https://adamdurrant.co.uk/",
+    "image": "https://adamdurrant.co.uk/me/adam-durrant.jpg",
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "Coventry University",
+      "url": "https://www.coventry.ac.uk/"
+    },
+    "sameAs": ["https://twitter.com/adamddurrant", "https://www.linkedin.com/in/adam-durrant/", "https://github.com/adamddurrant"]
+  };
+
   return (
     <>
       <Head>
@@ -138,26 +158,7 @@ export default function Home({ data, readingList, posts }) {
         <meta property='og:description' content={description} />
         <meta name='twitter:title' content={pageTitle} />
         <meta name='twitter:description' content={description} />
-        <script type='application/ld+json'>{` 
-        	{
-            "@context": "https://schema.org/",
-            "@type": "Person",
-            "name": "Adam Durrant",
-            "description": "Adam Durrant (born 26 July 1992 in Birmingham, England), is an SEO consultant & front end web developer.",
-            "height": "180 cm",
-            "nationality": "British",
-            "birthDate": "26 July 1992",
-            "Gender": "Male",
-            "url": "https://adamdurrant.co.uk/",
-            "image": "https://adamdurrant.co.uk/me/adam-durrant.jpg",
-            "alumniOf": {
-              "@type": "EducationalOrganization",
-              "name": "Coventry University",
-              "url": "https://www.coventry.ac.uk/"
-            },
-            "sameAs": ["https://twitter.com/adamddurrant", "https://www.linkedin.com/in/adam-durrant/", "https://github.com/adamddurrant"]
-          }
-        `}</script>
+        <StructuredData data={structuredData} />
       </Head>
       <main className={util.page} id='recentsPage'>
         <div className={styles.homeColumn}>

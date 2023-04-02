@@ -147,7 +147,7 @@ export default function About({ data }) {
                       technology={"JavaScript ES6"}
                     />
                     <SkillsIcon icon={"react"} technology={"React"} />
-                    <SkillsIcon icon={"sass-word"} technology={"Sass"} />
+                    <SkillsIcon icon={"sass"} technology={"Sass"} />
                     <SkillsIcon icon={"wordpress"} technology={"WordPress 6"} />
                     <SkillsIcon icon={"webflow"} technology={"Webflow"} />
                   </div>
