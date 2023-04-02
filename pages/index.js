@@ -139,24 +139,24 @@ export default function Home({ data, readingList, posts }) {
         <meta name='twitter:title' content={pageTitle} />
         <meta name='twitter:description' content={description} />
         <script type='application/ld+json'>{` 
-        {
-          "@context": "https://schema.org/",
-          "@type": "Person",
-          "name": "Adam Durrant",
-          "description": "Adam Durrant (born 26 July 1992 in Birmingham, England), is an SEO consultant & front end web developer.",
-          "height": "180 cm",
-          "nationality": "British",
-          "birthDate": "26 July 1992",
-          "Gender": "Male",
-          "url": "https://adamdurrant.co.uk/",
-          "image": "https://adamdurrant.co.uk/me/adam-durrant.jpg",
-          "alumniOf": {
+        	{
+            "@context": "https://schema.org/",
+            "@type": "Person",
+            "name": "Adam Durrant",
+            "description": "Adam Durrant (born 26 July 1992 in Birmingham, England), is an SEO consultant & front end web developer.",
+            "height": "180 cm",
+            "nationality": "British",
+            "birthDate": "26 July 1992",
+            "Gender": "Male",
+            "url": "https://adamdurrant.co.uk/",
+            "image": "https://adamdurrant.co.uk/me/adam-durrant.jpg",
+            "alumniOf": {
               "@type": "EducationalOrganization",
               "name": "Coventry University",
               "url": "https://www.coventry.ac.uk/"
-          },
-          "sameAs": ["https://twitter.com/adamddurrant", "https://www.linkedin.com/in/adam-durrant/","https://github.com/adamddurrant"],
-        } 
+            },
+            "sameAs": ["https://twitter.com/adamddurrant", "https://www.linkedin.com/in/adam-durrant/", "https://github.com/adamddurrant"]
+          }
         `}</script>
       </Head>
       <main className={util.page} id='recentsPage'>
