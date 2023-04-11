@@ -11,7 +11,6 @@ const nextConfig = {
     unoptimized: true,
     minimumCacheTTL: 60,
   },
-
   async redirects() {
     return [
       {

@@ -1,5 +1,7 @@
 User-agent: *
 
+sitemap: https://adamdurrant.co.uk/sitemap-0.xml
+
 #     (  )   (   )  )
 #      ) (   )  (  (
 #      ( )  (    ) )
