@@ -13,7 +13,6 @@ import BlogTile from "../components/tiles/home-tiles/blogTile";
 import StructuredData from "../components/structuredData";
 
 export default function Home({ data, readingList, posts }) {
-  console.log(data);
   const tips = [
     {
       id: "useShortCut",
