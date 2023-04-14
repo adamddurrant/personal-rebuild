@@ -3,13 +3,19 @@ import Menu from "../components/menu";
 import { ThemeProvider } from "next-themes";
 import Background from "../components/background";
 import Head from "next/head";
-import toast, { Toaster } from "react-hot-toast";
+import { Toaster } from "react-hot-toast";
+import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps }) {
+
+  const router = useRouter();
+  const canonicalUrl = (`https://adamdurrant.co.uk` + (router.asPath === "/" ? "" : router.asPath)).split("?")[0];
+
   return (
     <ThemeProvider attribute='class' value={{ dark: "dark-theme" }}>
       <>
         <Head>
+          <link rel="canonical" href={canonicalUrl} />
           <link
             href='/favicon-small.png'
             rel='shortcut icon'
@@ -36,6 +42,7 @@ function MyApp({ Component, pageProps }) {
             },
           }}
         />
+        <div className="base"></div>
         <Background />
         <Menu />
         <Component {...pageProps} />

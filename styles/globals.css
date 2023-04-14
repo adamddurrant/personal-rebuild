@@ -192,6 +192,17 @@ code {
   transition: all 0.2s ease;
   display: table-cell;
 }
+
+.base {
+  background-color: var(--appbg);
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  left: 0px;
+  top: 0px;
+  z-index: -2;
+}
+
 .dark-theme .tag {
   color: rgba(255, 255, 255, 0.68);
 }
