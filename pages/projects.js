@@ -42,6 +42,14 @@ export default function Projects() {
           <p className={util.description}>{description}</p>
           <ul className={util.list}>
             <ProjectTile
+              image='px-to-rem-extension'
+              title='Px to rem unit converter extension'
+              content='A pixel unit to rem unit chrome extension. I work a lot outside of an IDE and all other extensions I found were slow and click intensive.'
+              type='Chrome Extenson · JavaScript · Side Project'
+              date='2023-06-09'
+              url='https://chrome.google.com/webstore/detail/px-to-rem-to-px-converter/alofjjmmmhlmapihldheanofnbfdmbop'
+            />
+            <ProjectTile
               image='zoe'
               title='ZOE Library Reimagined'
               content='A redesign and build of the ZOE blog subfolder. Built to help me learn an epic combo: Nextjs + DatoCMS.'
