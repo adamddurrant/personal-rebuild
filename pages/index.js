@@ -22,7 +22,7 @@ export default function Home({ data, readingList, posts }) {
     },
     {
       id: "firstTime",
-      text: "Get to know me. I love modern web development, sushi and over-engineered personal sites — ",
+      text: "Get to know me. I love modern web dev, sushi and over-engineered personal sites — ",
       ctaText: "Learn more about me →",
       ctaLink: "/about",
     },
@@ -34,7 +34,7 @@ export default function Home({ data, readingList, posts }) {
     },
     {
       id: "referenceSJ",
-      text: "This site was forked and restructured from a build by designer & developer SJ Zhang — ",
+      text: "This site was forked and restructured from my favourite designer & developer SJ Zhang — ",
       ctaText: "Learn how it's made →",
       ctaLink: "/about#site",
     },
@@ -46,7 +46,7 @@ export default function Home({ data, readingList, posts }) {
     },
     {
       id: "seeProject",
-      text: "My web development journey is just getting started but, I have a small collection of code projects — ",
+      text: "My web development journey is still in its infancy but, I have a small collection of code projects — ",
       ctaText: "See projects →",
       ctaLink: "/projects",
     },

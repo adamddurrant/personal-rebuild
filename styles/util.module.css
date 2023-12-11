@@ -19,7 +19,6 @@
   font-size: var(--font-m);
   line-height: 1.35;
   color: var(--gray11);
-  max-width: 300px;
 }
 
 .skillsInvert {
@@ -375,6 +374,17 @@
   grid-column-gap: 0rem;
   grid-row-gap: 0rem;
   margin: 3rem -1rem;
+}
+
+@media screen and (max-width: 700px) {
+  .grid {
+    margin: 3rem -0.1rem;
+    grid-template-columns: 100%;
+  }
+
+  .grid a {
+    margin-bottom: 20px;
+  }
 }
 
 .fullWidthGrid {

@@ -10,7 +10,7 @@ import Settings from "../components/settings";
 
 export default function ReadingList({ list }) {
   const description =
-    "This page is a collection books, videos, twitter threads and blog posts that have made my brain bigger.";
+    "This page is a collection of books, videos, twitter threads and blog posts that have made my brain bigger.";
   const pageTitle = "Adam Durrant | Reading List";
   //filtering logic depends on query params
   //if no query we assume the section is "recently added" and fav setting is "false"

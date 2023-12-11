@@ -9,7 +9,7 @@ import Settings from "../components/settings";
 
 export default function ReadingList({ list }) {
   const description =
-    "A curated and growing list of SEO, design and development resources I use regularly.";
+    "A curated and growing list of SEO, design and development resources I use regularly and find useful.";
 
   const pageTitle = "Adam Durrant | Tools & Resources List";
 
