@@ -17,31 +17,14 @@ const CodeBlock = ({ language, codestring }) => {
     </SyntaxHighlighter>
   );
 };
-export default function Post (props) {
-  const { data } = props;
+export default function Blogpost (props) {
+  const { postData } = props;
   return (
     <>
-
+      <h1>{postData.title}</h1>
     </>
   );
 };
-
-// export async function getStaticProps({ params, preview = false }) {
-//   const data = await getPostAndMorePosts(params.slug, preview);
-//   const content = await markdownToHtml(data?.post?.content || "");
-
-//   return {
-//     props: {
-//       preview,
-//       post: {
-//         ...data?.post,
-//         content,
-//       },
-//       morePosts: data?.morePosts ?? [],
-//     },
-//   };
-// }
-
 
 const PATHS_QUERY = ` 
 query Paths {
@@ -51,9 +34,9 @@ query Paths {
 }
 `;
 
-export async function getStaticPaths() {
+export const getStaticPaths = async () => {
   const slugQuery = await request({
-    query: PATHS_QUERY
+    query: PATHS_QUERY,
   });
   let paths = [];
   slugQuery.allPosts.map((p) => paths.push(`/blog/${p.slug}`));
@@ -66,21 +49,38 @@ export async function getStaticPaths() {
 
 
 const POST_QUERY = ` 
-query Posts {
-  allPosts {
-    title
-    publishDate
+query singlePost($slug: String) {
+  post(filter: {slug: {eq: $slug}}) {
+    featuredImage {
+      url
+      title
+    }
+    category {
+      name
+    }
+    _seoMetaTags {
+      content
+      tag
+      attributes
+    }
     slug
+    title
+    body {
+      value
+    }
+    publishDate
   }
 }
 `;
 
-// Props functon from dato
-export async function getStaticProps() {
-  const data = await request({
-    query: POST_QUERY
+export const getStaticProps = async ({ params }) => {
+  const postQuery = await request({
+    query: POST_QUERY,
+    variables: {slug: params.slug},
   });
   return {
-    props: { data }
+    props: {
+      postData: postQuery.post,
+     },
   };
 }
