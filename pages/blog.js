@@ -2,6 +2,7 @@ import Head from "next/head";
 import { request } from "../lib/datocms";
 import util from "../styles/util.module.css";
 import BlogTile from "../components/tiles/blogTile";
+import heroOne from "../public/blogs/hero-1.jpg"
 
 //page header and in-page description
 const description = "Here you'll find my most recent writings. I enjoy writing but I need motivation to write more so, this page will keep me accountable. Here you can find search engine optimisaton and web development insight, guides, tools & thoughts.";
@@ -35,13 +36,13 @@ export default function Home(props) {
                 url={post.slug}
               />
             ))}
-            {/* <BlogTile
+            <BlogTile
                 key={98}
-                image={'../../og.jpg'}
+                staticImage={heroOne}
                 title={'Six Most Common Travel SEO Mistakes'}
                 excerpt={'In-depth guide for all things SEO in the travel industry for 2019. Index bloat, on-site search, 404 pages, meta titles, and more. Common mistakes and fixes.'}
                 url={'https://www.searchenginewatch.com/2018/12/14/travel-seo-guide-2019/'}
-              /> */}
+              />
           </div>
         </div >
       </main >

@@ -2,7 +2,7 @@ import styles from "./blogTile.module.css";
 import util from "../../styles/util.module.css";
 import { Image } from "react-datocms"
 
-export default function BlogTile({ image, title, excerpt, url }) {
+export default function BlogTile({ image, staticImage, title, excerpt, url }) {
   //Checks if link is external to open in a new tab
   const target = url.includes("http") ? "_blank" : null;
   const slugConcat = "blog/" + url;
@@ -16,7 +16,7 @@ export default function BlogTile({ image, title, excerpt, url }) {
         className={styles.container}
       >
         <div>
-          <Image data={image.responsiveImage} style={{borderRadius: "6px"}} />
+          <Image data={staticImage ? staticImage : image.responsiveImage} style={{borderRadius: "6px"}} />
         </div>
 
         <div className={styles.stack}>
