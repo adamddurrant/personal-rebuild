@@ -48,7 +48,7 @@ export default function Blogpost(props) {
                   <Image data={authorImage} style={{ borderRadius: "100px", width: "40px", height: "40px" }} />
                 </div>
                 <div className={util.read}>
-                  <p style={{ margin: "0px", lineHeight: "0.9" }}>Adam Durrant</p>
+                  <p style={{ margin: "0px", lineHeight: "0.9", fontWeight: "600" }}>Adam Durrant</p>
                   <a
                     className={util.tweetLink}
                     style={{ fontSize: "12px" }}

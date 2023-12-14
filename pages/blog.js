@@ -5,9 +5,9 @@ import BlogTile from "../components/tiles/blogTile";
 
 //page header and in-page description
 const description = "Here you'll find my most recent writings. I enjoy writing but I need motivation to write more so, this page will keep me accountable. Here you can find search engine optimisaton and web development insight, guides, tools & thoughts.";
-const pageTitle = "Adam Durrant | Personal Blog";
+const pageTitle = "Adam Durrant | Personal SEO & Web Dev Blog";
 
-export default function Home( props ) {
+export default function Home(props) {
   const { data } = props;
   const posts = data.allPosts;
   return (
@@ -25,7 +25,7 @@ export default function Home( props ) {
         <div className={util.pageColumn}>
           <h1 className={util.header}>Blog</h1>
           <p className={util.description}>{description}</p>
-          <ul className={util.grid}>
+          <div className={util.grid}>
             {posts.map((post, index) => (
               <BlogTile
                 key={index}
@@ -35,9 +35,16 @@ export default function Home( props ) {
                 url={post.slug}
               />
             ))}
-          </ul>
-        </div>
-      </main>
+            {/* <BlogTile
+                key={98}
+                image={'../../og.jpg'}
+                title={'Six Most Common Travel SEO Mistakes'}
+                excerpt={'In-depth guide for all things SEO in the travel industry for 2019. Index bloat, on-site search, 404 pages, meta titles, and more. Common mistakes and fixes.'}
+                url={'https://www.searchenginewatch.com/2018/12/14/travel-seo-guide-2019/'}
+              /> */}
+          </div>
+        </div >
+      </main >
     </>
   );
 }
@@ -48,14 +55,14 @@ export async function getStaticProps() {
   });
   return {
     props: {
-     data 
+      data
     },
   };
 }
 
 const POSTS_QUERY = ` 
 query Posts {
-  allPosts(orderBy: publishDate_ASC) {
+  allPosts(orderBy: publishDate_DESC) {
     title
     slug
     featuredImage {

@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
 const { Client } = require("@notionhq/client");
-import { getHomePosts } from "../lib/notion";
 import { request } from "../lib/datocms";
 import styles from "../pages/index.module.css";
 import React, { useEffect } from "react";

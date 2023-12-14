@@ -173,8 +173,8 @@ span a[href*="http"]:hover {
 * {
   box-sizing: border-box;
 }
-code {
-  /* background: var(--gray5); */
+p > code {
+  background: var(--gray5);
   border-radius: 3px;
   padding: 0px 4px;
   margin: 0px 0px 0px;
