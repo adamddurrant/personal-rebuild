@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 const { Client } = require("@notionhq/client");
 import { getHomePosts } from "../lib/notion";
+import { request } from "../lib/datocms";
 import styles from "../pages/index.module.css";
 import React, { useEffect } from "react";
 import util from "../styles/util.module.css";
@@ -115,17 +116,18 @@ export default function Home({ data, readingList, posts }) {
       hour > 17
         ? "Good evening"
         : hour > 11
-        ? "Good afternoon"
-        : hour > 4
-        ? "Good morning"
-        : hour > 2
-        ? "It's late, go to bed"
-        : "Hello";
+          ? "Good afternoon"
+          : hour > 4
+            ? "Good morning"
+            : hour > 2
+              ? "It's late, go to bed"
+              : "Hello";
     setUserTime(greeting);
   }, []);
 
-  const description =
-    "Adam Durrant - Growing ambitious brands online. Working with and learning from inspiring people along the way.";
+  const blogs = posts.allPosts;
+
+  const description = "Adam Durrant - Growing ambitious brands online. Working with and learning from inspiring people along the way.";
 
   const pageTitle = "Adam Durrant | SEO Specialist & Front-end Web Developer";
 
@@ -240,16 +242,17 @@ export default function Home({ data, readingList, posts }) {
             </Link>
           </div>{" "}
           <ul className={util.homePostsGrid}>
-            {posts.map((post, index) => (
-              <BlogTile
-                key={index}
-                imageUrl={post.image}
-                title={post.title}
-                content={post.description}
-                url={post.slug}
-                tags={post.multi_select}
-              />
-            ))}
+            {blogs.map((blog, index) => {
+              return (
+                <BlogTile
+                  key={index}
+                  image={blog.featuredImage}
+                  title={blog.title}
+                  excerpt={blog.excerpt}
+                  url={blog.slug}
+                />
+              )
+            })}
           </ul>
           <div className={styles.homeSectionContainer}>
             <h2 className={styles.homeSectionTitle}>Reading List</h2>
@@ -322,7 +325,9 @@ export const getStaticProps = async () => {
     page_size: 8,
   });
 
-  const blogPosts = await getHomePosts();
+  const blogPosts = await request({
+    query: POSTS_QUERY
+  });
 
   return {
     props: {
@@ -333,3 +338,28 @@ export const getStaticProps = async () => {
     revalidate: 5,
   };
 };
+
+const POSTS_QUERY = ` 
+query Posts {
+  allPosts(orderBy: publishDate_ASC) {
+    title
+    slug
+    featuredImage {
+      responsiveImage {
+        alt
+        width
+        webpSrcSet
+        title
+        srcSet
+        src
+        sizes
+        height
+        bgColor
+        base64
+        aspectRatio
+      }
+    }
+    excerpt
+  }
+}
+`;

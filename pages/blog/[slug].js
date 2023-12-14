@@ -6,7 +6,8 @@ import util from "../../styles/util.module.css";
 import { isCode } from 'datocms-structured-text-utils';
 import Head from "next/head";
 import Link from "next/link";
-import {Image as NextImage } from "next/image";
+import { Image as NextImage } from "next/image";
+import authorImage from "../../public/me/adam-durrant.jpg";
 
 const CodeBlock = ({ language, codestring }) => {
   return (
@@ -50,14 +51,7 @@ export default function Blogpost(props) {
 
             <div className={util.flexRow} style={{ marginTop: "30px" }}>
               <div style={{ marginRight: "10px" }}>
-                {/* <NextImage
-                  priority
-                  width={40}
-                  height={40}
-                  src='/me/adam-durrant.jpg'
-                  alt='Adam Durrant'
-                  style={{ borderRadius: "100px" }}
-                /> */}
+              <Image data={authorImage} style={{ borderRadius: "100px", width: "40px", height: "40px" }} />
               </div>
               <div className={util.read}>
                 <p style={{ margin: "0px", lineHeight: "0.9" }}>Adam Durrant</p>
@@ -71,7 +65,7 @@ export default function Blogpost(props) {
             </div>
           </div>
 
-          <section class="blog-body">
+          <section className={util.body}>
 
             <StructuredText data={postData.body}
               renderBlock={({ record }) => {

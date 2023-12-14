@@ -1,18 +1,15 @@
 import Head from "next/head";
-import { getAllPublished } from "../lib/notion";
 import { request } from "../lib/datocms";
 import util from "../styles/util.module.css";
 import BlogTile from "../components/tiles/blogTile";
 
 //page header and in-page description
-const description =
-  "Here you'll find my most recent writings. I enjoy writing but I need motivation to write more so, this page will keep me accountable. Here you can find search engine optimisaton and web development insight, guides, tools & thoughts.";
+const description = "Here you'll find my most recent writings. I enjoy writing but I need motivation to write more so, this page will keep me accountable. Here you can find search engine optimisaton and web development insight, guides, tools & thoughts.";
 const pageTitle = "Adam Durrant | Personal Blog";
 
 export default function Home( props ) {
   const { data } = props;
   const posts = data.allPosts;
-  console.log(posts);
   return (
     <>
       <Head>

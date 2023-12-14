@@ -1,5 +1,4 @@
 import styles from "./blogTile.module.css";
-// import Image from "next/image";
 import util from "../../styles/util.module.css";
 import { Image } from "react-datocms"
 
@@ -17,7 +16,7 @@ export default function BlogTile({ image, title, excerpt, url }) {
         className={styles.container}
       >
         <div>
-        <Image data={image.responsiveImage} />
+          <Image data={image.responsiveImage} style={{borderRadius: "6px"}} />
         </div>
 
         <div className={styles.stack}>

@@ -8,6 +8,8 @@
   margin: 0rem;
   /* background-color: var(--linkContainerBg); */
   transition: background-color 0.15s ease;
+  background-color: var(--linkContainerBg);
+  border: 1px solid var(--linkContainerBorder);
 }
 .container:hover {
   background-color: var(--linkContainerBgHover);
@@ -53,9 +55,4 @@
   display: -webkit-box;
   -webkit-line-clamp: 2; /* number of lines to show */
   -webkit-box-orient: vertical;
-}
-@media (max-width: 700px) {
-  .container {
-    padding: 0.5rem;
-  }
 }
