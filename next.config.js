@@ -7,6 +7,7 @@ const nextConfig = {
       "s2.googleusercontent.com",
       "s3.us-west-2.amazonaws.com",
       "amazonaws.com",
+      "datocms-assets.com"
     ],
     unoptimized: true,
     minimumCacheTTL: 60,
