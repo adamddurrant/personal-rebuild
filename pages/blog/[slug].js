@@ -1,14 +1,12 @@
-import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { request } from "../../lib/datocms";
-import { Image } from "react-datocms"
+import { Image, renderRule, StructuredText } from "react-datocms"
 import util from "../../styles/util.module.css";
-import style from "./markdownStyles.module.css";
-import { StructuredText } from "react-datocms";
+import { isCode } from 'datocms-structured-text-utils';
 import Head from "next/head";
 import Link from "next/link";
-// import Image from "next/image";
+import {Image as NextImage } from "next/image";
 
 const CodeBlock = ({ language, codestring }) => {
   return (
@@ -17,6 +15,7 @@ const CodeBlock = ({ language, codestring }) => {
     </SyntaxHighlighter>
   );
 };
+
 export default function Blogpost(props) {
   const { postData } = props;
   return (
@@ -51,7 +50,7 @@ export default function Blogpost(props) {
 
             <div className={util.flexRow} style={{ marginTop: "30px" }}>
               <div style={{ marginRight: "10px" }}>
-                {/* <Image
+                {/* <NextImage
                   priority
                   width={40}
                   height={40}
@@ -73,6 +72,7 @@ export default function Blogpost(props) {
           </div>
 
           <section class="blog-body">
+
             <StructuredText data={postData.body}
               renderBlock={({ record }) => {
                 switch (record.__typename) {
@@ -81,7 +81,17 @@ export default function Blogpost(props) {
                   default:
                     return null;
                 }
-              }} />
+              }
+              }
+              customNodeRules={[
+                renderRule(isCode, ({ node, key }) => (
+                  <CodeBlock key={key} codestring={node.code} language={node.language}>
+                    {node.code}
+                  </CodeBlock>
+                ))
+              ]}
+            />
+
           </section>
 
         </div>
