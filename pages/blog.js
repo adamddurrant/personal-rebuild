@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { getAllPublished } from "../lib/notion";
+import { request } from "../lib/datocms";
 import util from "../styles/util.module.css";
 import BlogTile from "../components/tiles/blogTile";
 
@@ -8,8 +9,10 @@ const description =
   "Here you'll find my most recent writings. I enjoy writing but I need motivation to write more so, this page will keep me accountable. Here you can find search engine optimisaton and web development insight, guides, tools & thoughts.";
 const pageTitle = "Adam Durrant | Personal Blog";
 
-export default function Home({ posts }) {
-  if (!posts) return <h1>No posts</h1>;
+export default function Home( props ) {
+  const { data } = props;
+  const posts = data.allPosts;
+  console.log(posts);
   return (
     <>
       <Head>
@@ -29,11 +32,10 @@ export default function Home({ posts }) {
             {posts.map((post, index) => (
               <BlogTile
                 key={index}
-                imageUrl={post.image}
+                image={post.featuredImage}
                 title={post.title}
-                content={post.description}
+                excerpt={post.excerpt}
                 url={post.slug}
-                tags={post.multi_select}
               />
             ))}
           </ul>
@@ -42,12 +44,39 @@ export default function Home({ posts }) {
     </>
   );
 }
-export const getStaticProps = async () => {
-  const data = await getAllPublished();
+
+export async function getStaticProps() {
+  const data = await request({
+    query: POSTS_QUERY
+  });
   return {
     props: {
-      posts: data,
+     data 
     },
-    revalidate: 5,
   };
-};
+}
+
+const POSTS_QUERY = ` 
+query Posts {
+  allPosts(orderBy: publishDate_ASC) {
+    title
+    slug
+    featuredImage {
+      responsiveImage {
+        alt
+        width
+        webpSrcSet
+        title
+        srcSet
+        src
+        sizes
+        height
+        bgColor
+        base64
+        aspectRatio
+      }
+    }
+    excerpt
+  }
+}
+`;

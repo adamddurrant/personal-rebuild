@@ -1,8 +1,9 @@
 import styles from "./blogTile.module.css";
-import Image from "next/image";
+// import Image from "next/image";
 import util from "../../styles/util.module.css";
+import { Image } from "react-datocms"
 
-export default function BlogTile({ imageUrl, title, content, url, tags, fav }) {
+export default function BlogTile({ image, title, excerpt, url }) {
   //Checks if link is external to open in a new tab
   const target = url.includes("http") ? "_blank" : null;
   const slugConcat = "blog/" + url;
@@ -16,16 +17,7 @@ export default function BlogTile({ imageUrl, title, content, url, tags, fav }) {
         className={styles.container}
       >
         <div>
-          <Image
-            // unoptimized
-            className={styles.image}
-            priority
-            src={imageUrl}
-            width={288}
-            height={150}
-            layout='responsive'
-            alt={title}
-          />
+        <Image data={image.responsiveImage} />
         </div>
 
         <div className={styles.stack}>
@@ -33,7 +25,7 @@ export default function BlogTile({ imageUrl, title, content, url, tags, fav }) {
             <h3 className={util.tileTitle + " " + styles.inline}>{title}</h3>
             <span className={styles.externalIcon}>↗</span>
           </div>
-          <p className={styles.content}>{content}</p>
+          <p className={styles.content}>{excerpt}</p>
         </div>
       </a>
     </>

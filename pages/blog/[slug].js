@@ -1,7 +1,6 @@
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism";
-import { getPosts } from "../../lib/api";
 import { request } from "../../lib/datocms";
 import { Image } from "react-datocms"
 import util from "../../styles/util.module.css";
