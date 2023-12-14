@@ -3,6 +3,7 @@ import { request } from "../lib/datocms";
 import util from "../styles/util.module.css";
 import BlogTile from "../components/tiles/blogTile";
 import heroOne from "../public/blogs/hero-1.jpg"
+import heroTwo from "../public/blogs/hero-2.jpg"
 
 //page header and in-page description
 const description = "Here you'll find my most recent writings. I enjoy writing but I need motivation to write more so, this page will keep me accountable. Here you can find search engine optimisaton and web development insight, guides, tools & thoughts.";
@@ -37,11 +38,18 @@ export default function Home(props) {
               />
             ))}
             <BlogTile
-                key={98}
+                key={99}
                 staticImage={heroOne}
                 title={'Six Most Common Travel SEO Mistakes'}
                 excerpt={'In-depth guide for all things SEO in the travel industry for 2019. Index bloat, on-site search, 404 pages, meta titles, and more. Common mistakes and fixes.'}
                 url={'https://www.searchenginewatch.com/2018/12/14/travel-seo-guide-2019/'}
+              />
+            <BlogTile
+                key={98}
+                staticImage={heroTwo}
+                title={'How To Optimize Your Local Business For Voice Search'}
+                excerpt={'Specific strategies for local businesses trying to understand the potential voice search will have on their bottom lines.'}
+                url={'https://www.searchenginewatch.com/2018/11/20/optimize-local-business-voice-search/'}
               />
           </div>
         </div >
