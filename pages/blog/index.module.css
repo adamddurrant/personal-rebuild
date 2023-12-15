@@ -7,7 +7,7 @@
   grid-template-columns: 2fr 1fr;
 }
 
-.codeBlock {
+.codeBlock, .blog_inlineImage {
   margin-bottom: 15px;
 }
 

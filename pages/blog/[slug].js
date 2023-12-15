@@ -2,7 +2,7 @@ import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import styles from "../../pages/blog/index.module.css"
 import { request } from "../../lib/datocms";
-import { Image, renderRule, StructuredText } from "react-datocms"
+import { Image, renderRule, StructuredText, renderMetaTags } from "react-datocms"
 import util from "../../styles/util.module.css";
 import { isCode } from 'datocms-structured-text-utils';
 import Head from "next/head";
@@ -18,17 +18,20 @@ const CodeBlock = ({ language, codestring }) => {
 };
 
 export default function Blogpost(props) {
+
   const { postData } = props;
+
   return (
     <>
       <Head>
-        {/* <title>{post.metadata.title} | ADurrant</title>
-        <meta name='description' content={post.metadata.description} />
-        <meta property='og:title' content={post.metadata.title} />
-        <meta property='og:description' content={post.metadata.description} />
-        <meta name='twitter:title' content={post.metadata.title} />
-        <meta name='twitter:description' content={post.metadata.description} /> */}
+        <title>{postData.title} | ADurrant</title>
+        <meta name='description' content={postData.excerpt} />
+        <meta property='og:title' content={postData.title} />
+        <meta property='og:description' content={postData.excerpt} />
+        <meta name='twitter:title' content={postData.title} />
+        <meta name='twitter:description' content={postData.excerpt} />
       </Head>
+      
       <article className={util.page}>
 
         <div className={util.pageColumn}>
@@ -71,7 +74,11 @@ export default function Blogpost(props) {
               renderBlock={({ record }) => {
                 switch (record.__typename) {
                   case "ImageRecord":
-                    return <Image data={record.image.responsiveImage} />;
+                    return (
+                      <div className={styles.blog_inlineImage}>
+                        <Image data={record.image.responsiveImage} />
+                      </div>
+                    )
                   default:
                     return null;
                 }
@@ -79,7 +86,7 @@ export default function Blogpost(props) {
               }
               customNodeRules={[
                 renderRule(isCode, ({ node, key }) => (
-                  <div className={styles.codeBlock}>
+                  <div key={key} className={styles.codeBlock}>
                     <CodeBlock key={key} codestring={node.code} language={node.language}>
                       {node.code}
                     </CodeBlock>
@@ -123,7 +130,6 @@ export const getStaticPaths = async () => {
     fallback: false,
   };
 }
-
 
 const POST_QUERY = ` 
 query singlePost($slug: String) {
@@ -183,21 +189,19 @@ query singlePost($slug: String) {
     publishDate
     seo {
       description
-      image {
-        url
-      }
       title
-      twitterCard
     }
   }
 }
 `;
 
 export const getStaticProps = async ({ params }) => {
+
   const postQuery = await request({
     query: POST_QUERY,
     variables: { slug: params.slug },
   });
+
   return {
     props: {
       postData: postQuery.post,

@@ -137,7 +137,7 @@ export default function About({ data }) {
 
                 <div className={util.flexRow}>
                   <div className={util.flexRow + "" + util.alignCenter}>
-                    <p class={util.smlHeading}>Development:</p>
+                    <p className={util.smlHeading}>Development:</p>
                   </div>
                   <div className={util.flexRow}>
                     <SkillsIcon icon={"html"} technology={"HTML 5"} />
@@ -154,7 +154,7 @@ export default function About({ data }) {
                 </div>
                 <div style={{ paddingTop: "25px" }} className={util.flexRow}>
                   <div className={util.flexRow + "" + util.alignCenter}>
-                    <p class={util.smlHeading}>Design:</p>
+                    <p className={util.smlHeading}>Design:</p>
                   </div>
                   <div className={util.flexRow}>
                     <SkillsIcon icon={"figma"} technology={"Figma"} />
@@ -170,7 +170,7 @@ export default function About({ data }) {
 
                 <div style={{ paddingTop: "25px" }} className={util.flexRow}>
                   <div className={util.flexRow + "" + util.alignCenter}>
-                    <p class={util.smlHeading}>Productivity:</p>
+                    <p className={util.smlHeading}>Productivity:</p>
                   </div>
                   <div className={util.flexRow}>
                     <SkillsIcon icon={"jira"} technology={"Jira"} />

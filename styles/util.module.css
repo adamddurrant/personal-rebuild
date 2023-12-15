@@ -25,6 +25,10 @@
  transition: color 0.25s ease;
 }
 
+.body p:empty {
+  height: 15px;
+}
+
 .body img {
   overflow: hidden;
   max-width: 100%;
