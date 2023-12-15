@@ -7,6 +7,15 @@
   grid-template-columns: 2fr 1fr;
 }
 
+.publishDate {
+  color: var(--gray9);
+  line-height: 0.9;
+  font-weight: 400;
+  font-size: var(--font-m);
+  transition: color 0.25s ease;
+  margin-top: 15px;
+}
+
 .codeBlock, .blog_inlineImage {
   margin-bottom: 15px;
 }
@@ -19,6 +28,20 @@
   align-items: flex-end;
   display: flex;
   flex-direction: column;
+}
+
+.authorWrapper {
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 850px) {
+  .metaData {
+    flex-direction: column-reverse;
+  }
+
+  .authorWrapper {
+    margin-top: 15px;
+  }
 }
 
 @media only screen and (max-width: 850px) {
@@ -43,6 +66,14 @@
   margin-top: 20px;
 }
 
+.authorName {
+  margin-bottom: 0;
+  line-height: 0.9;
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--gray9);
+}
+
 .excerpt {
-  color: var(--gray10);
+  color: var(--gray9);
 }

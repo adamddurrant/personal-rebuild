@@ -50,7 +50,7 @@ html {
   --linkContainerBg: rgb(255, 255, 255);
   --linkContainerGrayBg: rgb(251, 251, 251);
 
-  --linkContainerBorder: rgb(245, 245, 245);
+  --linkContainerBorder: rgb(236 236 236);
   --linkContainerBgHover: rgb(243, 243, 243);
   --linkContainerBorderHover: rgb(230, 230, 230);
 

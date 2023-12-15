@@ -17,6 +17,12 @@ const CodeBlock = ({ language, codestring }) => {
   );
 };
 
+function formatDate(dateString) {
+  const options = { year: 'numeric', month: 'short', day: 'numeric' };
+  const formattedDate = new Date(dateString).toLocaleDateString('en-US', options);
+  return formattedDate;
+}
+
 export default function Blogpost(props) {
 
   const { postData } = props;
@@ -31,7 +37,7 @@ export default function Blogpost(props) {
         <meta name='twitter:title' content={postData.title} />
         <meta name='twitter:description' content={postData.excerpt} />
       </Head>
-      
+
       <article className={util.page}>
 
         <div className={util.pageColumn}>
@@ -46,12 +52,12 @@ export default function Blogpost(props) {
             </div>
 
             <div className={util.flexColumn + " " + styles.metaData}>
-              <div className={util.flexRow} style={{ marginTop: "30px" }}>
+              <div className={util.flexRow + " " + styles.authorWrapper}>
                 <div style={{ marginRight: "10px" }}>
                   <Image data={authorImage} style={{ borderRadius: "100px", width: "40px", height: "40px" }} />
                 </div>
-                <div className={util.read}>
-                  <p style={{ margin: "0px", lineHeight: "0.9", fontWeight: "600" }}>Adam Durrant</p>
+                <div>
+                  <p className={styles.authorName}>Adam Durrant</p>
                   <a
                     className={util.tweetLink}
                     style={{ fontSize: "12px" }}
@@ -60,6 +66,7 @@ export default function Blogpost(props) {
                   </a>
                 </div>
               </div>
+              <p className={styles.publishDate}>Published: {formatDate(postData.publishDate)}</p>
             </div>
 
             <div className={styles.featuredImage}>
