@@ -6,7 +6,7 @@ import heroOne from "../public/blogs/hero-1.jpg"
 import heroTwo from "../public/blogs/hero-2.jpg"
 
 //page header and in-page description
-const description = "Here you'll find my most recent writings. I enjoy writing but I need motivation to write more so, this page will keep me accountable. Here you can find search engine optimisaton and web development insight, guides, tools & thoughts.";
+const description = "I enjoy writing but I need motivation to write more so, this page will keep me accountable. Here you can find SEO and web development insight, guides & thoughts.";
 const pageTitle = "Adam Durrant | Personal SEO & Web Dev Blog";
 
 export default function Home(props) {
