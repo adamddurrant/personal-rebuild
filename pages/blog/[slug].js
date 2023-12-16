@@ -18,7 +18,7 @@ const CodeBlock = ({ language, codestring }) => {
 };
 
 function formatDate(dateString) {
-  const options = { year: 'numeric', month: 'short', day: 'numeric' };
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
   const formattedDate = new Date(dateString).toLocaleDateString('en-US', options);
   return formattedDate;
 }
@@ -45,7 +45,7 @@ export default function Blogpost(props) {
           <section className={styles.headerGroup}>
 
             <div className={styles.header}>
-              <h1 style={{ marginTop: "20px", textAlign: "left" }} className={util.blogHeader}>
+              <h1 style={{ textAlign: "left" }} className={util.blogHeader}>
                 {postData.title}
               </h1>
               <p className={styles.excerpt}>{postData.excerpt}</p>

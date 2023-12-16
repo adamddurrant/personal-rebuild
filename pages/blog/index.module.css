@@ -13,7 +13,7 @@
   font-weight: 400;
   font-size: var(--font-m);
   transition: color 0.25s ease;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 .codeBlock, .blog_inlineImage {
@@ -30,17 +30,13 @@
   flex-direction: column;
 }
 
-.authorWrapper {
-  margin-top: 30px;
-}
-
 @media screen and (max-width: 850px) {
   .metaData {
     flex-direction: column-reverse;
   }
 
   .authorWrapper {
-    margin-top: 15px;
+    margin-top: 20px;
   }
 }
 
