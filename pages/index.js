@@ -340,7 +340,7 @@ export const getStaticProps = async () => {
 
 const POSTS_QUERY = ` 
 query Posts {
-  allPosts(orderBy: publishDate_ASC, filter: {}, first: "4") {
+  allPosts(orderBy: publishDate_DESC, filter: {}, first: "4") {
     title
     slug
     featuredImage {
