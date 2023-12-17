@@ -63,13 +63,13 @@
   object-fit: cover;
 }
 .content {
-  margin-top: 0.25rem;
+  margin-top: 0.5rem;
   font-size: var(--font-m);
   font-weight: 390;
   color: var(--gray9);
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 2; /* number of lines to show */
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }

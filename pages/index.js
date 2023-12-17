@@ -9,10 +9,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import OnboardingCard from "../components/onboardingCard";
 import HomeUpdatesTile from "../components/tiles/home-tiles/homeUpdatesTile";
 import ReadingListTile from "../components/tiles/home-tiles/readingListTile";
+import ToolsListTile from "../components/tiles/home-tiles/toolsListTile";
 import BlogTile from "../components/tiles/home-tiles/blogTile";
 import StructuredData from "../components/structuredData";
 
-export default function Home({ data, readingList, posts }) {
+export default function Home({ data, readingList, toolsList, posts }) {
+  console.log(toolsList);
   const tips = [
     {
       id: "useShortCut",
@@ -167,10 +169,10 @@ export default function Home({ data, readingList, posts }) {
             {userTime ? userTime : "Hello"}
           </h1>
           <span className={styles.mobileTinyText}>
-            My name is Adam Durrant ✌️ I&apos;m a <a style={{textDecoration: "none"}} href="https://www.brainlabsdigital.com/">Brainlabs</a> Alum SEO specialist on a mission to shift my career to coding full-time.
+            My name is Adam Durrant ✌️ I&apos;m a <a style={{ textDecoration: "none" }} href="https://www.brainlabsdigital.com/">Brainlabs</a> Alum SEO specialist on a mission to shift my career to coding full-time.
           </span>
           <span className={styles.tinyText + " " + util.read}>
-            My name is Adam Durrant ✌️ I&apos;m a <a style={{textDecoration: "none"}} href="https://www.brainlabsdigital.com/">Brainlabs</a> Alum SEO specialist on a mission to shift my career to coding full-time —{" "}
+            My name is Adam Durrant ✌️ I&apos;m a <a style={{ textDecoration: "none" }} href="https://www.brainlabsdigital.com/">Brainlabs</a> Alum SEO specialist on a mission to shift my career to coding full-time —{" "}
             {isVisible ? `Learn more about me ↓` : null}
             {!isVisible ? (
               <span onClick={resetOnboarding} className={styles.reset}>
@@ -271,6 +273,24 @@ export default function Home({ data, readingList, posts }) {
               />
             ))}
           </ul>
+
+          <div className={styles.homeSectionContainer}>
+            <h2 className={styles.homeSectionTitle}>Latest Tools</h2>
+            <Link href='/tools'>
+              <a className={styles.homeLinkButton}>View All</a>
+            </Link>
+          </div>{" "}
+          <ul className={styles.homeReadingGrid}>
+            {toolsList.map((tool) => (
+              <ToolsListTile
+                key={tool.id}
+                title={tool.properties.Name.title[0].plain_text}
+                url={tool.properties.URL.url}
+                imageUrl={tool.properties.image.url}
+                content={tool.properties.Body.rich_text[0].plain_text}
+              />
+            ))}
+          </ul>
         </div>
       </main>
     </>
@@ -303,6 +323,22 @@ export const getStaticProps = async () => {
     page_size: 4,
   });
 
+  const toolsListResponse = await notion.databases.query({
+    database_id: process.env.TOOLS_DATABASE_ID,
+    filter: {
+      and: [
+        {
+          property: "Display",
+          checkbox: {
+            equals: true,
+          },
+        },
+      ],
+    },
+    page_size: 4,
+  });
+
+
   const readingListResponse = await notion.databases.query({
     database_id: process.env.READING_LIST_DATABASE_ID,
     filter: {
@@ -333,6 +369,7 @@ export const getStaticProps = async () => {
       data: response.results,
       posts: blogPosts,
       readingList: readingListResponse.results,
+      toolsList: toolsListResponse.results
     },
     revalidate: 5,
   };

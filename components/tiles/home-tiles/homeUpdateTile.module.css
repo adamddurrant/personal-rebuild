@@ -28,7 +28,7 @@
   color: var(--gray9);
 }
 .tileContent {
-  margin-top: 0.25rem;
+  margin-top: 0.5rem;
   font-size: var(--font-m);
   color: var(--gray9);
   display: -webkit-inline-box;
