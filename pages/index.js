@@ -41,7 +41,7 @@ export default function Home({ data, readingList, posts }) {
     {
       id: "openCal",
       text: "I enjoy meeting people and love to help where I can. Feel free to book some time together — ",
-      ctaText: "My open calendar is here ↗",
+      ctaText: "My open calendar is here →",
       ctaLink: "https://cal.com/adam-durrant-z9wzhk/15min",
     },
     {
@@ -167,10 +167,10 @@ export default function Home({ data, readingList, posts }) {
             {userTime ? userTime : "Hello"}
           </h1>
           <span className={styles.mobileTinyText}>
-            My name is Adam Durrant, I&apos;m an SEO Specialist on a mission to shift my career to coding full-time.
+            My name is Adam Durrant ✌️ I&apos;m a <a style={{textDecoration: "none"}} href="https://www.brainlabsdigital.com/">Brainlabs</a> Alum SEO specialist on a mission to shift my career to coding full-time.
           </span>
-          <span className={styles.tinyText}>
-          My name is Adam Durrant, I&apos;m an SEO Specialist on a mission to shift my career to coding full-time —{" "}
+          <span className={styles.tinyText + " " + util.read}>
+            My name is Adam Durrant ✌️ I&apos;m a <a style={{textDecoration: "none"}} href="https://www.brainlabsdigital.com/">Brainlabs</a> Alum SEO specialist on a mission to shift my career to coding full-time —{" "}
             {isVisible ? `Learn more about me ↓` : null}
             {!isVisible ? (
               <span onClick={resetOnboarding} className={styles.reset}>
