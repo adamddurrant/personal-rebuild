@@ -23,7 +23,7 @@ export default function Home({ data, readingList, posts }) {
     {
       id: "firstTime",
       text: "Get to know me. I love modern web dev, sushi and over-engineered personal sites — ",
-      ctaText: "Learn more about me →",
+      ctaText: "See my about page →",
       ctaLink: "/about",
     },
     {
@@ -167,11 +167,11 @@ export default function Home({ data, readingList, posts }) {
             {userTime ? userTime : "Hello"}
           </h1>
           <span className={styles.mobileTinyText}>
-            My name is Adam Durrant - Welcome to my corner of the web.
+            My name is Adam Durrant, I&apos;m an SEO Specialist on a mission to shift my career to coding full-time.
           </span>
           <span className={styles.tinyText}>
-            My name is Adam —{" "}
-            {isVisible ? `Below are some tips to help you get started ↓` : null}
+          My name is Adam Durrant, I&apos;m an SEO Specialist on a mission to shift my career to coding full-time —{" "}
+            {isVisible ? `Learn more about me ↓` : null}
             {!isVisible ? (
               <span onClick={resetOnboarding} className={styles.reset}>
                 Need a refresher? Reset onboarding.

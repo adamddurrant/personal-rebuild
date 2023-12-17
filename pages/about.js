@@ -22,9 +22,9 @@ export default function About({ data }) {
     return () => thisPage.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const description =
-    "I’m an SEO specialist and newly turned web dev. I currently spend most of my spare time learning to code. This is my corner of the internet. Here I share my writings, favourite resources, personal updates and career adventures.";
-  const pageTitle = "Adam Durrant | About Me";
+  const description = "I’m an SEO specialist that has recently swapped a life in marketing to one full-time coding. Here I share my personal updates, info about this website and my career adventures.";
+  const pageTitle = "Adam Durrant | About Me"; 
+ 
   return (
     <>
       <Head>
@@ -40,7 +40,8 @@ export default function About({ data }) {
         <div className={util.pageColumn}>
           <h1 className={util.header}>About</h1>
           <div className={util.inset}>
-            <p className={util.description}>{description}</p>
+            <p className={util.description}>{description}</p> 
+            <p style={{marginTop: "10px"}} className={util.description + " " + util.read}>🚨 if you are thinking about/are in the process of changing your career to web dev and need advice, please <a className={util.normalLink} href="#aboutContact">reach out anytime</a>, I will share all my learnings to help you get your first gig.</p>
 
             <div className={util.read}>
               <h2 style={{ padding: "1rem 0rem 0rem 0rem" }} id='about-update'>
@@ -126,12 +127,10 @@ export default function About({ data }) {
                 <p className={util.read}>
                   My front end dev journey is still in its infancy but, I am
                   dabbling with numerous languages and frameworks to understand
-                  what I enjoy most. The Next.js used to build this website for
-                  example has opened my eyes to using this awesome React
-                  framework as often as possible.
+                  what I enjoy most. I used Next.js to build this website.
                 </p>
                 <p>
-                  Despite this, I am experimenting, working and coding most with
+                  Despite this, I am experimenting, working and coding full time with
                   the following tech stack:
                 </p>
 
@@ -139,7 +138,7 @@ export default function About({ data }) {
                   <div className={util.flexRow + "" + util.alignCenter}>
                     <p className={util.smlHeading}>Development:</p>
                   </div>
-                  <div className={util.flexRow}>
+                  <div className={util.flexRow} style={{rowGap: "15px"}}>
                     <SkillsIcon icon={"html"} technology={"HTML 5"} />
                     <SkillsIcon icon={"css"} technology={"CSS 3"} />
                     <SkillsIcon
@@ -148,8 +147,10 @@ export default function About({ data }) {
                     />
                     <SkillsIcon icon={"react"} technology={"React"} />
                     <SkillsIcon icon={"sass"} technology={"Sass"} />
+                    <SkillsIcon icon={"php"} technology={"PHP"} />
                     <SkillsIcon icon={"wordpress"} technology={"WordPress 6"} />
                     <SkillsIcon icon={"webflow"} technology={"Webflow"} />
+                    <SkillsIcon icon={"docker"} technology={"Docker"} />
                   </div>
                 </div>
                 <div style={{ paddingTop: "25px" }} className={util.flexRow}>
@@ -174,6 +175,7 @@ export default function About({ data }) {
                   </div>
                   <div className={util.flexRow}>
                     <SkillsIcon icon={"jira"} technology={"Jira"} />
+                    <SkillsIcon icon={"bitbucket"} technology={"Bitbucket"} />
                     <SkillsIcon icon={"git"} technology={"Git"} />
                     <SkillsIcon icon={"slack"} technology={"Slack"} />
                     <SkillsIcon icon={"loom"} technology={"Loom"} />
@@ -191,7 +193,7 @@ export default function About({ data }) {
                   rel='noopener noreferrer'
                   className={util.externalLink}>
                   Pugpig
-                </a> a WordPress based publishing platform that powers some of the worlds biggest names in media
+                </a> a publishing platform that powers a big chunk of the worlds biggest names in media such as condé nast, Hearst, Reach, National World and lots more
                 {". "}
                 {
                   "In the 7+ years that I've been working in the SEO industry I have made it my mission to learn by doing. I started my career at the bottom as an SEO assistant and quickly realised how much impact I could make as a solo marketeer. Since then, i've been hooked on all things web."
@@ -270,9 +272,9 @@ export default function About({ data }) {
             <div className={util.read}>
               <h2 id='site'>How this site was made</h2>
               <p>
-                This site was forked, rebuilt and modified from a build by{" "}
-                <a href='https://www.linkedin.com/in/s-j-zhang'>S J Zhang</a> A
-                designer I take a lot of inspiration from.
+                This site was forked, rebuilt and modified from {" "}
+                <a href='https://www.linkedin.com/in/s-j-zhang'>S J Zhang</a>. A
+                designer I take a LOT of inspiration from.
               </p>
               <p>
                 I&apos;m in the process of learning React & Next.js and totally
@@ -286,24 +288,24 @@ export default function About({ data }) {
                 style={{ padding: "0rem 0rem 0rem 1.25rem" }}>
                 <li style={{ marginBottom: "0.5rem" }}>
                   To motivate myself to read, interpret and understand code
-                  written by other people.
+                  written by others
                 </li>
                 <li style={{ marginBottom: "0.5rem" }}>
                   To keep myself accountable with my goal of becoming proficient
-                  in modern front end development.
+                  in modern front end development
                 </li>
                 <li style={{ marginBottom: "0.5rem" }}>
                   To stay actively engaged with the the latest frameworks &
-                  libraries.
+                  libraries
                 </li>
                 <li style={{ marginBottom: "0.5rem" }}>
                   To encourage myself to make and share more frequently. A
-                  beautiful site that i&apos;m proud of keeps me driven.
+                  beautiful site that i&apos;m proud of keeps me driven
                 </li>
               </ol>
               <p>
                 Because he&apos;s amazing, SJ has kindly licensed this build for
-                anyone to use as a base starting place{" "}
+                anyone{" "}
                 <a href='https://github.com/sjzhan9/sj-land'>over on Github</a>{" "}
                 so you can try it too!
               </p>
@@ -348,9 +350,16 @@ export default function About({ data }) {
                   rel='noopener noreferrer'
                   className={util.externalLink}>
                   regularly regenerate
-                </a>
-                . To solve for this I host images locally or via Medium for blog
-                content. Radix UI is also used for front-end components like
+                </a>.
+                </p>
+                <p>
+                  To solve for this, I have recently replatformed my blog section using  <a
+                  href='https://www.datocms.com/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className={util.externalLink}>
+                  DatoCMS
+                </a> which I cannot recommend enough for its ease of implementation and awesome capabilities via GraphQL. Radix UI is also used for front-end components like
                 modals and tooltips.{" "}
                 <a
                   href='https://github.com/pacocoursey/next-themes'
@@ -363,7 +372,7 @@ export default function About({ data }) {
               </p>
               {/* <div className={util.divider}></div> */}
 
-              <h2 style={{ margin: "4rem 0rem -0.5rem 0rem" }}>Contact</h2>
+              <h2 id="aboutContact" style={{ margin: "4rem 0rem -0.5rem 0rem" }}>Contact</h2>
             </div>
             <div className={util.inset} style={{ marginBottom: "4rem" }}>
               <ContactContent />
