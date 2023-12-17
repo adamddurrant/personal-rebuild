@@ -169,10 +169,10 @@ export default function Home({ data, readingList, toolsList, posts }) {
             {userTime ? userTime : "Hello"}
           </h1>
           <span className={styles.mobileTinyText + " " + util.read}>
-            My name is Adam Durrant ✌️ I&apos;m a <a  className={util.normalLink} style={{ textDecoration: "none" }} href="https://www.brainlabsdigital.com/">Brainlabs</a> Alum SEO specialist on a mission to shift my career to coding full-time.
+          I&apos;m Adam Durrant, a former <a  className={util.normalLink} style={{ textDecoration: "none" }} href="https://www.brainlabsdigital.com/">Brainlabs</a> SEO consultant, I&apos;m shifting career to coding full-time.
           </span>
           <span className={styles.tinyText + " " + util.read}>
-            My name is Adam Durrant ✌️ I&apos;m a <a className={util.normalLink} style={{ textDecoration: "none" }} href="https://www.brainlabsdigital.com/">Brainlabs</a> Alum SEO specialist on a mission to shift my career to coding full-time —{" "}
+          I&apos;m Adam Durrant, a former <a  className={util.normalLink} style={{ textDecoration: "none" }} href="https://www.brainlabsdigital.com/">Brainlabs</a> SEO consultant, I&apos;m shifting career to coding full-time —{" "}
             {isVisible ? `Learn more about me ↓` : null}
             {!isVisible ? (
               <span onClick={resetOnboarding} className={styles.reset}>
