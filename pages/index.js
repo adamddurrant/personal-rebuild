@@ -14,7 +14,6 @@ import BlogTile from "../components/tiles/home-tiles/blogTile";
 import StructuredData from "../components/structuredData";
 
 export default function Home({ data, readingList, toolsList, posts }) {
-  console.log(toolsList);
   const tips = [
     {
       id: "useShortCut",
@@ -165,14 +164,16 @@ export default function Home({ data, readingList, toolsList, posts }) {
       </Head>
       <main className={util.page} id='recentsPage'>
         <div className={styles.homeColumn}>
-          <h1 className={styles.homeGreetingTitle}>
-            {userTime ? userTime : "Hello"}
-          </h1>
+          {userTime && (
+            <h1 className={styles.homeGreetingTitle}>
+              {userTime}
+            </h1>
+          )}
           <span className={styles.mobileTinyText + " " + util.read}>
-          I&apos;m Adam Durrant, a former <a  className={util.normalLink} style={{ textDecoration: "none" }} href="https://www.brainlabsdigital.com/">Brainlabs</a> SEO consultant turned full-time web dev.
+            I&apos;m Adam Durrant, a former <a className={util.normalLink} style={{ textDecoration: "none" }} href="https://www.brainlabsdigital.com/">Brainlabs</a> SEO consultant turned full-time web dev.
           </span>
           <span className={styles.tinyText + " " + util.read}>
-          I&apos;m Adam Durrant, a former <a  className={util.normalLink} style={{ textDecoration: "none" }} href="https://www.brainlabsdigital.com/">Brainlabs</a> SEO consultant turned full-time web dev —{" "}
+            I&apos;m Adam Durrant, a former <a className={util.normalLink} style={{ textDecoration: "none" }} href="https://www.brainlabsdigital.com/">Brainlabs</a> SEO consultant turned full-time web dev —{" "}
             {isVisible ? `Learn more about me ↓` : null}
             {!isVisible ? (
               <span onClick={resetOnboarding} className={styles.reset}>
