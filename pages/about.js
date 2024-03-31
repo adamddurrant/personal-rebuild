@@ -22,7 +22,7 @@ export default function About({ data }) {
     return () => thisPage.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const description = "I’m an SEO specialist that has recently swapped a life in marketing to one full-time coding. Here I share my personal updates, info about this website and my career adventures.";
+  const description = " I’m an SEO specialist on a mission to become a proficient web developer. I recently switched up my career to full-time coding and so far, i'm loving it. Here I share my personal updates, info about this website and my career adventures.";
   const pageTitle = "Adam Durrant | About Me"; 
  
   return (
@@ -41,7 +41,7 @@ export default function About({ data }) {
           <h1 className={util.header}>About</h1>
           <div className={util.inset}>
             <p className={util.description}>{description}</p> 
-            <p style={{marginTop: "10px"}} className={util.description + " " + util.read}>🚨 if you are thinking about/are in the process of changing your career to web dev and need advice, please <a className={util.normalLink} href="#aboutContact">reach out anytime</a>, I will share all my learnings to help you get your first gig.</p>
+            <p style={{marginTop: "10px"}} className={util.description + " " + util.read}>🚨 if you are thinking about/are in the process of changing your career to web development and need advice, please <a className={util.normalLink} href="#aboutContact">reach out anytime</a>, I will share all my learnings to help you get your first gig.</p>
 
             <div className={util.read}>
               <h2 style={{ padding: "1rem 0rem 0rem 0rem" }} id='about-update'>
@@ -65,7 +65,7 @@ export default function About({ data }) {
               <h2>About me</h2>
               <p>
                 {
-                  "I have almost a decade of experience as a professional SEO specialist. I've worked in a freelance, in-house and agency-side capacity for startups, SMEs and enterprise business. "
+                  "I have almost a decade of experience as a professional SEO specialist. I've worked freelance, in-house and agency-side for startups, SMEs and enterprise business. "
                 }
 
                 {"My work has been featured in; "}
@@ -125,12 +125,12 @@ export default function About({ data }) {
                   Tech stack
                 </h2>
                 <p className={util.read}>
-                  My front end dev journey is still in its infancy but, I am
+                  My web development journey is still in its infancy but, I am
                   dabbling with numerous languages and frameworks to understand
-                  what I enjoy most. I used Next.js to build this website.
+                  what I enjoy. I used Next.js to build this website but, day to day I am working with Wordpress and PHP.
                 </p>
                 <p>
-                  Despite this, I am experimenting, working and coding full time with
+                  I am experimenting, working and coding full time mostly with
                   the following tech stack:
                 </p>
 
@@ -193,12 +193,12 @@ export default function About({ data }) {
                   rel='noopener noreferrer'
                   className={util.externalLink}>
                   Pugpig
-                </a> a publishing platform that powers a big chunk of the worlds biggest names in media such as condé nast, Hearst, Reach, National World and lots more
+                </a> a native publishing platform that powers a big chunk of the worlds biggest names in media such as condé nast, Hearst, Reach, National World, Boston Globe Media and lots more
                 {". "}
                 {
-                  "In the 7+ years that I've been working in the SEO industry I have made it my mission to learn by doing. I started my career at the bottom as an SEO assistant and quickly realised how much impact I could make as a solo marketeer. Since then, i've been hooked on all things web."
+                  "In the 8+ years prior to Pugpig I've been working in the SEO industry, starting my career at the bottom as an SEO assistant, I quickly realised how much impact I could make as a solo marketeer. Since then, i've been hooked on all things web."
                 }
-              </p>
+                </p>
               <p>
                 {
                   "I have added a brief summary below. If you are interested to learn more, "
@@ -272,14 +272,14 @@ export default function About({ data }) {
             <div className={util.read}>
               <h2 id='site'>How this site was made</h2>
               <p>
-                This site was forked, rebuilt and modified from {" "}
+                This site was forked and modified from {" "}
                 <a href='https://www.linkedin.com/in/s-j-zhang'>S J Zhang</a>. A
-                designer I take a LOT of inspiration from.
+                designer I adore.
               </p>
               <p>
                 I&apos;m in the process of learning React & Next.js and totally
                 fell in love with SJ&apos;s design so, I set about destructuring
-                his work and putting it back together piece by piece while
+                his work, understanding it and putting it back together piece by piece while
                 making it my own. I did this for a few reasons:
               </p>
               <ol
@@ -296,7 +296,7 @@ export default function About({ data }) {
                 </li>
                 <li style={{ marginBottom: "0.5rem" }}>
                   To stay actively engaged with the the latest frameworks &
-                  libraries
+                  libraries used by people smarter than me
                 </li>
                 <li style={{ marginBottom: "0.5rem" }}>
                   To encourage myself to make and share more frequently. A
@@ -307,7 +307,7 @@ export default function About({ data }) {
                 Because he&apos;s amazing, SJ has kindly licensed this build for
                 anyone{" "}
                 <a href='https://github.com/sjzhan9/sj-land'>over on Github</a>{" "}
-                so you can try it too!
+                so you can grab it too!
               </p>
               <p>
                 The site is built with{" "}
@@ -353,13 +353,19 @@ export default function About({ data }) {
                 </a>.
                 </p>
                 <p>
-                  To solve for this, I have recently replatformed my blog section using  <a
+                  To solve for this, I have recently replatformed the blog section using  <a
                   href='https://www.datocms.com/'
                   target='_blank'
                   rel='noopener noreferrer'
                   className={util.externalLink}>
                   DatoCMS
-                </a> which I cannot recommend enough for its ease of implementation and awesome capabilities via GraphQL. Radix UI is also used for front-end components like
+                </a> which I cannot recommend enough for its ease of implementation and awesome capabilities via GraphQL. <a
+                  href='https://www.radix-ui.com/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className={util.externalLink}>
+                  Radix UI
+                </a> is also used for front-end components like
                 modals and tooltips.{" "}
                 <a
                   href='https://github.com/pacocoursey/next-themes'

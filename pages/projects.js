@@ -22,7 +22,7 @@ export default function Projects() {
 
   //page header and in-page description
   const description =
-    "Since 2016, I’ve focused all my energy on progressing a career in search engine optimisation. I am slowly transitioning to focus more of my attention on writing code and web applications. More interesting projects will be added to this page soon.";
+    "Since 2016, I’ve focused all my energy on progressing a career in SEO. I am slowly transitioning to focus more of my attention to writing code and building web applications. More interesting projects will be added to this page soon.";
   const pageTitle = "Adam Durrant | Coding Projects";
   return (
     <>

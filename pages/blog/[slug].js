@@ -17,6 +17,16 @@ const CodeBlock = ({ language, codestring }) => {
   );
 };
 
+function readingTime(body) {
+  const contentString = JSON.stringify(body);
+  const wordsPerMinute = 220
+  const cleanText = contentString.replace(/<\/?[^>]+(>|$)/g, "");
+  const noOfWords = cleanText.split(/\s/g).length
+  const minutes = noOfWords / wordsPerMinute
+  const readTime = Math.ceil(minutes)
+  return `${readTime} minute read`
+}
+
 function formatDate(dateString) {
   const options = { year: 'numeric', month: 'long', day: 'numeric' };
   const formattedDate = new Date(dateString).toLocaleDateString('en-US', options);
@@ -26,6 +36,8 @@ function formatDate(dateString) {
 export default function Blogpost(props) {
 
   const { postData } = props;
+
+  let body = postData.body.value.document.children;
 
   return (
     <>
@@ -40,11 +52,18 @@ export default function Blogpost(props) {
 
       <article className={util.page}>
 
-        <div className={util.pageColumn}>
+        <div style={{ maxWidth: "50rem" }} className={util.pageColumn}>
+
+          <div className={styles.breadcrumb}>
+            <a className={styles.crumbLink} style={{ fontSize: "12px" }} href='/blog'>Blog</a><span className={styles.crumbSpacer}>&gt;</span><p className={styles.crumbTitle}>{postData.title}</p>
+          </div>
 
           <section className={styles.headerGroup}>
 
             <div className={styles.header}>
+              <div className={styles.readTimeWrapper} style={{ marginRight: "10px" }}>
+                <p className={styles.readTime}>{readingTime(body)}</p>
+              </div>
               <h1 style={{ textAlign: "left" }} className={util.blogHeader}>
                 {postData.title}
               </h1>
@@ -57,7 +76,7 @@ export default function Blogpost(props) {
                   <Image data={authorImage} style={{ borderRadius: "100px", width: "40px", height: "40px" }} />
                 </div>
                 <div>
-                  <p className={styles.authorName}>Adam Durrant</p>
+                  <p className={styles.authorName}>By Adam Durrant</p>
                   <a
                     className={util.tweetLink}
                     style={{ fontSize: "12px" }}
@@ -67,15 +86,12 @@ export default function Blogpost(props) {
                 </div>
               </div>
               <p className={styles.publishDate}>Published: {formatDate(postData.publishDate)}</p>
-            </div>
-
-            <div className={styles.featuredImage}>
-              <Image data={postData.featuredImage.responsiveImage} style={{ borderRadius: "6px" }} />
+              {/* <p style={{ marginTop: "10px" }} className={styles.updateDate}>Updated: {formatDate(postData._updatedAt)}</p> */}
             </div>
 
           </section>
 
-          <section className={util.body}>
+          <section style={{ maxWidth: "40rem", marginLeft: "auto", marginRight: "auto" }} className={util.body}>
 
             <StructuredText data={postData.body}
               renderBlock={({ record }) => {
@@ -198,6 +214,7 @@ query singlePost($slug: String) {
       description
       title
     }
+    _updatedAt
   }
 }
 `;

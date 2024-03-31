@@ -98,6 +98,10 @@ html {
   --imageBg: #191919;
 }
 
+.stopWatch picture img {
+  filter: invert(1)!important;
+}
+
 .bg {
   position: fixed;
   width: 100%;
@@ -109,10 +113,6 @@ html {
   height: 100%;
 }
 
-.dark-theme .bg {
-  opacity: 0.08;
-}
-
 .base {
   background-color: var(--appbg);
   height: 100%;
@@ -122,6 +122,7 @@ html {
   top: 0px;
   z-index: -2;
 }
+
 .dark-theme .iconInvert {
   filter: invert(1);
   transition: color 0.2s ease;
