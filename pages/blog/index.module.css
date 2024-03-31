@@ -13,12 +13,9 @@
   margin-bottom: 20px;
 }
 
-.crumbLink {
-  margin-right: 5px;
-}
-
 .crumbSpacer {
   margin-right: 5px;
+  margin-left: 5px;
 }
 
 .crumbTitle {

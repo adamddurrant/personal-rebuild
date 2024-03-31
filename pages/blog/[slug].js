@@ -55,7 +55,7 @@ export default function Blogpost(props) {
         <div style={{ maxWidth: "50rem" }} className={util.pageColumn}>
 
           <div className={styles.breadcrumb}>
-            <a className={styles.crumbLink} style={{ fontSize: "12px" }} href='/blog'>Blog</a><span className={styles.crumbSpacer}>&gt;</span><p className={styles.crumbTitle}>{postData.title}</p>
+          <Link scroll={false} href='/blog'>Blog</Link><span className={styles.crumbSpacer}>&gt;</span><p className={styles.crumbTitle}>{postData.title}</p>
           </div>
 
           <section className={styles.headerGroup}>
