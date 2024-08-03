@@ -13,10 +13,10 @@
   border-radius: 10px;
   position: relative;
 }
-.card:hover{
+.card:hover {
   border-color: blue;
 }
-.card a{
+.card a {
   text-decoration: none;
   cursor: pointer;
   border: 2px solid transparent;
