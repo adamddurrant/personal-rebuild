@@ -170,10 +170,10 @@ export default function Home({ data, readingList, toolsList, posts }) {
             </h1>
           )}
           <span className={styles.mobileTinyText + " " + util.read}>
-            I&apos;m Adam Durrant, a former <a className={util.normalLink} style={{ textDecoration: "none" }} href="https://www.brainlabsdigital.com/">Brainlabs</a> SEO consultant turned full-time web dev.
+            I&apos;m Adam Durrant, a former <a className={util.normalLink} style={{ textDecoration: "none" }} href="https://www.brainlabsdigital.com/">Brainlabs</a> SEO consultant turned full-time web developer.
           </span>
           <span className={styles.tinyText + " " + util.read}>
-            I&apos;m Adam Durrant, a former <a className={util.normalLink} style={{ textDecoration: "none" }} href="https://www.brainlabsdigital.com/">Brainlabs</a> SEO consultant turned full-time web dev —{" "}
+            I&apos;m Adam Durrant, a former <a className={util.normalLink} style={{ textDecoration: "none" }} href="https://www.brainlabsdigital.com/">Brainlabs</a> SEO consultant turned full-time web developer —{" "}
             {isVisible ? `Learn more about me ↓` : null}
             {!isVisible ? (
               <span onClick={resetOnboarding} className={styles.reset}>

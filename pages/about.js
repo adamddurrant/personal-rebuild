@@ -22,7 +22,7 @@ export default function About({ data }) {
     return () => thisPage.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const description = " I’m an SEO specialist on a mission to become a proficient web developer. I recently switched up my career to full-time coding and so far, i'm loving it. Here I share my personal updates, info about this website and my career adventures.";
+  const description = "I’m an ex-SEO specialist on a mission to become a proficient web developer. I recently switched up my career to full-time coding and so far, i'm loving it. Here I share my personal updates, info about this website and my career adventures.";
   const pageTitle = "Adam Durrant | About Me"; 
  
   return (
@@ -40,8 +40,8 @@ export default function About({ data }) {
         <div className={util.pageColumn}>
           <h1 className={util.header}>About</h1>
           <div className={util.inset}>
-            <p className={util.description}>{description}</p> 
-            <p style={{marginTop: "10px"}} className={util.description + " " + util.read}>🚨 if you are thinking about/are in the process of changing your career to web development and need advice, please <a className={util.normalLink} href="#aboutContact">reach out anytime</a>, I will share all my learnings to help you get your first gig.</p>
+            <p className={util.description + " " + util.read}>I’m Adam, an ex <a className={util.normalLink} href="https://zoe.com/">ZOE</a>, ex <a className={util.normalLink} href="https://www.brainlabsdigital.com/">Brainlabs</a> SEO specialist turned web developer. In the last 24 months I've switched up my career to full-time coding and so far, i'm loving it. Here I share my personal updates, info about this website and my career adventures.</p> 
+            <p style={{marginTop: "10px"}} className={util.description + " " + util.read}>🚨 if you are thinking about/are in the process of changing your career to web development and need advice, please <a className={util.normalLink} href="#aboutContact">reach out anytime</a>, I will gladly share all my learnings to help you.</p>
 
             <div className={util.read}>
               <h2 style={{ padding: "1rem 0rem 0rem 0rem" }} id='about-update'>
@@ -125,13 +125,10 @@ export default function About({ data }) {
                   Tech stack
                 </h2>
                 <p className={util.read}>
-                  My web development journey is still in its infancy but, I am
-                  dabbling with numerous languages and frameworks to understand
-                  what I enjoy. I used Next.js to build this website but, day to day I am working with Wordpress and PHP.
+                  My web development journey is still in its infancy but, I'm actively learning numerous languages and frameworks to build systems and solve problems to understand what I enjoy. I used Next.js to build this website but, day to day I am working with Wordpress, PHP and SaSS.
                 </p>
                 <p>
-                  I am experimenting, working and coding full time mostly with
-                  the following tech stack:
+                  Most commonly I use the following stack:
                 </p>
 
                 <div className={util.flexRow}>
@@ -186,14 +183,14 @@ export default function About({ data }) {
 
               <h2>Career</h2>
               <p className={util.read}>
-                {"I'm currently working at "}
+                {"I currently work as a web developer at "}
                 <a
                   href='https://www.pugpig.com/'
                   target='_blank'
                   rel='noopener noreferrer'
                   className={util.externalLink}>
                   Pugpig
-                </a> a native publishing platform that powers a big chunk of the worlds biggest names in media such as condé nast, Hearst, Reach, National World, Boston Globe Media and lots more
+                </a> a native app publishing platform that powers a big chunk of the worlds biggest names in media such as condé nast, Hearst, Reach, National World, Boston Globe Media and lots more
                 {". "}
                 {
                   "In the 8+ years prior to Pugpig I've been working in the SEO industry, starting my career at the bottom as an SEO assistant, I quickly realised how much impact I could make as a solo marketeer. Since then, i've been hooked on all things web."
@@ -208,7 +205,7 @@ export default function About({ data }) {
                   target='_blank'
                   rel='noopener noreferrer'
                   className={util.externalLink}>
-                  visit my Linkedin
+                  visit my Linkedin profile
                 </a>
               </p>
             </div>

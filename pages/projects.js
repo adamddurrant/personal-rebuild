@@ -20,10 +20,10 @@ export default function Projects() {
     return () => thisPage.removeEventListener("scroll", handleScroll);
   }, []);
 
-  //page header and in-page description
+  // Page header and in-page description
   const description =
-    "Since 2016, I’ve focused all my energy on progressing a career in SEO. I am slowly transitioning to focus more of my attention to writing code and building web applications. More interesting projects will be added to this page soon.";
-  const pageTitle = "Adam Durrant | Coding Projects";
+    "Since 2016, I’ve focused all my energy on progressing a career in SEO. I am slowly transitioning to focus more of my attention to writing code and building web applications which i'll store here.";
+  const pageTitle = "Coding Projects | Adam Durrant";
   return (
     <>
       <Head>
@@ -42,10 +42,18 @@ export default function Projects() {
           <p className={util.description}>{description}</p>
           <ul className={util.list}>
             <ProjectTile
+              image='frontend-wrapped'
+              title='Frontend Wrapped'
+              content='After retraining to learn to code I revisited an old no-code project to see if I could remake it with-code.'
+              type='Web app · NextJS · Notion · Side Project'
+              date='2024-08-20'
+              url='https://www.frontendwrapped.com/'
+            />
+            <ProjectTile
               image='px-to-rem-extension'
               title='Px to rem unit converter extension'
               content='A pixel unit to rem unit chrome extension. I work a lot outside of an IDE and all other extensions I found were slow and click intensive.'
-              type='Chrome Extenson · JavaScript · Side Project'
+              type='Chrome Extension · JavaScript · Side Project'
               date='2023-06-09'
               url='https://chrome.google.com/webstore/detail/px-to-rem-to-px-converter/alofjjmmmhlmapihldheanofnbfdmbop'
             />
