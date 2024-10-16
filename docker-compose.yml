@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  nextjs-app:
+    image: node:18-alpine
+    working_dir: /app
+    volumes:
+      - ./:/app
+      - /app/node_modules 
+    ports:
+      - "3000:3000"
+    command: sh -c "npm install --silent && npm run dev"
+    environment:
+      - NODE_ENV=development
