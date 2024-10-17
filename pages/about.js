@@ -40,7 +40,7 @@ export default function About({ data }) {
         <div className={util.pageColumn}>
           <h1 className={util.header}>About</h1>
           <div className={util.inset}>
-            <p className={util.description + " " + util.read}>I’m Adam, an ex <a className={util.normalLink} href="https://zoe.com/">ZOE</a>, ex <a className={util.normalLink} href="https://www.brainlabsdigital.com/">Brainlabs</a> SEO specialist turned web developer. In the last 24 months I've switched up my career to full-time coding and so far, i'm loving it. Here I share my personal updates, info about this website and my career adventures.</p> 
+            <p className={util.description + " " + util.read}>I&apos;m Adam, an ex <a className={util.normalLink} href="https://zoe.com/">ZOE</a>, ex <a className={util.normalLink} href="https://www.brainlabsdigital.com/">Brainlabs</a> SEO specialist turned web developer. In the last 24 months I retrained changed career to full-time coding. Here I share my personal updates, info about this website and my career adventures.</p> 
             <p style={{marginTop: "10px"}} className={util.description + " " + util.read}>🚨 if you are thinking about/are in the process of changing your career to web development and need advice, please <a className={util.normalLink} href="#aboutContact">reach out anytime</a>, I will gladly share all my learnings to help you.</p>
 
             <div className={util.read}>
@@ -125,7 +125,7 @@ export default function About({ data }) {
                   Tech stack
                 </h2>
                 <p className={util.read}>
-                  My web development journey is still in its infancy but, I'm actively learning numerous languages and frameworks to build systems and solve problems to understand what I enjoy. I used Next.js to build this website but, day to day I am working with Wordpress, PHP and SaSS.
+                  My web development journey is still in its infancy but, I&apos;m actively learning numerous languages and frameworks to build systems and solve problems to understand what I enjoy. I used Next.js to build this website but, day to day I am working with Wordpress, PHP and SaSS.
                 </p>
                 <p>
                   Most commonly I use the following stack:
