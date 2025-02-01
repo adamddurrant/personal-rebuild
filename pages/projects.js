@@ -52,7 +52,7 @@ export default function Projects() {
             <ProjectTile
               image='tug-of-war-project'
               title='Tug of war mobile game'
-              content="A simple React Native game where two players compete by tapping on two sections of the screen (top and bottom). Each tap increases the height of the player's section while decreasing the height of the opponent's section until they lose."
+              content="A simple React Native game where two players compete by tapping on two sections of the screen (top and bottom). Each tap increases the height of the player&apos;s section while decreasing the height of the opponent&apos;s section until they lose."
               type='Native App · React Native · Side Project'
               date='2025-01-09'
               url='https://github.com/adamddurrant/tug-of-war'

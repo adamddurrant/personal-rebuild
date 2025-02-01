@@ -41,7 +41,7 @@ export default function About({ data }) {
           <h1 className={util.header}>About</h1>
           <div className={util.inset}>
             <p className={util.description + " " + util.read}>I&apos;m Adam, an ex <a className={util.normalLink} href="https://zoe.com/">ZOE</a>, ex <a className={util.normalLink} href="https://www.brainlabsdigital.com/">Brainlabs</a> SEO specialist turned web developer. In the last 24 months I retrained to code full-time. Here I share my personal updates, info about this website and my career adventures.</p> 
-            <p style={{marginTop: "10px"}} className={util.description + " " + util.read}>🚨 if you are thinking about/are in the process of changing your career to web development and need advice, please <a className={util.normalLink} href="#aboutContact">reach out anytime</a>, i'd love to help.</p>
+            <p style={{marginTop: "10px"}} className={util.description + " " + util.read}>🚨 if you are thinking about/are in the process of changing your career to web development and need advice, please <a className={util.normalLink} href="#aboutContact">reach out anytime</a>, i&apos;d love to help.</p>
 
             <div className={util.read}>
               <h2 style={{ padding: "1rem 0rem 0rem 0rem" }} id='about-update'>
