@@ -9,6 +9,7 @@
 
 .breadcrumb {
   display: flex;
+  color: var(--gray11);
   font-size: 12px;
   margin-bottom: 20px;
 }
@@ -36,10 +37,9 @@
 }
 
 .publishDate {
-  color: var(--gray12);
+  color: var(--gray11);
   font-weight: 500;
   font-size: 13px;
-  color: var(--gray12);
   transition: color 0.25s ease;
   margin-top: 20px;
 }

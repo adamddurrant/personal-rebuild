@@ -22,7 +22,7 @@ export default function Projects() {
 
   // Page header and in-page description
   const description =
-    "Since 2016, I’ve focused all my energy on progressing a career in SEO. I am slowly transitioning to focus more of my attention to writing code and building web applications which i'll store here.";
+    "Below is a collection of projects I've worked on outside employment. Some are side projects, some are freelance work.";
   const pageTitle = "Coding Projects | Adam Durrant";
   return (
     <>
@@ -48,6 +48,14 @@ export default function Projects() {
               type='Web app · NextJS · Notion · Side Project'
               date='2024-08-20'
               url='https://www.frontendwrapped.com/'
+            />
+            <ProjectTile
+              image='tug-of-war-project'
+              title='Tug of war mobile game'
+              content="A simple React Native game where two players compete by tapping on two sections of the screen (top and bottom). Each tap increases the height of the player's section while decreasing the height of the opponent's section until they lose."
+              type='Native App · React Native · Side Project'
+              date='2025-01-09'
+              url='https://github.com/adamddurrant/tug-of-war'
             />
             <ProjectTile
               image='px-to-rem-extension'

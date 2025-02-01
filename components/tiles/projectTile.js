@@ -1,4 +1,4 @@
-import styles from ".//projectTile.module.css";
+import styles from "./projectTile.module.css";
 import Image from "next/image";
 import util from "../../styles/util.module.css";
 import Link from "next/link";
@@ -14,12 +14,12 @@ export default function ProjectTile({
 }) {
   return (
     <div className={styles.outer}>
-      <p className={styles.date}>
+      {/* <p className={styles.date}>
         {new Date(date).toLocaleDateString("en-US", {
           year: "numeric",
           month: "short",
         })}
-      </p>
+      </p> */}
       {internal ? (
         <Link href={"/projects/" + url}>
           <a

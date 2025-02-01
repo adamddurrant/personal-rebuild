@@ -44,7 +44,7 @@
   margin-top: 0.5rem;
   font-size: 12.6px;
   font-weight: 500;
-  color: var(--gray9);
+  color: var(--gray11);
 }
 .outer {
   margin: 1rem 0rem 0rem;
@@ -59,7 +59,7 @@
   flex-shrink: 0;
   font-size: var(--font-s);
   font-weight: 390;
-  color: var(--gray9);
+  color: var(--gray11);
   text-align: right;
 }
 .inline {

@@ -52,13 +52,13 @@
 
 .tag {
   font-size: var(--font-s);
-  color: var(--gray9);
+  color: var(--gray11);
 }
 .type {
   margin-top: 0.5rem;
   font-size: 13px;
   font-weight: 500;
-  color: var(--gray9);
+  color: var(--gray11);
 }
 .date {
   width: 6rem;
@@ -66,14 +66,14 @@
   padding: 1rem;
   font-size: 12px;
   font-weight: 390;
-  color: var(--gray9);
+  color: var(--gray11);
   text-align: right;
 }
 .url {
   margin: 0.35rem 0rem 0rem;
   font-size: var(--font-s);
   font-weight: 390;
-  color: var(--gray9);
+  color: var(--gray11);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -82,7 +82,7 @@
   margin-top: 0.25rem;
   font-size: var(--font-s);
   font-weight: 390;
-  color: var(--gray9);
+  color: var(--gray11);
   /* max-width: 40%; */
   white-space: nowrap;
   overflow: hidden;

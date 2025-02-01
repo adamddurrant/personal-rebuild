@@ -236,7 +236,7 @@
   padding: 0.125rem;
   line-height: 1.38;
   font-size: var(--font-s);
-  color: var(--gray9);
+  color: var(--gray11);
   transition: color 0.25s ease;
   max-width: 336px;
   text-align: right;
@@ -248,7 +248,7 @@
   /* margin-top: 0.5rem; */
   font-size: 12.4px;
   font-weight: 450;
-  color: var(--gray9);
+  color: var(--gray11);
 }
 
 .center {
@@ -448,7 +448,7 @@
 .projectDate {
   text-align: center;
   font-size: var(--font-m);
-  color: var(--gray9);
+  color: var(--gray11);
   transition: color 0.25s ease;
 }
 
@@ -676,7 +676,7 @@
 .emptyState {
   padding: 3rem;
   font-size: var(--font-m);
-  color: var(--gray9);
+  color: var(--gray11);
   border-radius: 6px;
   border: 1px solid var(--gray3);
   display: flex;
