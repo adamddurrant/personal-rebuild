@@ -129,7 +129,7 @@ export default function Home({ data, readingList, toolsList, posts }) {
 
   const description = "Adam Durrant - Growing ambitious brands online. Working with and learning from inspiring people along the way.";
 
-  const pageTitle = "Adam Durrant | SEO Specialist & Front-end Web Developer";
+  const pageTitle = "Adam Durrant | Web Developer & SEO Specialist";
 
   const structuredData = {
     "@context": "https://schema.org",

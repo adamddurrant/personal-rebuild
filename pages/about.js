@@ -40,9 +40,7 @@ export default function About({ data }) {
         <div className={util.pageColumn}>
           <h1 className={util.header}>About</h1>
           <div className={util.inset}>
-            <p className={util.description + " " + util.read}>I&apos;m Adam, an ex <a className={util.normalLink} href="https://zoe.com/">ZOE</a>, ex <a className={util.normalLink} href="https://www.brainlabsdigital.com/">Brainlabs</a> SEO specialist turned web developer. In the last 24 months I retrained to code full-time. Here I share my personal updates, info about this website and my career adventures.</p> 
-            <p style={{marginTop: "10px"}} className={util.description + " " + util.read}>🚨 if you are thinking about/are in the process of changing your career to web development and need advice, please <a className={util.normalLink} href="#aboutContact">reach out anytime</a>, i&apos;d love to help.</p>
-
+            <p className={util.description + " " + util.read}>I&apos;m Adam, an ex <a className={util.normalLink} href="https://zoe.com/">ZOE</a>, ex <a className={util.normalLink} href="https://www.brainlabsdigital.com/">Brainlabs</a> SEO specialist turned full time web developer. Here I share my personal updates, info about this website and my career adventures.</p>
             <div className={util.read}>
               <h2 style={{ padding: "1rem 0rem 0rem 0rem" }} id='about-update'>
                 Personal updates
@@ -125,7 +123,7 @@ export default function About({ data }) {
                   Tech stack
                 </h2>
                 <p className={util.read}>
-                  My web development journey is still in its infancy but, I&apos;m actively learning numerous languages and frameworks to build systems and solve problems to understand what I enjoy. I used Next.js to build this website but, day to day I am working with Wordpress, PHP and SaSS.
+                  I recently retrained and learned to code so I&apos;m actively learning numerous languages and frameworks to build systems and solve problems to understand what I enjoy. I used Next.js to build this website but, day to day I am working with Wordpress, PHP, Vue and SaSS.
                 </p>
                 <p>
                   Most commonly I use the following stack:
@@ -190,15 +188,15 @@ export default function About({ data }) {
                   rel='noopener noreferrer'
                   className={util.externalLink}>
                   Pugpig
-                </a> a native app publishing platform that powers a big chunk of the worlds biggest names in media such as condé nast, Hearst, Reach, National World, Boston Globe Media and lots more
+                </a> a native app publishing platform that powers some of the worlds biggest media brands such as condé nast, Hearst, Reach, National World, Boston Globe Media and lots more
                 {". "}
                 {
-                  "In the 8+ years prior to Pugpig I've been working in the SEO industry, starting my career at the bottom as an SEO assistant, I quickly realised how much impact I could make as a solo marketeer. Since then, i've been hooked on all things web."
+                  "In the 8+ years prior to Pugpig I've been working in the whacky world of Search Engine optimization which taught me how much impact I could make as a solo marketeer. Since then, i've been hooked on all things web."
                 }
                 </p>
               <p>
                 {
-                  "I have added a brief summary below. If you are interested to learn more, "
+                  "I have added a brief summary below. To learn more, "
                 }
                 <a
                   href='https://www.linkedin.com/in/s-j-zhang/'
