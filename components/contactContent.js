@@ -68,7 +68,7 @@ export default function ContactContent() {
       </div>
       <div className={styles.row}>
         <div className={styles.stack}>
-          <p className={styles.mainText}>Book a call</p>
+          <p className={styles.mainText}>Arrange a call</p>
           <p className={styles.subText}>
             {"For advice, it's easier to chat live"}
           </p>
@@ -81,13 +81,13 @@ export default function ContactContent() {
             util.button + " " + util.singleButton + " " + util.iconButtonText
           }
         >
-          Book
+          Calendar
         </a>
       </div>
       <div className={styles.row}>
         <div className={styles.stack}>
           <p className={styles.mainText}>Stay in touch</p>
-          <p className={styles.subText}>{"I'm most active on twitter"}</p>
+          <p className={styles.subText}>{"I'm most responsive on Linkedin"}</p>
         </div>
         <div className={styles.flexRow}>
           <a

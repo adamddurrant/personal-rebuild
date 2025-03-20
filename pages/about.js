@@ -40,30 +40,12 @@ export default function About({ data }) {
         <div className={util.pageColumn}>
           <h1 className={util.header}>About</h1>
           <div className={util.inset}>
-            <p className={util.description + " " + util.read}>I&apos;m Adam, an ex <a className={util.normalLink} href="https://zoe.com/">ZOE</a>, ex <a className={util.normalLink} href="https://www.brainlabsdigital.com/">Brainlabs</a> SEO specialist turned full time web developer. Here I share my personal updates, info about this website and my career adventures.</p>
-            <div className={util.read}>
-              <h2 style={{ padding: "1rem 0rem 0rem 0rem" }} id='about-update'>
-                Personal updates
-              </h2>
-            </div>
-            <ul className={util.list} style={{ margin: "0rem 0rem 0rem 0rem" }}>
-              {data.map((item) => (
-                <Tile
-                  key={item.id}
-                  logoUrl={item.properties.icon.url}
-                  title={item.properties.Name.title[0].plain_text}
-                  content={item.properties.Description.rich_text}
-                  url={item.properties.URL.url}
-                  date={item.properties.Date.date.start}
-                />
-              ))}
-            </ul>
-            <div className={util.divider}></div>
-            <div className={util.read}>
-              <h2>About me</h2>
-              <p>
+            <p className={util.description + " " + util.read} style={{marginBottom: "10px"}}>
+            I&apos;m Adam Durrant, a former <a className={util.normalLink} style={{ textDecoration: "none" }} href="https://www.brainlabsdigital.com/">Brainlabs</a> SEO consultant turned full-time web developer.
+
                 {
-                  "I have almost a decade of experience as a professional SEO specialist. I've worked freelance, in-house and agency-side for startups, SMEs and enterprise business. "
+                  
+                  " I have almost a decade of experience as a professional SEO specialist. I've worked freelance, in-house and agency-side for startups, SMEs and enterprise business. "
                 }
 
                 {"My work has been featured in; "}
@@ -98,12 +80,12 @@ export default function About({ data }) {
                   className={util.normalLink}>
                   Oncrawl
                 </a>
-
                 {
-                  ". For as long as I can remember I have been passionate about the web and fascinated by code."
+                  " and, for as long as I can remember, I have been passionate about the web and fascinated by code."
                 }
               </p>
-              <p>
+
+              <p className={util.description + " " + util.read}>
                 {
                   "My current personal mission is to master my craft while working with ambitious and important brands online. Meeting and working with the most creative and ambitious people I can find along the way. If you need it, here's "
                 }
@@ -117,7 +99,25 @@ export default function About({ data }) {
                 </a>
                 .
               </p>
-
+            <div className={util.read}>
+              <h2 style={{ padding: "1rem 0rem 0rem 0rem" }} id='about-update'>
+                Personal updates
+              </h2>
+            </div>
+            <ul className={util.list} style={{ margin: "0rem 0rem 0rem 0rem" }}>
+              {data.map((item) => (
+                <Tile
+                  key={item.id}
+                  logoUrl={item.properties.icon.url}
+                  title={item.properties.Name.title[0].plain_text}
+                  content={item.properties.Description.rich_text}
+                  url={item.properties.URL.url}
+                  date={item.properties.Date.date.start}
+                />
+              ))}
+            </ul>
+            <div className={util.divider}></div>
+            <div className={util.read}>
               <div className={util.read}>
                 <h2 style={{ padding: "1rem 0rem 0rem 0rem" }} id='about-tools'>
                   Tech stack
@@ -179,6 +179,8 @@ export default function About({ data }) {
                 </div>
               </div>
 
+              <div className={util.divider}></div>
+
               <h2>Career</h2>
               <p className={util.read}>
                 {"I currently work as a web developer at "}
@@ -188,10 +190,10 @@ export default function About({ data }) {
                   rel='noopener noreferrer'
                   className={util.externalLink}>
                   Pugpig
-                </a> a native app publishing platform that powers some of the worlds biggest media brands such as condé nast, Hearst, Reach, National World, Boston Globe Media and lots more
+                </a>, a native app publishing platform that powers some of the worlds biggest media brands such as condé nast, Hearst, Reach, National World, Boston Globe Media and lots more
                 {". "}
                 {
-                  "In the 8+ years prior to Pugpig I've been working in the whacky world of Search Engine optimization which taught me how much impact I could make as a solo marketeer. Since then, i've been hooked on all things web."
+                  "In the 8+ years prior to Pugpig I've been working in the wacky world of Search Engine optimization which taught me how much impact I could make as a solo marketeer. Since then, i've been hooked on all things web."
                 }
                 </p>
               <p>
@@ -199,7 +201,7 @@ export default function About({ data }) {
                   "I have added a brief summary below. To learn more, "
                 }
                 <a
-                  href='https://www.linkedin.com/in/s-j-zhang/'
+                  href='https://www.linkedin.com/in/adam-durrant/'
                   target='_blank'
                   rel='noopener noreferrer'
                   className={util.externalLink}>
@@ -209,7 +211,7 @@ export default function About({ data }) {
             </div>
             <div>
               <ExpTile
-                date='2022–Now'
+                date='2023–Now'
                 title='Web Developer at Pugpig'
                 url={"https://www.pugpig.com/"}
                 content={
@@ -217,7 +219,7 @@ export default function About({ data }) {
                 }
               />
               <ExpTile
-                date='2022–Now'
+                date='2022'
                 title='SEO Manager at ZOE'
                 url={"https://joinzoe.com/"}
                 content={
@@ -264,16 +266,19 @@ export default function About({ data }) {
                 url={"https://www.interflora.co.uk/"}
               />
             </div>
+
+            <div className={util.divider}></div>
+
             <div className={util.read}>
               <h2 id='site'>How this site was made</h2>
               <p>
-                This site was forked and modified from {" "}
-                <a href='https://www.linkedin.com/in/s-j-zhang'>S J Zhang</a>. A
-                designer I adore.
+                This site was forked from {" "}
+                <a href='https://x.com/sjzhang_'>S J Zhang</a>. A
+                designer who&apos;s work love.
               </p>
               <p>
                 I&apos;m in the process of learning React & Next.js and totally
-                fell in love with SJ&apos;s design so, I set about destructuring
+                fell for SJ&apos;s design so, I set about destructuring
                 his work, understanding it and putting it back together piece by piece while
                 making it my own. I did this for a few reasons:
               </p>
@@ -299,7 +304,7 @@ export default function About({ data }) {
                 </li>
               </ol>
               <p>
-                Because he&apos;s amazing, SJ has kindly licensed this build for
+                Because he&apos;s amazing, SJ has kindly licenses his work for
                 anyone{" "}
                 <a href='https://github.com/sjzhan9/sj-land'>over on Github</a>{" "}
                 so you can grab it too!
@@ -348,13 +353,13 @@ export default function About({ data }) {
                 </a>.
                 </p>
                 <p>
-                  To solve for this, I have recently replatformed the blog section using  <a
+                  To solve for this, I recently replatformed the blog section using  <a
                   href='https://www.datocms.com/'
                   target='_blank'
                   rel='noopener noreferrer'
                   className={util.externalLink}>
                   DatoCMS
-                </a> which I cannot recommend enough for its ease of implementation and awesome capabilities via GraphQL. <a
+                </a> which I cannot recommend enough for its ease of implementation. <a
                   href='https://www.radix-ui.com/'
                   target='_blank'
                   rel='noopener noreferrer'
@@ -371,7 +376,8 @@ export default function About({ data }) {
                 </a>{" "}
                 controls light/dark-mode and made implementation a lot easier.
               </p>
-              {/* <div className={util.divider}></div> */}
+
+              <div className={util.divider}></div>
 
               <h2 id="aboutContact" style={{ margin: "4rem 0rem -0.5rem 0rem" }}>Contact</h2>
             </div>

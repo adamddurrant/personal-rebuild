@@ -47,7 +47,7 @@ export default function Home({ data, readingList, toolsList, posts }) {
     },
     {
       id: "seeProject",
-      text: "My web development journey is still in its infancy but, I have a small collection of code projects — ",
+      text: "My web development journey is still just getting started but I have a small collection of code projects — ",
       ctaText: "See projects →",
       ctaLink: "/projects",
     },
@@ -257,7 +257,7 @@ export default function Home({ data, readingList, toolsList, posts }) {
             })}
           </ul>
           <div className={styles.homeSectionContainer}>
-            <h2 className={styles.homeSectionTitle}>Reading List</h2>
+            <h2 className={styles.homeSectionTitle}>Reading list</h2>
             <Link href='/reading-list'>
               <a className={styles.homeLinkButton}>View All</a>
             </Link>
@@ -276,7 +276,7 @@ export default function Home({ data, readingList, toolsList, posts }) {
           </ul>
 
           <div className={styles.homeSectionContainer}>
-            <h2 className={styles.homeSectionTitle}>Latest Tools</h2>
+            <h2 className={styles.homeSectionTitle}>Latest tools</h2>
             <Link href='/tools'>
               <a className={styles.homeLinkButton}>View All</a>
             </Link>
