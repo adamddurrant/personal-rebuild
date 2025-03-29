@@ -53,7 +53,7 @@ export default function Menu() {
               shortcut='4'
             />
             <p className={styles.divider}>Resources</p>
-            <NavLink svg='file' href='/blog' label='Posts' shortcut='5' />
+            <NavLink svg='pencil' href='/blog' label='Writing' shortcut='5' />
             <NavLink
               svg='reading'
               href='/reading-list'

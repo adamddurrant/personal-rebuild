@@ -6,8 +6,8 @@ import heroOne from "../public/blogs/hero-1.jpg"
 import heroTwo from "../public/blogs/hero-2.jpg"
 
 //page header and in-page description
-const description = "I enjoy writing but I need motivation to write more so, this page will keep me accountable. Here you can find SEO and web development insight, guides & thoughts.";
-const pageTitle = "Adam Durrant | Personal SEO & Web Dev Blog";
+const description = "I enjoy writing, it helps me learn and it's great for record-keeping but I often need motivation to write so, this page keeps me accountable. Here you can find SEO and web dev insight, guides & thoughts.";
+const pageTitle = "Adam Durrant | Web Dev & SEO Articles";
 
 export default function Home(props) {
   const { data } = props;
@@ -23,9 +23,9 @@ export default function Home(props) {
         <meta name='twitter:title' content={pageTitle} />
         <meta name='twitter:description' content={description} />
       </Head>
-      <main className={util.page} id='aboutPage'>
+      <main className={util.page} id='blog'>
         <div className={util.pageColumn}>
-          <h1 className={util.header}>Blog</h1>
+          <h1 className={util.header}>Writing</h1>
           <p className={util.description}>{description}</p>
           <div className={util.grid}>
             {posts.map((post, index) => (
