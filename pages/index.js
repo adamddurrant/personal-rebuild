@@ -238,7 +238,7 @@ export default function Home({ data, readingList, toolsList, posts }) {
             ))}
           </ul>
           <div className={styles.homeSectionContainer}>
-            <h2 className={styles.homeSectionTitle}>Recent posts</h2>
+            <h2 className={styles.homeSectionTitle}>Recent writing</h2>
             <Link href='/blog'>
               <a className={styles.homeLinkButton}>View All</a>
             </Link>
@@ -274,7 +274,7 @@ export default function Home({ data, readingList, toolsList, posts }) {
               />
             ))}
           </ul>
-
+          
           <div className={styles.homeSectionContainer}>
             <h2 className={styles.homeSectionTitle}>Latest tools</h2>
             <Link href='/tools'>

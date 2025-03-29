@@ -14,78 +14,48 @@ export default function HomeUpdatesTile({
 }) {
   return (
     <div className={styles.container}>
-      <div className={styles.stack}>
-        <div className={styles.iconContainer}>
-          {internalUrl ? (
-            <Image
-              className={styles.icon}
-              priority
-              unoptimized
-              src={"/recents/" + internalUrl + ".png"}
-              height={28}
-              width={28}
-              alt={title}
-            />
-          ) : logoUrl ? (
-            <Image
-              className={styles.icon}
-              priority
-              unoptimized
-              src={logoUrl}
-              height={28}
-              width={28}
-              alt={title}
-            />
-          ) : null}
-        </div>
-        {url.includes("http") ? (
-          <a
-            href={url}
-            target='_blank'
-            rel='noopener noreferrer'
-            className={styles.titleLink}
-          >
+      <a href={url} target={url.includes("http") ? "_blank" : undefined} rel={url.includes("http") ? "noopener noreferrer" : undefined} className={styles.homeTileLink}>
+        <div className={styles.stack}>
+          <div className={styles.iconContainer}>
+            {internalUrl ? (
+              <Image
+                className={styles.icon}
+                priority
+                unoptimized
+                src={"/recents/" + internalUrl + ".png"}
+                height={28}
+                width={28}
+                alt={title}
+              />
+            ) : logoUrl ? (
+              <Image
+                className={styles.icon}
+                priority
+                unoptimized
+                src={logoUrl}
+                height={28}
+                width={28}
+                alt={title}
+              />
+            ) : null}
+          </div>
+          <div style={{ display: "block" }}>
             <h3 className={util.tileTitle + " " + styles.inline}>{title}</h3>
-            <span className={styles.externalIcon}>↗</span>
-          </a>
-        ) : (
-          <Link href={url}>
-            <a className={styles.titleLink}>
-              <h3 className={util.tileTitle + " " + styles.inline}>{title}</h3>
-              <span className={styles.externalIcon}>→</span>
-            </a>
-          </Link>
-        )}
-        <Tooltip.Provider delayDuration={800}>
-          <Tooltip.Root>
-            <Tooltip.Trigger asChild>
-              <span className={styles.tileContent}>
-                {content.map((e, i) => (
-                  <a key={i} href={e.href}>
-                    {e.plain_text}
-                  </a>
-                ))}
-              </span>
-            </Tooltip.Trigger>
-            <Tooltip.Content className={util.tooltip + " " + util.tooltipLarge}>
-              <span className={util.viewTruncated}>
-                {content.map((e, i) => (
-                  <a key={i} href={e.href}>
-                    {e.plain_text}
-                  </a>
-                ))}
-              </span>
-              <Tooltip.Arrow className={util.arrow} />
-            </Tooltip.Content>
-          </Tooltip.Root>
-        </Tooltip.Provider>
-      </div>
-      <p className={styles.date}>
-        {new Date(date).toLocaleDateString("en-US", {
-          year: "numeric",
-          month: "short",
-        })}
-      </p>
+            <span className={styles.externalIcon}>{url.includes("http") ? "↗" : "→"}</span>
+          </div>
+          <span className={styles.tileContent}>
+            {Array.isArray(content) ? content.map((e, i) => (
+              <span key={i} className={styles.plainText}>{e.plain_text}</span>
+            )) : null}
+          </span>
+          <p className={styles.date}>
+            {new Date(date).toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "short",
+            })}
+          </p>
+        </div>
+      </a>
     </div>
   );
 }

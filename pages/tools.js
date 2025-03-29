@@ -165,7 +165,7 @@ export default function ReadingList({ list }) {
       </Head>
       <main className={util.page} id='readingPage'>
         <div className={util.pageColumn}>
-          <h1 className={util.header}>Tools List</h1>
+          <h1 className={util.header}>Tools</h1>
           <p className={util.description}>{description}</p>
 
           <ul className={util.list}>
