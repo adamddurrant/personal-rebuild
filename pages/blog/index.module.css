@@ -52,6 +52,10 @@
   transition: color 0.25s ease;
 }
 
+.codeBlock {
+  margin: 25px 0;
+}
+
 .codeBlock, .blog_inlineImage {
   margin-bottom: 15px;
 }
