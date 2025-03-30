@@ -5,11 +5,29 @@ import Background from "../components/background";
 import Head from "next/head";
 import { Toaster } from "react-hot-toast";
 import { useRouter } from "next/router";
+import { useEffect } from 'react';
+import { initMixpanel, trackPageView } from '../lib/mixpanelClient';
+
 
 function MyApp({ Component, pageProps }) {
 
   const router = useRouter();
   const canonicalUrl = (`https://adamdurrant.co.uk` + (router.asPath === "/" ? "/" : router.asPath)).split("?")[0];
+
+  useEffect(() => {
+    initMixpanel();
+
+    const handleRouteChange = (url) => {
+      trackPageView(url); // Track pageviews
+    };
+
+    // Track page views on route change
+    router.events.on('routeChangeComplete', handleRouteChange);
+
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router.events]);
 
   return (
     <ThemeProvider attribute='class' value={{ dark: "dark-theme" }}>
