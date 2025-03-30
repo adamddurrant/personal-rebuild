@@ -72,7 +72,7 @@ export default function Menu() {
               label='Podcasts'
               shortcut='8'
             />
-            <p className={styles.divider}>Reach out</p>
+            <p className={styles.divider}>Connect</p>
             <Contact svg='chat' label='Contact' shortcut='9' />
             <NavLink
               svg='twitter'
