@@ -6,6 +6,24 @@ import util from "../styles/util.module.css";
 import ContactContent from "./contactContent";
 import * as Tooltip from "@radix-ui/react-tooltip";
 
+function getLocalGMTTimeFormatted() {
+  const now = new Date();
+
+  // Get UTC hours and minutes
+  let hours = now.getUTCHours();
+  const minutes = now.getUTCMinutes();
+
+  // Format AM/PM
+  const ampm = hours >= 12 ? 'pm' : 'am';
+  hours = hours % 12 || 12; // convert 0 to 12 for 12-hour format
+
+  // Format minutes with leading zero
+  const formattedMinutes = String(minutes).padStart(2, '0');
+
+  return `${hours}.${formattedMinutes}${ampm}`;
+}
+
+
 export default function Contact({ svg, label, shortcut }) {
   var time = 0;
 
@@ -70,6 +88,9 @@ export default function Contact({ svg, label, shortcut }) {
           onOpenAutoFocus={(e) => e.preventDefault()}
         >
           <Dialog.Title className={styles.title}>Contact</Dialog.Title>
+          <span style={{ fontSize: 12, fontStyle: "italic",color: "var(--gray11)" }}>
+            My local time: {getLocalGMTTimeFormatted()}
+          </span>
           <ContactContent inModal="true" />
         </Dialog.Content>
       </Dialog.Portal>

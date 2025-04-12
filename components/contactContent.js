@@ -70,7 +70,7 @@ export default function ContactContent() {
         <div className={styles.stack}>
           <p className={styles.mainText}>Arrange a call</p>
           <p className={styles.subText}>
-            {"For advice, it's easier to chat live"}
+            {"Chat with me on a call"}
           </p>
         </div>
         <a
