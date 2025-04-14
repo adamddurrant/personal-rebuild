@@ -1,13 +1,16 @@
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import React from "react";
 import styles from "../../pages/blog/index.module.css"
+import * as Tooltip from "@radix-ui/react-tooltip";
 import { request } from "../../lib/datocms";
 import { Image, renderRule, StructuredText, renderMetaTags } from "react-datocms"
 import util from "../../styles/util.module.css";
-import { isCode } from 'datocms-structured-text-utils';
+import { isCode, isHeading } from 'datocms-structured-text-utils';
 import Head from "next/head";
 import Link from "next/link";
 import authorImage from "../../public/me/adam-durrant.jpg";
+import LinkIcon from "../../public/feather/link-2.svg";
 
 const CodeBlock = ({ language, codestring }) => {
   return (
@@ -55,7 +58,7 @@ export default function Blogpost(props) {
         <div style={{ maxWidth: "50rem" }} className={util.pageColumn}>
 
           <div className={styles.breadcrumb}>
-          <Link scroll={false} href='/blog'>Blog</Link><span className={styles.crumbSpacer}>&gt;</span><p className={styles.crumbTitle}>{postData.title}</p>
+            <Link scroll={false} href='/blog'>Blog</Link><span className={styles.crumbSpacer}>&gt;</span><p className={styles.crumbTitle}>{postData.title}</p>
           </div>
 
           <section className={styles.headerGroup}>
@@ -91,8 +94,7 @@ export default function Blogpost(props) {
 
           </section>
 
-          <section style={{ maxWidth: "40rem", marginLeft: "auto", marginRight: "auto" }} className={util.body}>
-
+          <section id="blog-body" style={{ maxWidth: "40rem", marginLeft: "auto", marginRight: "auto" }} className={util.body}>
             <StructuredText data={postData.body}
               renderBlock={({ record }) => {
                 switch (record.__typename) {
@@ -114,7 +116,42 @@ export default function Blogpost(props) {
                       {node.code}
                     </CodeBlock>
                   </div>
-                ))
+                )),
+                renderRule(isHeading, ({ node, children, key }) => {
+                  const text = node.children.map((child) => child.value || '').join('');
+                  const id = text.toLowerCase().replace(/[^\w]+/g, '-');
+
+                  const copyLink = () => {
+                    const url = `${window.location.origin}${window.location.pathname}#${id}`;
+                    navigator.clipboard.writeText(url);
+                  };
+
+                  return React.createElement(
+                    `h${node.level}`,
+                    { key, id, className: styles.headingWithLink },
+                    <>
+                      {children}
+                      <Tooltip.Provider delayDuration={200}>
+                        <Tooltip.Root>
+                          <Tooltip.Trigger asChild>
+                            <div
+                              onClick={copyLink}
+                              className={styles.copyButton}
+                              aria-label="Copy link to this section"
+                            >
+                              <Image data={LinkIcon} className={styles.copyButtonIcon} />
+                            </div>
+                          </Tooltip.Trigger>
+
+                          <Tooltip.Content className={util.tooltip}>
+                            <span>Copy link to this section</span>
+                            <Tooltip.Arrow className={util.arrow} />
+                          </Tooltip.Content>
+                        </Tooltip.Root>
+                      </Tooltip.Provider>
+                    </>
+                  );
+                }),
               ]}
             />
 

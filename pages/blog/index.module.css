@@ -1,10 +1,44 @@
-
 .headerGroup {
   display: grid;
   margin-bottom: 1.875rem;
   padding-bottom: 1.875rem;
   border-bottom: 1px solid var(--gray8);
   grid-template-columns: 2fr 1fr;
+}
+
+h4.headingWithLink .copyButton, 
+h5.headingWithLink .copyButton,
+h6.headingWithLink .copyButton {
+  display: none;
+}
+
+.copyButton {
+  border-radius: 5px;
+  padding: 3px 7px;
+  display: inline-block;
+  margin-left: 5px;
+  position: relative;
+  transition: all 75ms ease-in;
+  cursor: pointer;
+  overflow: hidden;
+  border: none;
+  background-color: transparent;
+  vertical-align: middle;
+  border: 1px solid var(--appbg);
+}
+
+.copyButton:active {
+  background-color: var(--linkContainerBgHover);
+  border: 1px solid var(--linkContainerBorderHover);
+}
+
+.copyButtonIcon {
+  width: 20px;
+  height: 20px;
+}
+
+:global(.dark-theme) .copyButtonIcon {
+  filter: invert(1);
 }
 
 .breadcrumb {
@@ -56,12 +90,13 @@
   margin: 25px 0;
 }
 
-.codeBlock, .blog_inlineImage {
+.codeBlock,
+.blog_inlineImage {
   margin-bottom: 15px;
 }
 
-.codeBlock > div:first-child {
-  margin: 0!important;
+.codeBlock>div:first-child {
+  margin: 0 !important;
 }
 
 .metaData {
