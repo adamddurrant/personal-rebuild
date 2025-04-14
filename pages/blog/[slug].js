@@ -131,7 +131,7 @@ export default function Blogpost(props) {
                     { key, id, className: styles.headingWithLink },
                     <>
                       {children}
-                      <Tooltip.Provider delayDuration={200}>
+                      <Tooltip.Provider delayDuration={500}>
                         <Tooltip.Root>
                           <Tooltip.Trigger asChild>
                             <div

@@ -24,12 +24,18 @@ h6.headingWithLink .copyButton {
   border: none;
   background-color: transparent;
   vertical-align: middle;
-  border: 1px solid var(--appbg);
+  border: 1px solid var(--bg);
+}
+
+.copyButton:hover {
+  background-color: var(--linkContainerBgHover);
+  border: 1px solid var(--linkContainerBorderHover);
 }
 
 .copyButton:active {
   background-color: var(--linkContainerBgHover);
   border: 1px solid var(--linkContainerBorderHover);
+  filter: brightness(.9);
 }
 
 .copyButtonIcon {
