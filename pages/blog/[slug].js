@@ -11,6 +11,8 @@ import Head from "next/head";
 import Link from "next/link";
 import authorImage from "../../public/me/adam-durrant.jpg";
 import LinkIcon from "../../public/feather/link-2.svg";
+import toast from "react-hot-toast";
+
 
 const CodeBlock = ({ language, codestring }) => {
   return (
@@ -123,7 +125,14 @@ export default function Blogpost(props) {
 
                   const copyLink = () => {
                     const url = `${window.location.origin}${window.location.pathname}#${id}`;
-                    navigator.clipboard.writeText(url);
+                    navigator.clipboard.writeText(url).then(
+                      function () {
+                        toast("Copied to clipboard");
+                      },
+                      function () {
+                        toast("Copy failed");
+                      }
+                    );
                   };
 
                   return React.createElement(

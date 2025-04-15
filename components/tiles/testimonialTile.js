@@ -2,8 +2,6 @@ import styles from ".//testimonialTile.module.css";
 import util from "../../styles/util.module.css";
 import Image from "next/image";
 
-
-
 export default function TestimonialTile({ profileUrl, title, content, url }) {
   return (
     <>

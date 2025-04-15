@@ -357,7 +357,7 @@
   padding: 0.125rem;
   line-height: 1.68;
   font-size: var(--font-l);
-  color: var(--gray11);
+  color: var(--gray12);
   transition: color 0.25s ease;
 }
 
@@ -389,6 +389,9 @@
   color: var(--gray12);
   margin-bottom: 1.5rem;
   transition: color 0.25s ease;
+}
+.read span {
+  color: var(--gray12);
 }
 
 .read h2 {

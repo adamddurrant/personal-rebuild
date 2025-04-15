@@ -7,6 +7,7 @@ import ExpTile from "../components/tiles/expTile";
 const { Client } = require("@notionhq/client");
 import Tile from "../components/tiles/tile";
 import SkillsIcon from "../components/skillsIcon";
+import LocalTime from "../components/localTime";
 
 export default function About({ data }) {
   useEffect(() => {
@@ -23,8 +24,8 @@ export default function About({ data }) {
   }, []);
 
   const description = "I’m an ex-SEO specialist on a mission to become a proficient web developer. I recently switched up my career to full-time coding and so far, i'm loving it. Here I share my personal updates, info about this website and my career adventures.";
-  const pageTitle = "Adam Durrant | About Me"; 
- 
+  const pageTitle = "Adam Durrant | About Me";
+
   return (
     <>
       <Head>
@@ -40,65 +41,60 @@ export default function About({ data }) {
         <div className={util.pageColumn}>
           <h1 className={util.header}>About</h1>
           <div className={util.inset}>
-            <p className={util.description + " " + util.read} style={{marginBottom: "10px"}}>
-            I&apos;m Adam Durrant, a former <a className={util.normalLink} style={{ textDecoration: "none" }} href="https://www.brainlabsdigital.com/">Brainlabs</a> SEO consultant turned full-time web developer.
+            <p className={util.description + " " + util.read} style={{ marginBottom: "10px" }}>
+              I&apos;m Adam Durrant, a former <a className={util.normalLink} style={{ textDecoration: "none" }} href="https://www.brainlabsdigital.com/">Brainlabs</a> SEO consultant turned full-time web developer.
 
-                {
-                  
-                  " I have almost a decade of experience as a professional SEO specialist. I've worked freelance, in-house and agency-side for startups, SMEs and enterprise business. "
-                }
+              {
+                " I have almost a decade of experience as a professional SEO specialist. I've worked freelance, in-house and agency-side for startups, SMEs and enterprise business. "
+              }
 
-                {"My work has been featured in; "}
-                <a
-                  href='https://www.searchenginewatch.com/'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className={util.normalLink}>
-                  Search Engine Watch
-                </a>
-                {", "}
-                <a
-                  href='https://trafficthinktank.com/'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className={util.normalLink}>
-                  Traffic Think Tank
-                </a>
-                {", "}
-                <a
-                  href='https://www.seofomo.co/'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className={util.normalLink}>
-                  SEO FOMO
-                </a>
-                {" and "}
-                <a
-                  href='https://www.oncrawl.com/'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className={util.normalLink}>
-                  Oncrawl
-                </a>
-                {
-                  " and, for as long as I can remember, I have been passionate about the web and fascinated by code."
-                }
-              </p>
-
-              <p className={util.description + " " + util.read}>
-                {
-                  "My current personal mission is to master my craft while working with ambitious and important brands online. Meeting and working with the most creative and ambitious people I can find along the way. If you need it, here's "
-                }
-                <a
-                  href='/me/adam-durrant.jpg'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className={util.normalLink}>
-                  {" "}
-                  a picture of me looking busy
-                </a>
-                .
-              </p>
+            </p>
+            <p className={util.description + " " + util.read} style={{ marginBottom: "10px" }}>
+              {"My work has been featured in; "}
+              <a
+                href='https://www.searchenginewatch.com/'
+                target='_blank'
+                rel='noopener noreferrer'
+                className={util.normalLink}>
+                Search Engine Watch
+              </a>
+              {", "}
+              <a
+                href='https://trafficthinktank.com/'
+                target='_blank'
+                rel='noopener noreferrer'
+                className={util.normalLink}>
+                Traffic Think Tank
+              </a>
+              {", "}
+              <a
+                href='https://www.seofomo.co/'
+                target='_blank'
+                rel='noopener noreferrer'
+                className={util.normalLink}>
+                SEO FOMO
+              </a>
+              {" and "}
+              <a
+                href='https://www.oncrawl.com/'
+                target='_blank'
+                rel='noopener noreferrer'
+                className={util.normalLink}>
+                Oncrawl
+              </a>
+              {
+                " and, for as long as I can remember, I have been passionate about the web and fascinated by code. If you need it, here's "
+              }
+              <a
+                href='/me/adam-durrant.jpg'
+                target='_blank'
+                rel='noopener noreferrer'
+                className={util.normalLink}>
+                {" "}
+                a picture of me looking busy
+              </a>
+              .
+            </p>
             <div className={util.read}>
               <h2 style={{ padding: "1rem 0rem 0rem 0rem" }} id='about-update'>
                 Personal updates
@@ -123,7 +119,7 @@ export default function About({ data }) {
                   Tech stack
                 </h2>
                 <p className={util.read}>
-                  I recently retrained and learned to code so I&apos;m actively learning numerous languages and frameworks to build systems and solve problems to understand what I enjoy. I used Next.js to build this website but, day to day I am working with Wordpress, PHP, Vue and SaSS.
+                  I&apos;m actively learning numerous languages and frameworks to build systems and solve problems to understand what I enjoy. I used Next.js to build this website but, day to day I am working with Wordpress, PHP, Vue and SaSS.
                 </p>
                 <p>
                   Most commonly I use the following stack:
@@ -133,7 +129,7 @@ export default function About({ data }) {
                   <div className={util.flexRow + "" + util.alignCenter}>
                     <p className={util.smlHeading}>Development:</p>
                   </div>
-                  <div className={util.flexRow} style={{rowGap: "15px"}}>
+                  <div className={util.flexRow} style={{ rowGap: "15px" }}>
                     <SkillsIcon icon={"html"} technology={"HTML 5"} />
                     <SkillsIcon icon={"css"} technology={"CSS 3"} />
                     <SkillsIcon
@@ -190,12 +186,12 @@ export default function About({ data }) {
                   rel='noopener noreferrer'
                   className={util.externalLink}>
                   Pugpig
-                </a>, a native app publishing platform that powers some of the worlds biggest media brands such as condé nast, Hearst, Reach, National World, Boston Globe Media and lots more
+                </a>, a native app publishing platform that powers some of the worlds biggest media brands such as condé nast, Hearst, Reach, National World and Boston Globe Media
                 {". "}
                 {
-                  "In the 8+ years prior to Pugpig I've been working in the wacky world of Search Engine optimization which taught me how much impact I could make as a solo marketeer. Since then, i've been hooked on all things web."
+                  "In the 8+ years prior to Pugpig I've worked in digital marketing. Since then, i've been hooked on all things web."
                 }
-                </p>
+              </p>
               <p>
                 {
                   "I have added a brief summary below. To learn more, "
@@ -205,7 +201,7 @@ export default function About({ data }) {
                   target='_blank'
                   rel='noopener noreferrer'
                   className={util.externalLink}>
-                  visit my Linkedin profile
+                  visit my Linkedin
                 </a>
               </p>
             </div>
@@ -351,9 +347,9 @@ export default function About({ data }) {
                   className={util.externalLink}>
                   regularly regenerate
                 </a>.
-                </p>
-                <p>
-                  To solve for this, I recently replatformed the blog section using  <a
+              </p>
+              <p>
+                To solve for this, I recently replatformed the blog section using  <a
                   href='https://www.datocms.com/'
                   target='_blank'
                   rel='noopener noreferrer'
@@ -380,6 +376,7 @@ export default function About({ data }) {
               <div className={util.divider}></div>
 
               <h2 id="aboutContact" style={{ margin: "4rem 0rem -0.5rem 0rem" }}>Contact</h2>
+              <LocalTime />
             </div>
             <div className={util.inset} style={{ marginBottom: "4rem" }}>
               <ContactContent />

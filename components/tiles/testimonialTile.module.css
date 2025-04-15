@@ -8,6 +8,10 @@
   border: 1px solid var(--linkContainerBorder);
   position: relative;
 }
+
+.testimonial {
+  color: var(--gray11);
+}
 /* .container:hover {
   background-color: var(--linkContainerBgHover);
 } */

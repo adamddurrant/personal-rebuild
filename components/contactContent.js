@@ -2,7 +2,7 @@ import styles from "../components/contactContent.module.css";
 import React, { useEffect } from "react";
 import Image from "next/image";
 import util from "../styles/util.module.css";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 
 export default function ContactContent() {
   //copy feature start
@@ -23,7 +23,7 @@ export default function ContactContent() {
       <div className={styles.row}>
         <div className={styles.stack}>
           <p className={styles.mainText}>Email</p>
-          <p className={styles.subText}>I&apos;m always happy to help </p>
+          <p className={styles.subText}>Always happy to help </p>
         </div>
 
         <div className={styles.buttonPair}>

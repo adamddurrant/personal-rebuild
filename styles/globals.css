@@ -70,7 +70,6 @@ html {
 }
 
 .dark-theme {
-  /* Remap your colors for dark mode */
   --appbg: rgb(32, 32, 32);
   --bg: rgb(16, 16, 16);
   --bgSticky: rgba(16, 16, 16, 0.746);
