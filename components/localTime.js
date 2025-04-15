@@ -1,26 +1,30 @@
 import React from 'react'
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 export default function LocalTime() {
+  const [time, setTime] = useState('');
 
-  function TimeFormatted() {
-    const now = new Date();
-    const options = {
-      hour: 'numeric',
-      minute: '2-digit',
-      hour12: true,
-      timeZone: 'Europe/London',
+  useEffect(() => {
+    const updateTime = () => {
+      const now = new Date();
+      let hours = now.getHours();
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      const ampm = hours >= 12 ? 'pm' : 'am';
+      hours = hours % 12 || 12;
+
+      setTime(`${hours}.${minutes}${ampm}`);
     };
 
-    const formatter = new Intl.DateTimeFormat('en-GB', options);
-    const formatted = formatter.format(now);
-
-    return formatted.replace(':', '.').toLowerCase();
-  }
+    updateTime();
+    const interval = setInterval(updateTime, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <>
       <span style={{ fontSize: 13, color: "var(--gray11)", marginTop: "8px", display: "block" }}>
-        My local time: {TimeFormatted()}
+        My local time: {time}
       </span>
     </>
   )
