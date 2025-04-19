@@ -1,10 +1,7 @@
 import Head from "next/head";
-import Link from "next/link";
 import React, { useEffect } from "react";
 import util from "../styles/util.module.css";
 import ProjectTile from "../components/tiles/projectTile";
-import { useRouter } from "next/router";
-import Script from "next/script";
 
 export default function Projects() {
   useEffect(() => {
@@ -41,6 +38,14 @@ export default function Projects() {
           <h1 className={util.header}>Projects</h1>
           <p className={util.description}>{description}</p>
           <ul className={util.list}>
+            <ProjectTile
+              image='filter-finder'
+              title='Wordpress Custom Filter Finder'
+              content='Upload a WordPress plugin zip file to extract custom filter hooks to help extend plugins that lack documentation.'
+              type='Web app · React · Side Project'
+              date='2025-04-19'
+              url='https://filter-finder-app.vercel.app/'
+            />
             <ProjectTile
               image='frontend-wrapped'
               title='Frontend Wrapped'
