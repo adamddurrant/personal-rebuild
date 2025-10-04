@@ -52,7 +52,7 @@ export default function Projects() {
               content='After retraining to learn to code I revisited an old no-code project to see if I could remake it with-code.'
               type='Web app · NextJS · Notion · Side Project'
               date='2024-08-20'
-              url='https://dev-tweets-ri6fc0aqo-personal-pro.vercel.app/'
+              url='https://dev-tweets-git-main-personal-pro.vercel.app/'
             />
             <ProjectTile
               image='tug-of-war-project'
