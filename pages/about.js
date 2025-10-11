@@ -137,6 +137,7 @@ export default function About({ data }) {
                       technology={"JavaScript ES6"}
                     />
                     <SkillsIcon icon={"react"} technology={"React"} />
+                    <SkillsIcon icon={"vue"} technology={"Vue.js"} />
                     <SkillsIcon icon={"sass"} technology={"Sass"} />
                     <SkillsIcon icon={"php"} technology={"PHP"} />
                     <SkillsIcon icon={"wordpress"} technology={"WordPress 6"} />
@@ -207,11 +208,19 @@ export default function About({ data }) {
             </div>
             <div>
               <ExpTile
-                date='2023–Now'
+                date='2025–Now'
+                title='Solutions Developer at Pugpig'
+                url={"https://www.pugpig.com/"}
+                content={
+                  "Still loving my web development journey, I now build custom solutions to integrate publishing brands in the Pugpig native platforms."
+                }
+              />
+              <ExpTile
+                date='2023'
                 title='Web Developer at Pugpig'
                 url={"https://www.pugpig.com/"}
                 content={
-                  "Pugpig are one of the most well known publishing platforms on the web. Their product and client services power some of the world's leading media brands."
+                  "Pugpig power some of the worlds most known publishing apps. Here I started my web development journey coding UI's and features for native apps"
                 }
               />
               <ExpTile

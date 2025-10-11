@@ -120,8 +120,8 @@ export default function Home({ data, readingList, toolsList, posts }) {
           : hour > 4
             ? "Good morning"
             : hour > 2
-              ? "I'm sleeping... Zzz"
-              : "I'm sleeping... Zzz";
+              ? "I'm sleeping right now... Zzz"
+              : "I'm sleeping right now... Zzz";
     setUserTime(greeting);
   }, []);
 
