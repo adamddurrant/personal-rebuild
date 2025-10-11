@@ -2,6 +2,8 @@ import Head from "next/head";
 import React, { useEffect } from "react";
 import util from "../styles/util.module.css";
 import ProjectTile from "../components/tiles/projectTile";
+import { toast } from 'react-hot-toast';
+import Link from 'next/link';
 
 export default function Projects() {
   useEffect(() => {
@@ -39,12 +41,11 @@ export default function Projects() {
           <p className={util.description}>{description}</p>
           <ul className={util.list}>
             <ProjectTile
-              image='filter-finder'
-              title='Wordpress Custom Filter Finder'
-              content='Upload a WordPress plugin zip file to extract custom filter hooks to help extend plugins that lack documentation.'
-              type='Web app · React · Side Project'
-              date='2025-04-19'
-              url='https://filter-finder-app.vercel.app/'
+              image='qr-guard'
+              title='QR scanner with security checks'
+              content='Why this doesn&apos;t exist already, I do not know - basic security checks on QR data that flags issues before visiting the destination page.'
+              type='Expo · React Native · Side Project'
+              date='2025-10-11'
             />
             <ProjectTile
               image='frontend-wrapped'
@@ -61,6 +62,14 @@ export default function Projects() {
               type='Native App · React Native · Side Project'
               date='2025-01-09'
               url='https://github.com/adamddurrant/tug-of-war'
+            />
+            <ProjectTile
+              image='filter-finder'
+              title='Wordpress Custom Filter Finder'
+              content='Upload a WordPress plugin zip file to extract custom filter hooks to help extend plugins that lack documentation.'
+              type='Web app · React · Side Project'
+              date='2025-04-19'
+              url='https://filter-finder-app.vercel.app/'
             />
             <ProjectTile
               image='px-to-rem-extension'
@@ -107,16 +116,6 @@ export default function Projects() {
               type='Webflow · Freelance'
               date='2022-04-20'
               url={"https://www.cityacademyofballet.co.uk/"}
-            />
-            <ProjectTile
-              image='shopping-list'
-              title='Shopping List CRUD'
-              content={
-                "It might be cliché but I couldn't find a simple and unbloated shopping list app to use with my partner. Please reach out for the password if you want to play (it's our actual shopping list). "
-              }
-              type='HTML · CSS · Vanilla JS · Firebase · Side Project'
-              date='2021-02-20'
-              url={"https://shopping-list-regsnmcwt-adamddurrant.vercel.app/"}
             />
           </ul>
           <p

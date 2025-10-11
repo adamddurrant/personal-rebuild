@@ -2,6 +2,7 @@ import styles from "./projectTile.module.css";
 import Image from "next/image";
 import util from "../../styles/util.module.css";
 import Link from "next/link";
+import toast from "react-hot-toast";
 
 export default function ProjectTile({
   image,
@@ -22,11 +23,7 @@ export default function ProjectTile({
       </p> */}
       {internal ? (
         <Link href={"/projects/" + url}>
-          <a
-            // target="_blank"
-            // rel="noopener noreferrer"
-            className={styles.container}
-          >
+          <a className={styles.container}>
             <Image
               priority
               className={styles.image}
@@ -45,8 +42,19 @@ export default function ProjectTile({
         </Link>
       ) : (
         <a
-          href={url}
-          target='_blank'
+          href={url || "#"}
+          onClick={(e) => {
+            if (!url) {
+              e.preventDefault();
+              toast("Work in progress 🚧", {
+                style: {
+                  background: "#333",
+                  color: "#fff",
+                },
+              });
+            }
+          }}
+          target={url ? "_blank" : "_self"}
           rel='noopener noreferrer'
           className={styles.container}
         >
