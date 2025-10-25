@@ -17,13 +17,13 @@ export default function Home({ data, readingList, toolsList, posts }) {
   const tips = [
     {
       id: "useShortCut",
-      text: "Use keyboard shortcut 1 → 0 to navigate between pages. Try press 2, 3, 4, then 1 to come back here.",
+      text: "Navigate quickly through the site using keyboard shortcuts 1 → 0. Try pressing 2, 3 and 4.",
       ctaText: null,
       ctaLink: null,
     },
     {
       id: "firstTime",
-      text: "Get to know me. I love modern web dev, sushi and over-engineered personal sites — ",
+      text: "Get to know me: I love modern web dev, sushi and over-engineered personal sites — ",
       ctaText: "See my about page →",
       ctaLink: "/about",
     },
@@ -47,9 +47,15 @@ export default function Home({ data, readingList, toolsList, posts }) {
     },
     {
       id: "seeProject",
-      text: "My web development journey is still just getting started but I have a small collection of code projects — ",
+      text: "My web development journey is still just getting started but I have a small collection of dev projects — ",
       ctaText: "See projects →",
       ctaLink: "/projects",
+    },
+    {
+      id: "readStuff",
+      text: "I enjoy writing especially when I want to remember something — ",
+      ctaText: "Read my articles →",
+      ctaLink: "/blog",
     },
   ];
   //create currentlist of what user need to see

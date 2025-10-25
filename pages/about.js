@@ -119,7 +119,7 @@ export default function About({ data }) {
                   Tech stack
                 </h2>
                 <p className={util.read}>
-                  I&apos;m actively learning numerous languages and frameworks to build systems and solve problems to understand what I enjoy. I used Next.js to build this website but, day to day I am working with Wordpress, PHP, Vue and SaSS.
+                  I&apos;m actively learning numerous languages and frameworks to build systems and solve problems to understand what I enjoy. Next.js runs this website but, day to day I work primarily with Wordpress, PHP, Vue and SaSS.
                 </p>
                 <p>
                   Most commonly I use the following stack:
@@ -180,29 +180,28 @@ export default function About({ data }) {
 
               <h2>Career</h2>
               <p className={util.read}>
-                {"I currently work as a web developer at "}
+                {"I work as a solutions developer at "}
                 <a
                   href='https://www.pugpig.com/'
                   target='_blank'
                   rel='noopener noreferrer'
                   className={util.externalLink}>
                   Pugpig
-                </a>, a native app publishing platform that powers some of the worlds biggest media brands such as condé nast, Hearst, Reach, National World and Boston Globe Media
-                {". "}
+                </a>, a native app publishing platform that powers some of the worlds largest media brands such as condé nast, Hearst, Reach and DMG media.
                 {
-                  "In the 8+ years prior to Pugpig I've worked in digital marketing. Since then, i've been hooked on all things web."
+                  "In the 8+ years prior to Pugpig I worked in digital marketing. Since then, i've been hooked on all things web."
                 }
               </p>
               <p>
                 {
-                  "I have added a brief summary below. To learn more, "
+                  "Below is a brief summary, to learn more  "
                 }
                 <a
                   href='https://www.linkedin.com/in/adam-durrant/'
                   target='_blank'
                   rel='noopener noreferrer'
                   className={util.externalLink}>
-                  visit my Linkedin
+                  visit my Linkedin profile
                 </a>
               </p>
             </div>
@@ -277,12 +276,12 @@ export default function About({ data }) {
             <div className={util.read}>
               <h2 id='site'>How this site was made</h2>
               <p>
-                This site was forked from {" "}
+                This site was forked from a project by{" "}
                 <a href='https://x.com/sjzhang_'>S J Zhang</a>. A
-                designer who&apos;s work love.
+                designer who&apos;s work adore.
               </p>
               <p>
-                I&apos;m in the process of learning React & Next.js and totally
+                At the time, I was in the process of learning React & Next.js and totally
                 fell for SJ&apos;s design so, I set about destructuring
                 his work, understanding it and putting it back together piece by piece while
                 making it my own. I did this for a few reasons:
@@ -309,8 +308,8 @@ export default function About({ data }) {
                 </li>
               </ol>
               <p>
-                Because he&apos;s amazing, SJ has kindly licenses his work for
-                anyone{" "}
+                Because he&apos;s amazing, SJ has kindly licensed his work for
+                anyone to use{" "}
                 <a href='https://github.com/sjzhan9/sj-land'>over on Github</a>{" "}
                 so you can grab it too!
               </p>
