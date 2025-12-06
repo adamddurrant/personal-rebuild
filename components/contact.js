@@ -37,6 +37,7 @@ export default function Contact({ svg, label, shortcut }) {
                 src={"/feather/" + svg + ".svg"}
                 height={66}
                 width={66}
+                style={{ maxWidth: "100%", maxHeight: "100%" }}
                 alt={label}
               />
             </div>

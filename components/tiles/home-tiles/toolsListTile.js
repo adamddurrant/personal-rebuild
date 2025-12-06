@@ -25,6 +25,7 @@ export default function ToolsListTile({
           width={50}
           layout='fixed'
           alt={title}
+          style={{ maxWidth: "100%", maxHeight: "100%" }}
         ></Image>
       </div>
       <div className={styles.right}>

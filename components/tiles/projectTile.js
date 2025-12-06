@@ -22,7 +22,7 @@ export default function ProjectTile({
         })}
       </p> */}
       {internal ? (
-        <Link href={"/projects/" + url}>
+        <Link legacyBehavior href={"/projects/" + url}>
           <a className={styles.container}>
             <Image
               priority

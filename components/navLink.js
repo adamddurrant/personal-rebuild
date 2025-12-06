@@ -38,6 +38,7 @@ export default function NavLink({ svg, label, href, shortcut, external }) {
             src={"/icons/" + svg + ".svg"}
             height={66}
             width={66}
+            style={{ maxWidth: "100%", maxHeight: "100%" }}
             alt={label}
           />
         </div>
@@ -49,7 +50,7 @@ export default function NavLink({ svg, label, href, shortcut, external }) {
       </div>
     </a>
   ) : (
-    <Link href={href}>
+    <Link legacyBehavior href={href}>
       <a className={styles.item} aria-current={ariaCurrent}>
         <div className={styles.left}>
           <div className={util.icon}>
@@ -59,7 +60,9 @@ export default function NavLink({ svg, label, href, shortcut, external }) {
               src={"/feather/" + svg + ".svg"}
               height={66}
               width={66}
+              style={{ maxWidth: "100%", maxHeight: "100%" }}
               alt={label}
+              unoptimized
             />
           </div>
           <p className={styles.label}>{label}</p>

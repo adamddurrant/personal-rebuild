@@ -56,6 +56,7 @@ export default function ReadingListTile({ title, url, date, fav, tags }) {
           }
           height={20}
           width={20}
+          style={{ maxWidth: "100%", maxHeight: "100%" }}
           alt='url favicon'
         ></Image>
       </div>

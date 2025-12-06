@@ -168,7 +168,7 @@ export default function Blogpost(props) {
 
         </div>
 
-        <Link scroll={false} href='/blog'>
+        <Link legacyBehavior scroll={false} href='/blog'>
           <div className={util.buttonPadding}>
             <a className={util.backButton}> ← &nbsp; Back to blog</a>
           </div>
