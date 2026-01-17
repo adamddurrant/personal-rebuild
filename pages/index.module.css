@@ -41,6 +41,10 @@
   padding-bottom: 5rem;
 }
 
+.tinyText:not(:has( + .introContainer)) {
+  padding-bottom: 40px;
+}
+
 @media (min-width: 901px) {
   .mobileTinyText {
     display: none;
@@ -68,26 +72,23 @@
   padding-bottom: 1rem;
 }
 
-@media only screen and (min-width: 901px) and (max-width: 1080px) {
-  .introContainer {
-    margin-bottom: 50px !important;
-  }
-}
-
 .reset {
   user-select: none;
   cursor: pointer;
   transition: color 0.1s ease;
 }
+
 .reset:hover {
   color: var(--gray11);
 }
+
 .introContainer {
+  height: auto!important;
+  margin-bottom: 20px !important;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   margin-top: 0px;
-  margin-bottom: 0px;
 }
 
 @media (max-width: 1380px) {

@@ -211,7 +211,7 @@ export default function About({ data }) {
                 title='Solutions Developer at Pugpig'
                 url={"https://www.pugpig.com/"}
                 content={
-                  "Still loving my web development journey, I now build custom solutions to integrate publishing brands in the Pugpig native platforms."
+                  "Still loving my dev journey, I now build custom solutions to integrate enterprise publishing brands into Pugpig native platforms."
                 }
               />
               <ExpTile
@@ -219,7 +219,7 @@ export default function About({ data }) {
                 title='Web Developer at Pugpig'
                 url={"https://www.pugpig.com/"}
                 content={
-                  "Pugpig power some of the worlds most known publishing apps. Here I started my web development journey coding UI's and features for native apps"
+                  "Pugpig powers some of the worlds most known publishing apps. Here I started my web development journey coding UI's, themes and plugins for native apps"
                 }
               />
               <ExpTile
@@ -250,7 +250,7 @@ export default function About({ data }) {
                 title='SEO & Content Specialist at CIPS'
                 url={"https://www.cips.org/"}
                 content={
-                  "Main SEO POC globally including APAC teams. Oversaw technical and content strategy."
+                  "Main SEO point of contact globally including APAC teams. Oversaw technical and content strategy."
                 }
               />
               <ExpTile
@@ -258,14 +258,14 @@ export default function About({ data }) {
                 title='SEO & Data Lead at Zazzle Media'
                 url={"https://www.zazzlemedia.co.uk/"}
                 content={
-                  "Main SEO POC for varied clients in finance and eCommerce. Executed strategy as dictated by strategy lead."
+                  "SEO lead for varied clients in finance and eCommerce. Executed strategy as dictated by strategy lead."
                 }
               />
               <ExpTile
                 date='2016'
                 title='SEO & Content Executive at Interflora'
                 content={
-                  "Primarily worked on Interflora's portfolio brands building on an existing SEO strategy but touching all aspects of optimisation."
+                  "Primarily worked on Interflora's portfolio brands building on an existing SEO strategy touching all aspects of optimisation."
                 }
                 url={"https://www.interflora.co.uk/"}
               />

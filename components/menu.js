@@ -75,10 +75,11 @@ export default function Menu() {
             <p className={styles.divider}>Connect</p>
             <Contact svg='chat' label='Contact' shortcut='9' />
             <NavLink
-              svg='twitter'
-              href='https://twitter.com/AdamDDurrant'
-              label='Twitter'
+              svg='linkedin'
+              href='https://www.linkedin.com/in/adam-durrant/'
+              label='Linkedin'
               shortcut='0'
+              external
             />
           </nav>
         </div>
