@@ -40,13 +40,14 @@ export default function Projects() {
           <h1 className={util.header}>Projects</h1>
           <p className={util.description}>{description}</p>
           <ul className={util.list}>
-            {/* <ProjectTile
-              image='qr-guard'
-              title='QR scanner with security checks'
-              content='Why this doesn&apos;t exist already, I do not know - basic security checks on QR data that flags issues before visiting the destination page.'
+            <ProjectTile
+              image='qr-guardian'
+              title='A Smarter Way to Scan QR Codes'
+              content='Why this doesn&apos;t exist already, I do not know - A QR code scanner with security analysis, link preview and risk assessment for anti-quishing.'
               type='Expo · React Native · Side Project'
-              date='2025-10-11'
-            /> */}
+              date='2026-07-10'
+              url='https://qr-guardian.com/'
+            />
             <ProjectTile
               image='frontend-wrapped'
               title='Frontend Wrapped'
