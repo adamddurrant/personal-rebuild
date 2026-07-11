@@ -4,6 +4,7 @@
   flex-direction: column;
   justify-content: space-between;
   background-color: var(--linkContainerGrayBg);
+  border: 1px solid var(--linkContainerBorder);
   border-radius: 8px;
 }
 /* .container:hover {
