@@ -33,7 +33,7 @@ html {
   --font-m: 13.5px;
   --font-s: 12.3px;
 
-  --appbg: #eeeeee;
+  --appbg: #f2f2f2;
   --bg: white;
   --bgSticky: rgba(255, 255, 255, 0.746);
 
@@ -47,8 +47,8 @@ html {
   --tabbg: rgba(0, 0, 0, 0.04);
   --tabText: rgba(0, 0, 0, 0.32);
 
-  --linkContainerBg: #eeeeee;
-  --linkContainerGrayBg: #eeeeee;
+  --linkContainerBg: #f2f2f2;
+  --linkContainerGrayBg: #f2f2f2;
 
   --linkContainerBorder: rgb(236 236 236);
   --linkContainerBgHover: rgb(243, 243, 243);
