@@ -12,14 +12,14 @@ import { initMixpanel, trackPageView } from '../lib/mixpanelClient';
 function MyApp({ Component, pageProps }) {
 
   const router = useRouter();
-  // Strip query/hash, drop a trailing "/index" (static export), then normalise to a
-  // single trailing slash so the homepage canonical is the origin + "/"
+  // Strip query/hash, drop a trailing "/index" (static export) and any trailing
+  // slashes. Only the homepage keeps a trailing slash; inner pages have none.
   const path = (router.asPath || "/")
     .split("?")[0]
     .split("#")[0]
     .replace(/\/index$/, "")
     .replace(/\/+$/, "");
-  const canonicalUrl = `https://adamdurrant.co.uk${path}/`;
+  const canonicalUrl = `https://adamdurrant.co.uk${path || "/"}`;
 
   useEffect(() => {
     initMixpanel();
