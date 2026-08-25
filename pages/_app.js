@@ -12,7 +12,14 @@ import { initMixpanel, trackPageView } from '../lib/mixpanelClient';
 function MyApp({ Component, pageProps }) {
 
   const router = useRouter();
-  const canonicalUrl = (`https://adamdurrant.co.uk` + (router.asPath === "/" ? "/" : router.asPath)).split("?")[0];
+  // Strip query/hash, drop a trailing "/index" (static export) and any trailing slash
+  // so the homepage canonical is the bare origin, not /index or //
+  const path = (router.asPath || "/")
+    .split("?")[0]
+    .split("#")[0]
+    .replace(/\/index$/, "")
+    .replace(/\/+$/, "");
+  const canonicalUrl = `https://adamdurrant.co.uk${path}`;
 
   useEffect(() => {
     initMixpanel();
