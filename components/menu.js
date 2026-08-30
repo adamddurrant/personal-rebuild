@@ -18,7 +18,7 @@ export default function Menu() {
                   className={
                     util.hiddenOnMobile + " " + util.pointer + " logoInvert"
                   }
-                  src='/icons/adam-durrant.svg'
+                  src='/icons/adam-durrant.png'
                   alt='A Durrant'
                 ></img>
                 {/* <h2

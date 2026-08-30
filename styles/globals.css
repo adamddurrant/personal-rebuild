@@ -128,15 +128,24 @@ html {
 }
 
 .logoInvert {
-  width: 175px;
+  width: 220px;
   margin-top: 1.25rem;
   margin-bottom: 1.5rem;
   transition: color 0.2s ease;
   opacity: 0.9;
   -webkit-user-drag: none;
 }
+
 .dark-theme .logoInvert {
+  filter: invert(0);
+}
+
+.logoInvert {
   filter: invert(1);
+}
+
+* {
+  scrollbar-width: none !important;
 }
 
 html,
