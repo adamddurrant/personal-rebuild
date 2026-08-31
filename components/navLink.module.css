@@ -12,31 +12,42 @@
   margin-top: 2px;
   border: 0.5px solid transparent;
   position: relative;
-  isolation: isolate;
-  transition: background 0.25s ease, box-shadow 0.25s ease,
-    border-color 0.25s ease, transform 0.18s cubic-bezier(0.34, 1.4, 0.5, 1);
+  transition: box-shadow 0.35s ease, border-color 0.35s ease,
+    transform 0.18s cubic-bezier(0.34, 1.4, 0.5, 1);
 }
-.item:hover {
-  background: var(--glassItemHover);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
-}
-.item:active {
-  transform: scale(0.965);
-}
-.item[aria-current="page"] {
-  background: var(--glassItemActive);
-  border: 0.5px solid var(--glassItemBorder);
-  box-shadow: var(--glassItemShadow);
-}
-/* Liquid highlight across the top of the selected pill */
-.item[aria-current="page"]::after {
+/*
+ * The glass itself lives on a pseudo element, for two reasons: backdrop-filter
+ * on .item would make it the containing block for the Radix tooltip nested
+ * inside it, and `isolation` on .item would make it a backdrop root, which
+ * would leave the blur with nothing to sample. Fading the whole layer with
+ * opacity keeps the blur fading in and out with it.
+ */
+.item::before {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: var(--glassSheen);
+  background: var(--navGlass);
+  -webkit-backdrop-filter: var(--navGlassFilter);
+  backdrop-filter: var(--navGlassFilter);
+  box-shadow: inset 0 1px 0 var(--navGlassInner);
+  opacity: 0;
   pointer-events: none;
   z-index: -1;
+  transition: opacity 0.35s cubic-bezier(0.32, 0.72, 0.3, 1);
+}
+.item:hover::before {
+  opacity: 0.55;
+}
+.item:active {
+  transform: scale(0.965);
+}
+.item[aria-current="page"]::before {
+  opacity: 1;
+}
+.item[aria-current="page"] {
+  border-color: var(--navGlassBorder);
+  box-shadow: var(--navGlassShadow);
 }
 .left {
   display: flex;
@@ -99,6 +110,9 @@
     justify-content: center;
     align-items: center;
     border-radius: 14px;
+  }
+  .item::before {
+    background: var(--navGlassMobile);
   }
   .desktopOnly {
     display: none;

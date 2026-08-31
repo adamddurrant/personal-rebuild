@@ -12,18 +12,24 @@ export default function Background() {
 
     let baseNum = resolvedTheme == "dark" ? 50 : 150;
 
+    // Out of range channels make an invalid rgb() string, which the canvas
+    // ignores - the cell would silently keep the previous cell's colour.
+    const clamp = function (v) {
+      return Math.max(0, Math.min(255, v));
+    };
+
     const color = function (x, y, r, g, b) {
-      context.fillStyle = `rgb(${r}, ${g}, ${b})`;
+      context.fillStyle = `rgb(${clamp(r)}, ${clamp(g)}, ${clamp(b)})`;
       context.fillRect(x, y, 10, 10);
     };
     const B = function (x, y, time) {
-      return Math.floor(baseNum + 48 * Math.cos((x * x - y * y) / 200 + time));
+      return Math.floor(baseNum + 57.6 * Math.cos((x * x - y * y) / 200 + time));
     };
 
     const G = function (x, y, time) {
       return Math.floor(
         baseNum +
-          50 *
+          60 *
             Math.sin(
               (x * x * Math.cos(time / 4) + y * y * Math.sin(time / 3)) / 300
             )
@@ -37,7 +43,7 @@ export default function Background() {
     const R = function (x, y, time) {
       return Math.floor(
         baseNum +
-          64 *
+          76.8 *
             Math.sin(
               5 * Math.sin(time / 9) +
                 ((x - 100) * (x - 100) + (y - 100) * (y - 100)) / 1100
