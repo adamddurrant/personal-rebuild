@@ -76,12 +76,15 @@
 @media (max-width: 700px) {
   .container {
     /*
-     * 48px of icons + 6px above + 12px below. env() is 0 today (the viewport
-     * meta has no viewport-fit=cover) but keeps the gap correct if that is
-     * ever turned on, when it would sit above the home indicator instead.
+     * Even 12px of breathing room on every side of the 48px icon row. env() is
+     * 0 today (the viewport meta has no viewport-fit=cover) but keeps the gap
+     * correct if that is ever turned on, when the padding would sit above the
+     * home indicator instead of against the screen edge.
      */
-    padding: 0.375rem 1.5rem calc(0.75rem + env(safe-area-inset-bottom, 0px))
-      0.375rem;
+    padding-top: 0.75rem;
+    padding-right: 0.75rem;
+    padding-bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px));
+    padding-left: 0.75rem;
     width: 100%;
     justify-content: flex-start;
     display: flex;
@@ -92,7 +95,7 @@
     overflow-x: scroll;
     overflow-y: hidden;
     position: fixed;
-    height: calc(66px + env(safe-area-inset-bottom, 0px));
+    height: calc(72px + env(safe-area-inset-bottom, 0px));
     top: auto;
     bottom: 0px;
     border-top: 0.5px solid var(--glassBarBorder);
@@ -111,7 +114,7 @@
   .container::before {
     position: fixed;
     inset: auto 0 0 0;
-    height: calc(66px + env(safe-area-inset-bottom, 0px));
+    height: calc(72px + env(safe-area-inset-bottom, 0px));
     background: var(--glassBarBg);
     -webkit-backdrop-filter: var(--glassBlur);
     backdrop-filter: var(--glassBlur);

@@ -1023,7 +1023,7 @@
     position: static;
     width: auto;
     border-radius: 0px;
-    padding: 0rem 1.25rem calc(5.5rem + env(safe-area-inset-bottom, 0px));
+    padding: 0rem 1.25rem calc(6rem + env(safe-area-inset-bottom, 0px));
     order: 1;
     flex-grow: 1;
     margin-left: 0rem;
