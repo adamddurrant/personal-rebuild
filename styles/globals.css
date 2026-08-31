@@ -66,13 +66,6 @@ html {
   --glassBarBg: rgba(255, 255, 255, 0.62);
   --menuDivider: rgba(0, 0, 0, 0.07);
   --glassBarBorder: rgba(0, 0, 0, 0.06);
-  --glassSheen: linear-gradient(
-    165deg,
-    rgba(255, 255, 255, 0.65) 0%,
-    rgba(255, 255, 255, 0.15) 26%,
-    rgba(255, 255, 255, 0) 52%
-  );
-  --glassItemHover: rgba(255, 255, 255, 0.5);
   /* Selected / hovered nav pill: real glass, blurring the background wash */
   --navGlassFilter: blur(22px) saturate(340%);
   --navGlass: linear-gradient(
@@ -89,15 +82,6 @@ html {
     rgba(255, 255, 255, 0.2) 0%,
     rgba(255, 255, 255, 0.08) 100%
   );
-  --glassItemActive: linear-gradient(
-    160deg,
-    rgba(255, 255, 255, 0.9) 0%,
-    rgba(255, 255, 255, 0.6) 100%
-  );
-  --glassItemBorder: rgba(255, 255, 255, 0.9);
-  --glassItemShadow: 0 1px 2px rgba(0, 0, 0, 0.05),
-    0 6px 14px -8px rgba(0, 0, 0, 0.22),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9);
   --glassWell: rgba(0, 0, 0, 0.045);
   --glassWellShadow: inset 0 1px 2px rgba(0, 0, 0, 0.06),
     inset 0 0 0 0.5px rgba(0, 0, 0, 0.03);
@@ -142,13 +126,6 @@ html {
   --glassBarBg: rgba(24, 24, 24, 0.62);
   --menuDivider: rgba(255, 255, 255, 0.09);
   --glassBarBorder: rgba(255, 255, 255, 0.08);
-  --glassSheen: linear-gradient(
-    165deg,
-    rgba(255, 255, 255, 0.12) 0%,
-    rgba(255, 255, 255, 0.03) 28%,
-    rgba(255, 255, 255, 0) 54%
-  );
-  --glassItemHover: rgba(255, 255, 255, 0.07);
   --navGlassFilter: blur(22px) saturate(280%) brightness(1.12);
   --navGlass: linear-gradient(
     160deg,
@@ -163,15 +140,6 @@ html {
     rgba(255, 255, 255, 0.07) 0%,
     rgba(255, 255, 255, 0.025) 100%
   );
-  --glassItemActive: linear-gradient(
-    160deg,
-    rgba(255, 255, 255, 0.17) 0%,
-    rgba(255, 255, 255, 0.07) 100%
-  );
-  --glassItemBorder: rgba(255, 255, 255, 0.14);
-  --glassItemShadow: 0 1px 2px rgba(0, 0, 0, 0.35),
-    0 6px 14px -8px rgba(0, 0, 0, 0.6),
-    inset 0 1px 0 rgba(255, 255, 255, 0.16);
   --glassWell: rgba(0, 0, 0, 0.28);
   --glassWellShadow: inset 0 1px 2px rgba(0, 0, 0, 0.4),
     inset 0 0 0 0.5px rgba(255, 255, 255, 0.04);
