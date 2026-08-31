@@ -14,9 +14,11 @@
   box-sizing: border-box;
   display: flex;
   position: relative;
-  background-color: var(--tabbg);
+  background: var(--glassWell);
+  box-shadow: var(--glassWellShadow);
   padding: 2.5px;
-  border-radius: 8px;
+  border-radius: 10px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .tabs * {
@@ -65,17 +67,30 @@
   display: flex;
   height: 1.75rem;
   width: 74.07px;
-  background-color: var(--highlight);
+  background: var(--glassItemActive);
+  border: 0.5px solid var(--glassItemBorder);
+  box-shadow: var(--glassItemShadow);
+  -webkit-backdrop-filter: blur(8px) saturate(180%);
+  backdrop-filter: blur(8px) saturate(180%);
 
   z-index: 1;
-  border-radius: 6px;
-  transition: 0.2s ease-in-out;
+  border-radius: 8px;
+  /* Springy, liquid settle */
+  transition: transform 0.42s cubic-bezier(0.34, 1.32, 0.42, 1),
+    background 0.3s ease, box-shadow 0.3s ease;
 }
 
 @media (max-width: 700px) {
   .tabs {
-    transform: scale(1.15);
-    margin-left: 2rem;
-    margin-right: 2rem;
+    transform: scale(1.1);
+    margin-left: 1.75rem;
+    margin-right: 1.5rem;
+    flex-shrink: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glider {
+    transition: transform 0.15s linear;
   }
 }

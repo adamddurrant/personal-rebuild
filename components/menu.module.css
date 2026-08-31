@@ -12,6 +12,25 @@
   margin: 0.5rem;
 }
 
+/*
+ * Liquid glass: blur only, no tint, so the menu column stays the same colour as
+ * the page and never reads as a panel. It bleeds past the container's margins so
+ * there is no edge where the blurred region stops.
+ *
+ * This lives on a pseudo element because backdrop-filter on the container itself
+ * would become the containing block for the fixed-positioned Radix tooltips
+ * nested inside the nav links.
+ */
+.container::before {
+  content: "";
+  position: absolute;
+  inset: -0.5rem -0.75rem -0.5rem -0.5rem;
+  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
+  pointer-events: none;
+  z-index: -1;
+}
+
 .homeLogoText {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
@@ -30,6 +49,7 @@
 }
 
 .mainLogo img {
+  max-width: 100%;
   transition: all 0.4s ease-in-out;
 }
 
@@ -68,10 +88,24 @@
     height: 60px;
     top: auto;
     bottom: 0px;
-    border-top: 1px solid var(--linkContainerBorder);
+    border-top: 0.5px solid var(--glassBarBorder);
     margin: 0px;
-    background-color: var(--appbg);
     z-index: 9;
+
+    /* Frosted bar: content blurs as it scrolls underneath */
+    background: var(--appbg);
+  }
+  @supports (backdrop-filter: blur(1px)) or
+    (-webkit-backdrop-filter: blur(1px)) {
+    .container {
+      background: var(--glassBarBg);
+      -webkit-backdrop-filter: var(--glassBlur);
+      backdrop-filter: var(--glassBlur);
+    }
+  }
+  /* The veil would scroll with the bar's content, so blur the bar directly */
+  .container::before {
+    display: none;
   }
   .container::-webkit-scrollbar {
     display: none;
