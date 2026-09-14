@@ -12,7 +12,6 @@
   margin-left: 15.5rem;
   background-color: var(--bg);
   overflow: auto;
-  transition: background-color 0.2s ease;
   box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.035);
 }
 
