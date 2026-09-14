@@ -57,7 +57,9 @@ export default function Background() {
           color(x, y, R(x, y, time), G(x, y, time), B(x, y, time));
         }
       }
-      time = time + 0.015;
+      // Drives how fast the wash drifts. The menu is blur-only glass, so this
+      // is also the speed of the colour moving under it.
+      time = time + 0.003;
       window.requestAnimationFrame(startAnimation);
     };
 

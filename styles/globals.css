@@ -63,7 +63,7 @@ html {
 
   /* Liquid glass */
   --glassBlur: blur(20px) saturate(180%);
-  --glassBarBg: rgba(255, 255, 255, 0.62);
+  --glassBarBg: rgba(255, 255, 255, 0.57);
   --menuDivider: rgba(0, 0, 0, 0.07);
   --glassBarBorder: rgba(0, 0, 0, 0.06);
   /* Selected / hovered nav pill: real glass, blurring the background wash */
@@ -123,7 +123,7 @@ html {
 
   /* Liquid glass */
   --glassBlur: blur(22px) saturate(160%);
-  --glassBarBg: rgba(24, 24, 24, 0.62);
+  --glassBarBg: rgba(24, 24, 24, 0.57);
   --menuDivider: rgba(255, 255, 255, 0.09);
   --glassBarBorder: rgba(255, 255, 255, 0.08);
   --navGlassFilter: blur(22px) saturate(280%) brightness(1.12);
